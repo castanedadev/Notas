@@ -68,6 +68,9 @@ namespace WindowsFormsApplication1
         }
         private void toPDF()
         {
+            string aux = Application.StartupPath;
+            aux += "\\Logo.jpg";
+            iTextSharp.text.Image imagen= iTextSharp.text.Image.GetInstance(aux);
             Document doc = new Document(PageSize.A4.Rotate(), 10, 10, 10, 10);
             SaveFileDialog savefiledialog1 = new SaveFileDialog();
             savefiledialog1.InitialDirectory = @"C:";
@@ -89,9 +92,7 @@ namespace WindowsFormsApplication1
                     FileShare.ReadWrite);
                 PdfWriter.GetInstance(doc, file);
                 doc.Open();
-                doc.Add(new Paragraph("                                     "));
-                doc.Add(new Paragraph("                                     "));
-                doc.Add(new Paragraph("                                     "));
+                doc.Add(imagen);
                 doc.Add(new Paragraph("                                                                                   COMPLEJO EDUCATIVO COLONIA TIERRA VIRGEN "));
                 doc.Add(new Paragraph("                                                                                                    PROMEDIOS TRIMESTRALES"));
                 doc.Add(new Paragraph("          GRADO:" + cbGrado.Text + "        SECCIÓN:" + cbSeccion.Text + "                      ASIGNTURA:" + cbMateria.Text));
