@@ -95,7 +95,6 @@ namespace WindowsFormsApplication1
                PdfWriter pdfw=PdfWriter.GetInstance(doc, file);
                 doc.Open();
                 doc.Add(imagen);
-
                 doc.Add(new Paragraph("                                                                                   COMPLEJO EDUCATIVO COLONIA TIERRA VIRGEN "));
                 doc.Add(new Paragraph("                                                                                                    PROMEDIOS TRIMESTRALES"));
                 doc.Add(new Paragraph("          GRADO:" + cbGrado.Text + "        SECCIÓN:" + cbSeccion.Text + "                      ASIGNTURA:" + cbMateria.Text));
