@@ -40,6 +40,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMinimizar)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
@@ -65,9 +66,9 @@
             this.Lbl5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.Lbl5.Location = new System.Drawing.Point(62, 404);
             this.Lbl5.Name = "Lbl5";
-            this.Lbl5.Size = new System.Drawing.Size(553, 25);
+            this.Lbl5.Size = new System.Drawing.Size(366, 25);
             this.Lbl5.TabIndex = 23;
-            this.Lbl5.Text = "Velásquez Godoy Luis Alexis                VG160303          ";
+            this.Lbl5.Text = "Velásquez Godoy Luis Alexis            ";
             // 
             // Lbl4
             // 
@@ -75,9 +76,9 @@
             this.Lbl4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.Lbl4.Location = new System.Drawing.Point(62, 370);
             this.Lbl4.Name = "Lbl4";
-            this.Lbl4.Size = new System.Drawing.Size(485, 25);
+            this.Lbl4.Size = new System.Drawing.Size(381, 25);
             this.Lbl4.TabIndex = 22;
-            this.Lbl4.Text = "Rivera López, Jorge Antonio                 RL160365";
+            this.Lbl4.Text = "Rivera López, Jorge Antonio                ";
             // 
             // Lbl3
             // 
@@ -85,9 +86,9 @@
             this.Lbl3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.Lbl3.Location = new System.Drawing.Point(62, 334);
             this.Lbl3.Name = "Lbl3";
-            this.Lbl3.Size = new System.Drawing.Size(486, 25);
+            this.Lbl3.Size = new System.Drawing.Size(380, 25);
             this.Lbl3.TabIndex = 21;
-            this.Lbl3.Text = "Palma Rosales, Imer Alfredo                 PR160001";
+            this.Lbl3.Text = "Palma Rosales, Imer Alfredo                ";
             // 
             // Lbl2
             // 
@@ -95,9 +96,9 @@
             this.Lbl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.Lbl2.Location = new System.Drawing.Point(62, 300);
             this.Lbl2.Name = "Lbl2";
-            this.Lbl2.Size = new System.Drawing.Size(492, 25);
+            this.Lbl2.Size = new System.Drawing.Size(380, 25);
             this.Lbl2.TabIndex = 20;
-            this.Lbl2.Text = "González Mejía, Camilo Ernesto           GM160506";
+            this.Lbl2.Text = "González Mejía, Camilo Ernesto          ";
             // 
             // Lbl1
             // 
@@ -105,9 +106,9 @@
             this.Lbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl1.Location = new System.Drawing.Point(62, 262);
             this.Lbl1.Name = "Lbl1";
-            this.Lbl1.Size = new System.Drawing.Size(487, 25);
+            this.Lbl1.Size = new System.Drawing.Size(372, 25);
             this.Lbl1.TabIndex = 19;
-            this.Lbl1.Text = "Castaneda Hernández, Ricardo José   CH142568";
+            this.Lbl1.Text = "Castaneda Hernández, Ricardo José ";
             // 
             // LblProyect
             // 
@@ -171,11 +172,21 @@
             this.bunifuImageButton1.Zoom = 10;
             this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(457, 431);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(223, 13);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "Derechos reservados Universidad Don Bosco";
+            // 
             // AcercaD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(755, 481);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Lbl5);
             this.Controls.Add(this.Lbl4);
@@ -211,5 +222,6 @@
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
+        private System.Windows.Forms.Label label1;
     }
 }
