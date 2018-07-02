@@ -90,7 +90,7 @@ namespace WindowsFormsApplication1
                     FileMode.OpenOrCreate,
                     FileAccess.ReadWrite,
                     FileShare.ReadWrite);
-                PdfWriter.GetInstance(doc, file);
+               PdfWriter pdfw=PdfWriter.GetInstance(doc, file);
                 doc.Open();
                 doc.Add(imagen);
                 doc.Add(new Paragraph("                                                                                   COMPLEJO EDUCATIVO COLONIA TIERRA VIRGEN "));
@@ -103,6 +103,7 @@ namespace WindowsFormsApplication1
                 doc.Add(new Paragraph("                                                                       PRIMER TRIMESTRE       |SEGUNDO TRIMESTRE      |TERCER TRIMESTRE         |"));
                 doc.Add(new Paragraph("   "));
                 GenerarDocumento(doc);
+                pdfw.PageEvent = new PDFFooter(); 
                 doc.Close();
                 Process.Start(filename);
             }
@@ -140,6 +141,24 @@ namespace WindowsFormsApplication1
             }
             document.Add(datatable);
         }
+
+
+        public class PDFFooter : PdfPageEventHelper
+        {
+            public override void OnEndPage(PdfWriter writer, Document document)
+            {
+                //base.OnEndPage(writer, document); 
+                // Writing Footer on Page 
+                PdfPTable tab = new PdfPTable(1);
+                PdfPCell cell = new PdfPCell(new Phrase("© Derechos Reservados 2018 Universidad Don Bosco Todos los Derechos Reservados."));
+                cell.Border = 0;
+                tab.TotalWidth = 600F;
+                tab.AddCell(cell);
+                tab.WriteSelectedRows(0, -1, 150, 30, writer.DirectContent);
+            }
+
+
+        } 
 
         private float[] gettacolumnas(DataGridView dgv)
         {
