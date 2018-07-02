@@ -64,11 +64,11 @@
             // 
             this.Lbl5.AutoSize = true;
             this.Lbl5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.Lbl5.Location = new System.Drawing.Point(62, 395);
+            this.Lbl5.Location = new System.Drawing.Point(62, 404);
             this.Lbl5.Name = "Lbl5";
-            this.Lbl5.Size = new System.Drawing.Size(360, 25);
+            this.Lbl5.Size = new System.Drawing.Size(372, 25);
             this.Lbl5.TabIndex = 23;
-            this.Lbl5.Text = "Velásquez Godoy Luis Alexis           ";
+            this.Lbl5.Text = "Velásquez Godoy Luis Alexis             ";
             // 
             // Lbl4
             // 
@@ -76,19 +76,19 @@
             this.Lbl4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.Lbl4.Location = new System.Drawing.Point(62, 370);
             this.Lbl4.Name = "Lbl4";
-            this.Lbl4.Size = new System.Drawing.Size(381, 25);
+            this.Lbl4.Size = new System.Drawing.Size(387, 25);
             this.Lbl4.TabIndex = 22;
-            this.Lbl4.Text = "Rivera López, Jorge Antonio                ";
+            this.Lbl4.Text = "Rivera López, Jorge Antonio                 ";
             // 
             // Lbl3
             // 
             this.Lbl3.AutoSize = true;
             this.Lbl3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.Lbl3.Location = new System.Drawing.Point(61, 336);
+            this.Lbl3.Location = new System.Drawing.Point(62, 334);
             this.Lbl3.Name = "Lbl3";
-            this.Lbl3.Size = new System.Drawing.Size(374, 25);
+            this.Lbl3.Size = new System.Drawing.Size(380, 25);
             this.Lbl3.TabIndex = 21;
-            this.Lbl3.Text = "Palma Rosales, Imer Alfredo               ";
+            this.Lbl3.Text = "Palma Rosales, Imer Alfredo                ";
             // 
             // Lbl2
             // 
@@ -106,9 +106,9 @@
             this.Lbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl1.Location = new System.Drawing.Point(62, 262);
             this.Lbl1.Name = "Lbl1";
-            this.Lbl1.Size = new System.Drawing.Size(384, 25);
+            this.Lbl1.Size = new System.Drawing.Size(372, 25);
             this.Lbl1.TabIndex = 19;
-            this.Lbl1.Text = "Castaneda Hernández, Ricardo José   ";
+            this.Lbl1.Text = "Castaneda Hernández, Ricardo José ";
             // 
             // LblProyect
             // 
@@ -175,7 +175,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(493, 442);
+            this.label1.Location = new System.Drawing.Point(447, 446);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(223, 13);
             this.label1.TabIndex = 27;
