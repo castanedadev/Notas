@@ -1,0 +1,17 @@
+  public void materiacusto1(string nombre, ComboBox cbg, ComboBox cbm)
+        {
+            string consulta;
+            consulta = "CustoMate1";
+            SqlConnection getconexion = Conexion.Cnn();
+            scomand = new SqlCommand(consulta, getconexion);
+            scomand.Parameters.AddWithValue("@Nombre", nombre);
+            scomand.Parameters.AddWithValue("@Grado", cbg.Text.ToString());
+            scomand.CommandType = CommandType.StoredProcedure;
+            scomand.ExecuteNonQuery();
+            sreader = scomand.ExecuteReader();
+            while (sreader.Read())
+            {
+                cbm.Items.Add(sreader["Materia"].ToString());
+            }
+            getconexion.Close();
+        }

@@ -1,0 +1,280 @@
+
+		
+				PROCEDIMIENTOS
+
+
+--------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------
+CREATE PROCEDURE consultaMaestroData
+	@id varchar(10)
+AS
+begin
+SELECT   Maestros.IdMaestro, Maestros.Nombre, Maestros.Fecha ,Maestros.Telefono, Maestros.Direccion, Maestros.Tutor, GRADO.Grado, SECCION.Seccion
+FROM     GRADO INNER JOIN
+Maestros ON GRADO.IdGrado = Maestros.Grado_t INNER JOIN
+SECCION ON dbo.Maestros.Seccion_t = SECCION.IdSeccion
+WHERE Maestros.IdMaestro=@id
+end
+
+--------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------
+
+CREATE PROCEDURE DeletedDocente
+	@idMaestro varchar(10)
+AS
+begin
+	delete from Maestros where IdMaestro=@idMaestro
+end
+
+
+CREATE PROCEDURE DeletedNGM
+	@idMaestro varchar(10)
+AS
+begin
+	delete from NGM where Maestro=@idMaestro;
+end
+
+--------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------
+
+CREATE PROCEDURE IngresarDocente
+@tutor int,@idMaestro varchar(50), @Nombre varchar(100),
+@fecha varchar(100),@telefono varchar(10), @direccion varchar(100),
+@Grado varchar(50),@seccion char(1)
+as
+begin	 
+	if @tutor=1
+	BEGIN 
+		insert into Maestros values(@idMaestro,@Nombre,@fecha,@telefono,@direccion,@tutor,
+		(select GRADO.IdGrado from GRADO where Grado=@Grado),
+		(select SECCION.IdSeccion from SECCION where Seccion= @seccion))
+	END
+	if @tutor=0
+	BEGIN 
+		insert into Maestros(IdMaestro,Nombre,Fecha,Telefono,Direccion,Tutor) 
+		values(@idMaestro,@Nombre,@fecha,@telefono,@direccion,@tutor)
+	END		
+end
+
+--------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------
+
+
+CREATE PROCEDURE IngresarNGM
+@IdMaestro varchar(50), @Grado varchar(50), @Materia varchar(50),@seccion varchar(1)
+as 
+begin 
+	insert into NGM 
+	values((select Maestros.IdMaestro from Maestros where IdMaestro=@IdMaestro),
+	(select GRADO.IdGrado from GRADO where Grado=@Grado), 
+	(select MATERIA.IdMateria from MATERIA where Materia=@Materia),
+        (select IdSeccion from SECCION where Seccion=@seccion))
+end
+
+--------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------
+
+CREATE PROCEDURE UpdateDocente
+@tutor int,@idMaestro varchar(10),@telefono varchar(10), @direccion varchar(50),
+@Grado varchar(50),@seccion char(1)
+as
+begin	 
+	if @tutor=1
+	begin 
+		update Maestros set 
+		Telefono = @telefono, Direccion = @direccion,
+		Tutor = @tutor,
+		Grado_t = (select GRADO.IdGrado from GRADO where Grado=@Grado),
+		Seccion_t = (select SECCION.IdSeccion from SECCION where Seccion= @seccion)		
+		Where IdMaestro = @idMaestro		
+	end
+	if @tutor=0
+	begin 
+		update Maestros set 
+		Telefono = @telefono, Direccion = @direccion,
+		Tutor = @tutor,
+		Grado_t = null,
+		Seccion_t = null
+		Where IdMaestro = @idMaestro
+	end		
+end
+
+--------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------
+
+CREATE PROCEDURE Ver_TutorExitst
+@grado varchar(20),@seccion varchar(20)
+as
+begin 
+select IdMaestro from Maestros where Grado_t=(select GRADO.IdGrado from GRADO where Grado=@grado) and Seccion_t=(select SECCION.IdSeccion from SECCION where Seccion= @seccion)
+end
+
+--------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------
+
+CREATE PROCEDURE Verificar_NGM
+	@grado varchar(20),@materia varchar(20)
+AS
+begin
+	SELECT        Maestro
+FROM            NGM INNER JOIN
+                         MATERIA ON NGM.Materia = dbo.MATERIA.IdMateria INNER JOIN
+                         GRADO ON NGM.Grado = GRADO.IdGrado
+WHERE        (GRADO.Grado = @grado) AND (MATERIA.Materia = @materia)
+end
+
+--------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------
+CREATE PROCEDURE VerNGM
+@id varchar(10)
+as
+begin
+SELECT        GRADO.Grado, MATERIA.Materia,SECCION.Seccion
+FROM            GRADO INNER JOIN
+NGM ON GRADO.IdGrado = NGM.Grado INNER JOIN
+MATERIA ON NGM.Materia = MATERIA.IdMateria
+INNER JOIN SECCION ON NGM.Seccion=SECCION.IdSeccion
+WHERE NGM.Maestro=@id
+end
+
+
+--------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------
+
+
+
+			TABLAS
+UTILIZE 
+-TABLA MAESTROS
+-TABLA USUARIOS
+-TABLA NGM
+
+
+
+CREATE TABLE NGM
+(
+IdNivel int identity(1,1) not null,
+Maestro varchar(15),
+Grdo int,
+Materia int,
+Seccion int,
+CONSTRAINT PK_NGM Primary Key (IdNivel),
+CONSTRAINT FK_MAA1 Foreign Key(Maestro) REFERENCES Maestros(IdMaestro),
+CONSTRAINT FK_GRAA Foreign Key (Grado) REFERENCES GRADO(IdGrado),
+CONSTRAINT FK_mAAt Foreign Key (Materia) REFERENCES MATERIA(IdMateria),
+CONSTRAINT FK_SEcc Foreign Key (Seccion) REFERENCES SECCION(IdSeccion),
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
