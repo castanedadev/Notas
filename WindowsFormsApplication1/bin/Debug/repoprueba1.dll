@@ -4,18 +4,6 @@ AS
 BEGIN
  INSERT INTO ANO VALUES (@ano)
 END
-CREATE PROCEDURE [dbo].[IngresarGrado]
-@Grado varchar(50)
-as
-begin
-INSERT INTO GRADO VALUES(@Grado)
-end
-CREATE PROCEDURE [dbo].[IngresarSeccion]
-@Seccion char
-as
-begin
-INSERT INTO SECCION VALUES(@Seccion)
-end
 CREATE PROCEDURE ComprobarIdMaestro
 @idMaestro varchar(50)
 as
@@ -31,20 +19,22 @@ begin
 end
 CREATE PROCEDURE [dbo].[IngresarDocente]
 @idMaestro varchar(50), @Nombre varchar(100),
-@fecha varchar(100),@telefono varchar(10), @direccion varchar(100) 
+@fecha varchar(100) 
 as
 begin
-	INSERT INTO Maestros VALUES (@idMaestro,@Nombre,@fecha,@telefono,@direccion)	
+	INSERT INTO Maestros VALUES (@idMaestro,@Nombre,@fecha)	
 end
 CREATE PROCEDURE IngresarMaestroAno
 @IdMaestro varchar(50),
+@Telefono varchar(8),
+@Direccion varchar(100),
 @IdAno int,
 @Grado int,
 @Seccion int,
 @Estado int
 as
 BEGIN
-	INSERT INTO MaestroAno VALUES (@IdMaestro,@Grado,@Seccion,@IdAno,@Estado)
+	INSERT INTO MaestroAno VALUES (@IdMaestro,@Telefono,@Direccion,@Grado,@Seccion,@IdAno,@Estado)
 END
 CREATE PROCEDURE ComprobarNIE
 @NIE varchar(15)
@@ -80,19 +70,6 @@ as
 begin
 	INSERT INTO AlumnoAno VALUES (@NIE,@Telefono,@Direccion,@Responsable,@Grado,@Seccion,@Estado,@ano)
 end
-CREATE PROCEDURE [dbo].[IngresarNGS]
-@Grado int,
-@Seccion int
-as
-begin
-INSERT INTO NiVelGradoSeccion VALUES(@Grado,@Seccion)
-end
-CREATE PROCEDURE [dbo].[IngresarMateria]
-@Materia varchar(50)
-as
-begin
-INSERT INTO MATERIA VALUES(@Materia)
-end
 CREATE PROCEDURE [dbo].[IngresarNGM]
 @IdMaestro varchar(50), @Grado int , @Materia int,@seccion int,
 @estado int,@ano int
@@ -100,13 +77,6 @@ as
 begin 
 	insert into NGM  values((SELECT IdMaestroAno FROM MaestroAno WHERE MaestroAno.Ano=@ano  AND Maestro=@IdMaestro)
 ,@Grado,@Materia,@seccion,@estado)
-end
-CREATE PROCEDURE [dbo].[IngresarGradoMateria]
-@Grado int,
-@Materia int
-as
-begin
-INSERT INTO MateriaGrado VALUES(@Grado,@Materia)
 end
 CREATE PROCEDURE [dbo].[IngresarActividades]
 @Actividad varchar(100),
@@ -146,4 +116,61 @@ begin
 INSERT INTO REGISTRO VALUES((SELECT IdAlumnoAno from AlumnoANo WHERE AlumnoAno.Alumno=@Alumno AND AlumnoAno.Ano=@ano)
 ,@Materia,@Actividad,@Grado,@Seccion,@Trimestre,@Periodo,@Calificacion)
 end
+CREATE PROCEDURE GetRP
+@ano varchar(4)
+as
+BEGIN
+SELECT        dbo.Maestros.IdMaestro, dbo.Maestros.Nombre, dbo.MaestroAno.Direccion, dbo.Maestros.Fecha, dbo.MaestroAno.Telefono, dbo.GRADO.IdGrado, 
+                         dbo.SECCION.IdSeccion
+FROM            dbo.ANO INNER JOIN
+                         dbo.MaestroAno ON dbo.ANO.IdAno = dbo.MaestroAno.Ano INNER JOIN
+                         dbo.Maestros ON dbo.MaestroAno.Maestro = dbo.Maestros.IdMaestro INNER JOIN
+                         dbo.GRADO ON dbo.MaestroAno.Grado = dbo.GRADO.IdGrado INNER JOIN
+                         dbo.SECCION ON dbo.MaestroAno.Seccion = dbo.SECCION.IdSeccion
+WHERE        (dbo.MaestroAno.Ano =
+                             (SELECT        IdAno
+                               FROM            dbo.ANO AS ANO_1
+                               WHERE        (ano = @ano)))
+END
+CREATE PROCEDURE GetNGM
+@ano int,
+@maestro varchar(50)
+as
+BEGIN
+SELECT        dbo.NGM.Grado, dbo.NGM.Seccion, dbo.NGM.Materia
+FROM            dbo.ANO INNER JOIN
+                         dbo.MaestroAno ON dbo.ANO.IdAno = dbo.MaestroAno.Ano INNER JOIN
+                         dbo.Maestros ON dbo.MaestroAno.Maestro = dbo.Maestros.IdMaestro INNER JOIN
+                         dbo.NGM ON dbo.MaestroAno.IdMaestroAno = dbo.NGM.Maestro
+WHERE        (dbo.MaestroAno.Ano =
+                             (SELECT        IdAno
+                               FROM            dbo.ANO AS ANO_1
+                               WHERE        (ano = @ano))) AND MaestroAno.Maestro=@maestro
+END
+CREATE PROCEDURE GetAl
+@ano int,
+@grado int,
+@seccion int
+as
+BEGIN
+SELECT        dbo.ALUMNO.NIE, dbo.ALUMNO.Nombre, dbo.ALUMNO.Fecha_nac, dbo.AlumnoAno.Telefono, dbo.AlumnoAno.Direccion, dbo.AlumnoAno.Responsable, 
+                         dbo.AlumnoAno.Grado, dbo.AlumnoAno.Seccion, dbo.ANO.ano
+FROM            dbo.ALUMNO INNER JOIN
+                         dbo.AlumnoAno ON dbo.ALUMNO.NIE = dbo.AlumnoAno.Alumno INNER JOIN
+                         dbo.ANO ON dbo.AlumnoAno.Ano = dbo.ANO.IdAno
+						 WHERE AlumnoAno.Ano=@ano and AlumnoAno.Grado=@grado AND AlumnoAno.Seccion=@seccion
+END
+CREATE PROCEDURE GetAl2
+@ano int,
+@nombre varchar(101)
+as
+BEGIN
+SELECT        dbo.ALUMNO.NIE, dbo.ALUMNO.Nombre, dbo.ALUMNO.Fecha_nac, dbo.AlumnoAno.Telefono, dbo.AlumnoAno.Direccion, dbo.AlumnoAno.Responsable, 
+                         dbo.AlumnoAno.Grado, dbo.AlumnoAno.Seccion, dbo.ANO.ano
+FROM            dbo.ALUMNO INNER JOIN
+                         dbo.AlumnoAno ON dbo.ALUMNO.NIE = dbo.AlumnoAno.Alumno INNER JOIN
+                         dbo.ANO ON dbo.AlumnoAno.Ano = dbo.ANO.IdAno
+						 WHERE AlumnoAno.Ano=@ano and  Alumno.Nombre like @nombre
+
+END
 FIN

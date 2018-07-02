@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1.F2
 {
-    class PropiedadMaestro
+   public class PropiedadMaestro
     {
         private string idMaestro;
         private string nombre;

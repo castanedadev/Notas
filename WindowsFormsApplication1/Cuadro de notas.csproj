@@ -165,6 +165,51 @@
     <Compile Include="F2\PropiedadAlumno.cs" />
     <Compile Include="F2\PropiedadMaestro.cs" />
     <Compile Include="F2\Transferencia.cs" />
+    <Compile Include="F3\AlTraslado.cs" />
+    <Compile Include="F3\AlumnosR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F3\AlumnosR.Designer.cs">
+      <DependentUpon>AlumnosR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F3\DocenteR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F3\DocenteR.Designer.cs">
+      <DependentUpon>DocenteR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F3\NGM.cs" />
+    <Compile Include="F3\ProdTraslado.cs" />
+    <Compile Include="F3\RecuperarAlumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F3\RecuperarAlumnos.Designer.cs">
+      <DependentUpon>RecuperarAlumnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F3\RecuperarProfesores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F3\RecuperarProfesores.Designer.cs">
+      <DependentUpon>RecuperarProfesores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F3\Rep1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F3\Rep1.Designer.cs">
+      <DependentUpon>Rep1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F3\repe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F3\repe.Designer.cs">
+      <DependentUpon>repe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F3\RPro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F3\RPro.Designer.cs">
+      <DependentUpon>RPro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -239,6 +284,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="F2\Eliminar.resx">
       <DependentUpon>Eliminar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F3\AlumnosR.resx">
+      <DependentUpon>AlumnosR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F3\DocenteR.resx">
+      <DependentUpon>DocenteR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F3\RecuperarAlumnos.resx">
+      <DependentUpon>RecuperarAlumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F3\RecuperarProfesores.resx">
+      <DependentUpon>RecuperarProfesores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F3\Rep1.resx">
+      <DependentUpon>Rep1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F3\repe.resx">
+      <DependentUpon>repe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F3\RPro.resx">
+      <DependentUpon>RPro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

@@ -12,10 +12,14 @@
   </compatibleFrameworks>
   <dependency>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <dependentAssembly dependencyType="install" codebase="Cuadro de notas.exe.manifest" size="5672">
 =======
     <dependentAssembly dependencyType="install" codebase="Cuadro de notas.exe.manifest" size="5742">
 >>>>>>> Primer commit nuevo proyecto
+=======
+    <dependentAssembly dependencyType="install" codebase="Cuadro de notas.exe.manifest" size="5743">
+>>>>>>> PrimerCambio
       <assemblyIdentity name="Cuadro de notas.exe" version="1.0.0.3" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
@@ -23,10 +27,14 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
 <<<<<<< HEAD
+<<<<<<< HEAD
         <dsig:DigestValue>iV4zCRCK11dM+/i0vpLR/06WHXjWxb23n/kwTPO0K58=</dsig:DigestValue>
 =======
         <dsig:DigestValue>TJueZxwA3cQH0BfZzxkQrTPN3utzZmMMXP8VeX6aFeI=</dsig:DigestValue>
 >>>>>>> Primer commit nuevo proyecto
+=======
+        <dsig:DigestValue>A80yNQErZIC/iZ3nzoWl5xKooHFQfavWkVIRHhL/dLo=</dsig:DigestValue>
+>>>>>>> PrimerCambio
       </hash>
     </dependentAssembly>
   </dependency>
