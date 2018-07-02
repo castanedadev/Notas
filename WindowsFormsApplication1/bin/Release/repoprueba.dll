@@ -122,13 +122,15 @@ IdActividad int identity(1,1),
 Actividad varchar(100),
 Materia int,
 Grado int,
+Seccion int,
 Trimestre int,
 Periodo int,
 Ponderacion decimal(18,2),
 CONSTRAINT pk_IdA10 PRIMARY KEY (IdActividad),
 CONSTRAINT fk_M10 FOREIGN KEY (Materia) REFERENCES MATERIA(IdMateria),
 CONSTRAINT fk_G10 FOREIGN KEY (Grado) REFERENCES Grado(IdGrado),
-CONSTRAINT fk_T10 FOREIGN KEY (Trimestre) REFERENCES TRIMESTRE(IdTrimestre)
+CONSTRAINT fk_T10 FOREIGN KEY (Trimestre) REFERENCES TRIMESTRE(IdTrimestre),
+CONSTRAINT fk_S10A FOREIGN KEY (Seccion) REFERENCES SECCION(IdSeccion)
 );
 CREATE TABLE REGISTRO
 (

@@ -82,12 +82,13 @@ CREATE PROCEDURE [dbo].[IngresarActividades]
 @Actividad varchar(100),
 @Materia int,
 @Grado int,
+@Seccion int,
 @Trimestre int,
 @Periodo int,
 @Ponderacion decimal(18,2)
 as
 begin
-INSERT INTO ACTIVIDADES VALUES(@Actividad,@Materia,@Grado,@Trimestre,@Periodo,@Ponderacion)
+INSERT INTO ACTIVIDADES VALUES(@Actividad,@Materia,@Grado,@Seccion,@Trimestre,@Periodo,@Ponderacion)
 end
 CREATE PROCEDURE [dbo].[IngresarPorcentaje]
 @Alumno varchar(15),

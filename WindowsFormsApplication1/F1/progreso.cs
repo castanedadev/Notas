@@ -122,25 +122,25 @@ namespace WindowsFormsApplication1.F1
         private void timer1_Tick(object sender, EventArgs e)
         {
             timer1.Enabled = false;
-            //switch (cont)
-            //{
-            //    case 0:
-            //        timer1.Enabled = true;
-            //        cont = 1;
-            //        break;
-            //    case 1:
-            //        Transition2.ShowSync(panel1);
-            //        Procesos(0);
-            //        timer1.Enabled = true;
-            //        cont = 2;
-            //        break;
-            //    case 2:
-            //        Procesos(1);
-            //        timer1.Enabled = false;
-            //        timer1.Stop();
-            cont = 3;
-            //        break;
-            //}
+            switch (cont)
+            {
+                case 0:
+                    timer1.Enabled = true;
+                    cont = 1;
+                    break;
+                case 1:
+                    Transition2.ShowSync(panel1);
+                    Procesos(0);
+                    timer1.Enabled = true;
+                    cont = 2;
+                    break;
+                case 2:
+                    Procesos(1);
+                    timer1.Enabled = false;
+                    timer1.Stop();
+                    cont = 3;
+                    break;
+            }
             if (cont == 3)
             {
                 timer1.Enabled = false;

@@ -82,6 +82,7 @@
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <dsig:DigestValue>czwuFVEGDqgipQxHAv95nhfLD1xllPnxUYEaypwW2Hw=</dsig:DigestValue>
 =======
         <dsig:DigestValue>3DNlp68vtbLgsp/WbuIGUhJsobhmkARUcO2zdT9A1NM=</dsig:DigestValue>
@@ -89,6 +90,9 @@
 =======
         <dsig:DigestValue>ih/pAwZsriUQHbq8lCNCf1PzZirxs1svEPrJ6WH9fhI=</dsig:DigestValue>
 >>>>>>> PrimerCambio
+=======
+        <dsig:DigestValue>nkXVpeXBTelkPQfg5owmehbUJOBz27C90rSGVeFb4mI=</dsig:DigestValue>
+>>>>>>> Cambio2
       </hash>
     </dependentAssembly>
   </dependency>
