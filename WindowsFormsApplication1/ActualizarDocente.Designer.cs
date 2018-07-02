@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApplication1
+namespace WindowsFormsApplication1
 {
     partial class ActualizarDocente
     {
@@ -360,4 +360,5 @@
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.Label label5;
     }
+
 }

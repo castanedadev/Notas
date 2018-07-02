@@ -143,6 +143,7 @@
             // txtNIE
             // 
             this.txtNIE.Location = new System.Drawing.Point(156, 93);
+
             this.txtNIE.MaxLength = 10;
             this.txtNIE.Name = "txtNIE";
             this.txtNIE.Size = new System.Drawing.Size(100, 20);

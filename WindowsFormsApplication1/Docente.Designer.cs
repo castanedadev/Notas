@@ -93,6 +93,7 @@
             this.label24 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
+
             this.txtContraseña2 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.txtUsuB = new System.Windows.Forms.TextBox();
@@ -106,6 +107,7 @@
             this.txtUser = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.chEstado = new System.Windows.Forms.CheckBox();
+
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV2)).BeginInit();
@@ -605,6 +607,7 @@
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(832, 141);
+
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(124, 35);
             this.button3.TabIndex = 68;
@@ -615,6 +618,7 @@
             // txtIDBorrar
             // 
             this.txtIDBorrar.Location = new System.Drawing.Point(892, 57);
+
             this.txtIDBorrar.Name = "txtIDBorrar";
             this.txtIDBorrar.Size = new System.Drawing.Size(100, 20);
             this.txtIDBorrar.TabIndex = 66;
@@ -623,6 +627,7 @@
             // 
             this.uu.AutoSize = true;
             this.uu.Location = new System.Drawing.Point(829, 64);
+
             this.uu.Name = "uu";
             this.uu.Size = new System.Drawing.Size(43, 13);
             this.uu.TabIndex = 73;
@@ -724,6 +729,7 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+
             // txtContraseña2
             // 
             this.txtContraseña2.Location = new System.Drawing.Point(139, 214);
@@ -759,6 +765,7 @@
             // txtContrarBorrar
             // 
             this.txtContrarBorrar.Location = new System.Drawing.Point(892, 86);
+
             this.txtContrarBorrar.Name = "txtContrarBorrar";
             this.txtContrarBorrar.Size = new System.Drawing.Size(100, 20);
             this.txtContrarBorrar.TabIndex = 67;
@@ -767,6 +774,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Location = new System.Drawing.Point(811, 94);
+
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(61, 13);
             this.label20.TabIndex = 86;
@@ -838,6 +846,7 @@
             this.chEstado.UseVisualStyleBackColor = true;
             this.chEstado.CheckedChanged += new System.EventHandler(this.chEstado_CheckedChanged);
             // 
+
             // Docente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
