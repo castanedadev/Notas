@@ -60,7 +60,6 @@ namespace WindowsFormsApplication1
                 doc.Add(new Paragraph(chunk));
                 doc.Add(new Paragraph("                                     "));
                 doc.Add(new Paragraph("             COMPLEJO EDUCATIVO COLONIA TIERRA VIRGEN                        "));
-
                 doc.Add(new Paragraph("   "));
 
 

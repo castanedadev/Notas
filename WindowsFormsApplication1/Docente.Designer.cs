@@ -94,6 +94,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
 
+
             this.txtContraseña2 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.txtUsuB = new System.Windows.Forms.TextBox();
@@ -608,6 +609,7 @@
             // 
             this.button3.Location = new System.Drawing.Point(832, 141);
 
+
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(124, 35);
             this.button3.TabIndex = 68;
@@ -618,6 +620,7 @@
             // txtIDBorrar
             // 
             this.txtIDBorrar.Location = new System.Drawing.Point(892, 57);
+
 
             this.txtIDBorrar.Name = "txtIDBorrar";
             this.txtIDBorrar.Size = new System.Drawing.Size(100, 20);
@@ -862,6 +865,7 @@
             this.Controls.Add(this.label22);
             this.Controls.Add(this.txtContra);
             this.Controls.Add(this.label21);
+
             this.Controls.Add(this.button3);
             this.Controls.Add(this.txtIDBorrar);
             this.Controls.Add(this.uu);
@@ -966,6 +970,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox txtIDBorrar;
         private System.Windows.Forms.Label uu;
+
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox txtContra;
         private System.Windows.Forms.TextBox txtContraConfirmar;

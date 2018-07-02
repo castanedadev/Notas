@@ -163,6 +163,7 @@ as
 begin
 SELECT Porcentaje from PERIODO WHERE IdPeriodo=@Periodo
 end
+
 CREATE PROCEDURE getPonderacion
 @Grado varchar(50),
 
@@ -229,6 +230,7 @@ AS
 BEGIN
  SELECT * FROM SECCION WHERE Seccion=@Seccion
 END
+
 CREATE PROCEDURE IngresarActividades
 @Actividad varchar(100),
 
@@ -338,6 +340,7 @@ begin
 INSERT INTO PorcentajeMateria VALUES((SELECT NIE from ALUMNO WHERE Nombre=@Alumno),
 (SELECT IdMateria from MATERIA WHERE Materia=@Materia ),@Trimestre,@Periodo,@Porcentaje)
 end
+
 CREATE PROCEDURE IngresarRegistro
 @Alumno varchar(100),
 
@@ -631,6 +634,7 @@ Alumno=(SELECT NIE from ALUMNO WHERE Nombre=@Alumno) AND
 Materia=(SELECT IdMateria from MATERIA WHERE Materia=@Materia) AND
 Periodo=@Periodo AND Trimestre=@Trimestre
 end
+
 CREATE PROCEDURE UpdatePorstep1
 @Materia varchar(50),
 

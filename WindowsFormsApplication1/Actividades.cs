@@ -324,6 +324,7 @@ namespace WindowsFormsApplication1
             lbltotal.Text = Sumatoria().ToString();
             dgvactividades.Enabled = false;
             btnAgregar.Enabled = false;
+
             
         }
         private int validaractu(DataGridView dgv)

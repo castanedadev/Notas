@@ -14,16 +14,27 @@
       </applicationRequestMinimum>
       <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
         <!--
+<<<<<<< HEAD
           UAC Manifest Options
           If you want to change the Windows User Account Control level replace the 
           requestedExecutionLevel node with one of the following.
+=======
+          Opciones del manifiesto de Control de cuentas de usuario
+          Si desea cambiar el nivel de Control de cuentas de usuario de Windows, reemplace el 
+          nodo requestedExecutionLevel por alguno de los siguientes.
+>>>>>>> Primer commit nuevo proyecto
 
         <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
         <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
         <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
 
+<<<<<<< HEAD
          If you want to utilize File and Registry Virtualization for backward 
          compatibility then delete the requestedExecutionLevel node.
+=======
+         Si desea usar la virtualización de archivos y del Registro para la 
+         compatibilidad con versiones anteriores, elimine el nodo requestedExecutionLevel.
+>>>>>>> Primer commit nuevo proyecto
     -->
         <requestedExecutionLevel level="asInvoker" uiAccess="false" />
       </requestedPrivileges>
@@ -54,14 +65,22 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+<<<<<<< HEAD
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Cuadro de notas.exe" size="3410432">
+=======
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Cuadro de notas.exe" size="3394560">
+>>>>>>> Primer commit nuevo proyecto
       <assemblyIdentity name="Cuadro de notas" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< HEAD
         <dsig:DigestValue>j/Cg2wLS27SJ+RYVoQxjFbRilAIZXBVvJYmc3Zm+4bw=</dsig:DigestValue>
+=======
+        <dsig:DigestValue>z74rvMV0DrdzdrqtKElzrH3sDuePfXxjzYzUENDc+bk=</dsig:DigestValue>
+>>>>>>> Primer commit nuevo proyecto
       </hash>
     </dependentAssembly>
   </dependency>
