@@ -664,6 +664,7 @@ namespace WindowsFormsApplication1.F2
                             string Actividad = reader["Actividad"].ToString().Trim();
                             int Materia = int.Parse(reader["Materia"].ToString().Trim());
                             int Grado = int.Parse(reader["Grado"].ToString().Trim());
+                            int Seccion = int.Parse(reader["Seccion"].ToString().Trim());
                             int Trimestre = int.Parse(reader["Trimestre"].ToString().Trim());
                             int Periodo = int.Parse(reader["Periodo"].ToString().Trim());
                             double Ponderacion = double.Parse(reader["Ponderacion"].ToString().Trim());
@@ -673,6 +674,7 @@ namespace WindowsFormsApplication1.F2
                             command.Parameters.AddWithValue("@Actividad", Actividad);
                             command.Parameters.AddWithValue("@Materia", Materia);
                             command.Parameters.AddWithValue("@Grado", Grado);
+                            command.Parameters.AddWithValue("@Seccion", Seccion);
                             command.Parameters.AddWithValue("@Trimestre", Trimestre);
                             command.Parameters.AddWithValue("@Periodo", Periodo);
                             command.Parameters.AddWithValue("@Ponderacion", Ponderacion);

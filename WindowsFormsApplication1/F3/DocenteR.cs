@@ -74,9 +74,18 @@ namespace WindowsFormsApplication1.F3
 
         private void ChecBTutor_CheckedChanged(object sender, EventArgs e)
         {
-            GB_tutor.Visible = true;
-            ComBGrado.Enabled = true;
-            call.LlenarGrados(ComBGrado);
+            if (ChecBTutor.Checked == true)
+            {
+                GB_tutor.Visible = true;
+                ComBGrado.Enabled = true;
+                call.LlenarGrados(ComBGrado);
+            }
+            else
+            {
+                GB_tutor.Visible = false;
+            }
+
+
         }
 
         private void ComBGrado_SelectedIndexChanged(object sender, EventArgs e)
@@ -286,7 +295,8 @@ namespace WindowsFormsApplication1.F3
             {
                 maestro.Telefono = txtTelefono.Text;
                 maestro.Direccion = txtDireccion.Text;
-                
+                maestro.Grado = 1;
+                maestro.Seccion = 1;
                 maestro.Tutor = 0;
                 this.Close();
             
