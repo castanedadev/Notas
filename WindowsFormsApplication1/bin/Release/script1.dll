@@ -1,3 +1,66 @@
+CREATE PROCEDURE NGMRep
+
+@materia int,@grado int,@seccion 
+int
+
+as
+
+BEGIN
+
+SELECT     
+dbo.Maestros.Nombre, dbo.MATERIA.Materia, dbo.GRADO.Grado, dbo.SECCION.Seccion
+FROM            dbo.NGM INNER JOIN
+                         dbo.MATERIA ON dbo.NGM.Materia = dbo.MATERIA.IdMateria INNER JOIN
+                         dbo.GRADO ON dbo.NGM.Grado = dbo.GRADO.IdGrado INNER JOIN
+                         dbo.SECCION ON dbo.NGM.Seccion = dbo.SECCION.IdSeccion INNER JOIN
+                         dbo.Maestros ON dbo.NGM.Maestro = dbo.Maestros.IdMaestro
+						 WHERE Materia.IdMateria=@materia AND SECCION.IdSeccion=@seccion and Grado.IdGrado=@grado
+END
+CREATE PROCEDURE DocenteRetorno
+
+@tutor int,@idMaestro varchar(50), @Nombre varchar(100),
+@fecha varchar(100),@telefono varchar(10), 
+@direccion varchar(100),
+@Grado int,@seccion int,@estado varchar(1)
+
+as
+
+begin	 
+	
+	if @tutor=1
+	
+	BEGIN 
+		
+	insert into Maestros values(@idMaestro,@Nombre,@fecha,@telefono,@direccion,@tutor,
+@Grado,@seccion,
+@estado)
+
+	END
+	
+	if @tutor=0
+	
+	BEGIN 
+		
+	insert into Maestros(IdMaestro,Nombre,Fecha,Telefono,Direccion,Tutor,Estado) 
+		
+	values(@idMaestro,@Nombre,@fecha,@telefono,@direccion,@tutor,@estado)
+
+	END		
+
+end
+Create PROCEDURE [dbo].[NGMRetorno]
+
+@IdMaestro varchar(50), @Grado int, @Materia int,@seccion int,
+@estado int
+
+as 
+
+begin 
+	
+insert into NGM VALUES (@IdMaestro,@Grado,@Materia,@seccion,@estado)
+
+
+end
 CREATE PROCEDURE [dbo].[ALUMNOSPORSECCION]
 @Grado varchar(50),
 @Seccion char
@@ -724,15 +787,10 @@ BEGIN
 	DELETE REGISTRO
 	DELETE PorcentajeMateria
 	DELETE ACTIVIDADES
-	DELETE MateriaGrado
 	DELETE NGM
-	DELETE MATERIA
-	DELETE NivelGradoSeccion
 	DELETE ALUMNO
 	DELETE Maestros
-	DELETE SECCION WHERE IdSeccion!=1
-	DELETE GRADO WHERE IdGrado!=1
-end
+END
 CREATE PROCEDURE Preferencia
 @Usuario varchar(15)
 as
