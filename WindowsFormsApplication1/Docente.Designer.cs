@@ -721,10 +721,6 @@
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 631030c... Primer commit nuevo proyecto
             // txtContraseña2
             // 
             this.txtContraseña2.Location = new System.Drawing.Point(139, 214);
