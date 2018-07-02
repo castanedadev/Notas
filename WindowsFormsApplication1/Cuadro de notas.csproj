@@ -99,9 +99,12 @@
       <DependentUpon>ActualizarDocente.cs</DependentUpon>
     </Compile>
     <Compile Include="ClasePruebaBranch2.cs" />
+<<<<<<< HEAD
     <Compile Include="ClasePruebaBranch3.cs" />
     <Compile Include="ClasePruebaBranch1.cs" />
     <Compile Include="ClasePruebaBranch4.cs" />
+=======
+>>>>>>> 77261e5... Creando branch 2
     <Compile Include="Conexion.cs" />
     <Compile Include="ConexionK.cs" />
     <Compile Include="ConexionRepositorio.cs" />
