@@ -99,7 +99,6 @@ namespace WindowsFormsApplication1
                 doc.Add(new Paragraph("    "));
                 doc.Add(new Paragraph("          DOCENTE:"+pr.Nombrereportfinal(Usuario.usuario)+"                         FIRMA:________________________"));
                 doc.Add(new Paragraph("    "));
-                doc.Add(new Paragraph("    "));
                 doc.Add(new Paragraph("                                                                       PRIMER TRIMESTRE       |SEGUNDO TRIMESTRE      |TERCER TRIMESTRE         |"));
                 doc.Add(new Paragraph("   "));
                 GenerarDocumento(doc);
