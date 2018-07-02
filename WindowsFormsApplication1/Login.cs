@@ -20,8 +20,7 @@ namespace WindowsFormsApplication1
         Actividades ac = new Actividades();
         public Login()
         {
-            InitializeComponent();
-           
+            InitializeComponent();           
         }
 
         private void BtnIngresar_Click(object sender, EventArgs e)
@@ -52,11 +51,21 @@ namespace WindowsFormsApplication1
             {
                 if (sread["Usuario"].ToString() == TxtUser.Text && sread["Pass"].ToString() == TxtPass.Text)
                 {
-                    Menu m = new Menu();
-                    this.Hide();
-
                     Usuario.usuario = TxtUser.Text;
-                    m.ShowDialog();
+                    int valor = p.Preferencia(TxtUser.Text.Trim());
+
+                    if (valor == 1)
+                    {
+                        MenuDIC m = new MenuDIC();
+                        this.Hide();
+                        m.ShowDialog();
+                    }
+                    else
+                    {
+                        MenuDOC call = new MenuDOC();
+                        this.Hide();
+                        call.ShowDialog();
+                    }
                 }
             }
             else

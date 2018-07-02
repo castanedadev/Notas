@@ -186,6 +186,12 @@ namespace WindowsFormsApplication1
             DirectorGraficos dg = new DirectorGraficos();
             dg.Show();
         }
+
+        private void menuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MenuDIC call = new MenuDIC();
+            call.Show();
+        }
        
     }
 }

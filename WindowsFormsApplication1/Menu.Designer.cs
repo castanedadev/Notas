@@ -44,6 +44,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblusu = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,7 +55,8 @@
             this.actividadesToolStripMenuItem,
             this.cuadroFinalToolStripMenuItem,
             this.acercaDeToolStripMenuItem,
-            this.docenteToolStripMenuItem});
+            this.docenteToolStripMenuItem,
+            this.menuToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 24);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(570, 24);
@@ -181,6 +183,13 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // menuToolStripMenuItem
+            // 
+            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.menuToolStripMenuItem.Text = "menu";
+            this.menuToolStripMenuItem.Click += new System.EventHandler(this.menuToolStripMenuItem_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -225,5 +234,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblusu;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
     }
 }

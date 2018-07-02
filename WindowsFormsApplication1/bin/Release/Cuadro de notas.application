@@ -7,15 +7,19 @@
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Cuadro de notas.exe.manifest" size="5672">
+    <dependentAssembly dependencyType="install" codebase="Cuadro de notas.exe.manifest" size="5744">
       <assemblyIdentity name="Cuadro de notas.exe" version="1.0.0.3" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< HEAD
         <dsig:DigestValue>/MTAgZAUppOjilPd/awzpGlGPanRS/wSnM/En4Q599s=</dsig:DigestValue>
 
+=======
+        <dsig:DigestValue>TQWv8akrQXX4hWkvQ+FHtc00EPzTKBZkMVKFKeed3WI=</dsig:DigestValue>
+>>>>>>> 385e8a3... V5.1
       </hash>
     </dependentAssembly>
   </dependency>
