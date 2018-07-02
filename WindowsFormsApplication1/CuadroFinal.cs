@@ -69,7 +69,7 @@ namespace WindowsFormsApplication1
         private void toPDF()
         {
             string aux = Application.StartupPath;
-            aux += "\\Logo.jpg";
+            aux += "\\Logo.jpeg";
             iTextSharp.text.Image imagen= iTextSharp.text.Image.GetInstance(aux);
             Document doc = new Document(PageSize.A4.Rotate(), 10, 10, 10, 10);
             SaveFileDialog savefiledialog1 = new SaveFileDialog();
