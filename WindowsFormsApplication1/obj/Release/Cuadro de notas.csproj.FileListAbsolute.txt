@@ -231,3 +231,7 @@ C:\Users\TOSHIBA\Desktop\proyect\proyect\WindowsFormsApplication1\obj\Release\Cu
 C:\Users\TOSHIBA\Desktop\proyect\proyect\WindowsFormsApplication1\obj\Release\Cuadro de notas.application
 C:\Users\TOSHIBA\Desktop\proyect\proyect\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.Graficos.resources
 C:\Users\TOSHIBA\Desktop\proyect\proyect\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.DirectorGraficos.resources
+C:\Users\TOSHIBA\Desktop\Notas\WindowsFormsApplication1\bin\Release\Cuadro de notas.exe.config
+C:\Users\TOSHIBA\Desktop\Notas\WindowsFormsApplication1\obj\Release\Cuadro de notas.csproj.ResolveComReference.cache
+C:\Users\TOSHIBA\Desktop\Notas\WindowsFormsApplication1\obj\Release\Cuadro de notas.exe
+C:\Users\TOSHIBA\Desktop\Notas\WindowsFormsApplication1\obj\Release\Cuadro de notas.pdb
