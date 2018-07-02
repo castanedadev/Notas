@@ -138,7 +138,7 @@ namespace WindowsFormsApplication1.F1
             //        Procesos(1);
             //        timer1.Enabled = false;
             //        timer1.Stop();
-            cont = 3;
+                   cont = 3;
             //        break;
             //}
             if (cont == 3)

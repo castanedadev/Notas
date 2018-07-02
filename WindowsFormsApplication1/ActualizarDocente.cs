@@ -121,6 +121,7 @@ namespace WindowsFormsApplication1
         {
             mostrarDatos(LBDocentes.SelectedItem.ToString());
             btnUpdate.Enabled = true;
+            btnEliminar.Enabled = true;
             MessageBox.Show("Datos del docente cargados\nExitosamente....", "DATOS DEL DOCENTE", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -322,6 +323,7 @@ namespace WindowsFormsApplication1
             {
                 Limpiar();
                 btnUpdate.Enabled = false;
+                btnEliminar.Enabled = true;
             }
         }
 
@@ -719,6 +721,41 @@ namespace WindowsFormsApplication1
                 else return false;
             }
             else return false;
+        }
+        ////////////////////////////////////////////////////////////
+        ////////////////////////////// ELIMINAR DOCENTE
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Está seguro de eliminar a este Docente?", "ELIMNAR DOCENTE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                conectar = Conexion.Cnn();
+                String consulta1 = "Delete from Usuarios where Usuario = '" + ID + "'";
+                cmd = new SqlCommand(consulta1, conectar);
+                cmd.ExecuteNonQuery();
+                conectar.Close();
+
+                conectar = Conexion.Cnn();
+                String consulta = "DeletedNGM";
+                cmd = new SqlCommand(consulta, conectar);
+                cmd.Parameters.AddWithValue("@idMaestro", ID);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.ExecuteNonQuery();
+                conectar.Close();
+
+                conectar = Conexion.Cnn();
+                String consulta2 = "DeletedDocente";
+                cmd = new SqlCommand(consulta2, conectar);
+                cmd.Parameters.AddWithValue("@idMaestro", ID);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.ExecuteNonQuery();
+                conectar.Close();
+                MessageBox.Show("El Docente... \n\nHa sido Eliminado", "Docente Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            LBDocentes.Items.Clear();
+            llenado();
+            orden();
+            Limpiar();
         }
 
         //////////////////////////////
