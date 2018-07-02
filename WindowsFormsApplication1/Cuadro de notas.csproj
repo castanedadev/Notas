@@ -99,6 +99,7 @@
       <DependentUpon>ActualizarDocente.cs</DependentUpon>
     </Compile>
     <Compile Include="ClasePruebaBranch2.cs" />
+    <Compile Include="ClasePruebaBranch3.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="ConexionK.cs" />
     <Compile Include="ConexionRepositorio.cs" />
