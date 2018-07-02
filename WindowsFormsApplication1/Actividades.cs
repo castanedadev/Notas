@@ -322,7 +322,8 @@ namespace WindowsFormsApplication1
             txtnp.Text = ponderaa;
             dgvactividades.Rows.RemoveAt(dgvactividades.CurrentRow.Index);
             lbltotal.Text = Sumatoria().ToString();
-
+            dgvactividades.Enabled = false;
+            btnAgregar.Enabled = false;
             
         }
         private int validaractu(DataGridView dgv)
@@ -477,7 +478,8 @@ namespace WindowsFormsApplication1
 
 
                     MessageBox.Show("Datos actualizados", "MENSAJE", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
+                    dgvactividades.Enabled = true;
+                    btnAgregar.Enabled = true;
             }
             
 
