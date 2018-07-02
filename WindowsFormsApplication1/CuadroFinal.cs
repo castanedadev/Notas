@@ -145,6 +145,7 @@ namespace WindowsFormsApplication1
             document.Add(datatable);
         }
 
+
         public class PDFFooter : PdfPageEventHelper
         {
             public override void OnEndPage(PdfWriter writer, Document document)
@@ -192,9 +193,14 @@ namespace WindowsFormsApplication1
         }
 
         private void cbSeccion_SelectedIndexChanged(object sender, EventArgs e)
+<<<<<<< HEAD
         {               
 
 
+=======
+        {            
+            Activar();
+>>>>>>> 5ca897b... Primer commit nuevo proyecto
             pr.Limpiarcb(cbMateria);
             if (pr.Preferencia(Usuario.usuario) == 1)
             {
@@ -204,8 +210,11 @@ namespace WindowsFormsApplication1
             {
                 pr.materiacusto(Usuario.usuario, cbGrado, cbSeccion, cbMateria);
             }
+<<<<<<< HEAD
             Activar();
 
+=======
+>>>>>>> 5ca897b... Primer commit nuevo proyecto
         }
 
         private void cbMateria_SelectedIndexChanged(object sender, EventArgs e)

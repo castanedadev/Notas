@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1.F2
 {
-    partial class Eliminar
+    partial class EliminarWind
     {
         /// <summary>
         /// Required designer variable.

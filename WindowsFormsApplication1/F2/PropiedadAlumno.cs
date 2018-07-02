@@ -73,16 +73,6 @@ namespace WindowsFormsApplication1.F2
         }
 
 
-      
-
-
-
-
-
-
-
-
-
 
     }
 

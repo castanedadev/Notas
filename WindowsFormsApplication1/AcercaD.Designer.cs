@@ -221,6 +221,7 @@
         private Bunifu.Framework.UI.BunifuCustomLabel LblMateria;
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
+
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
         private System.Windows.Forms.Label label1;
 

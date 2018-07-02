@@ -609,7 +609,6 @@
             // 
             this.button3.Location = new System.Drawing.Point(832, 141);
 
-
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(124, 35);
             this.button3.TabIndex = 68;
@@ -620,6 +619,7 @@
             // txtIDBorrar
             // 
             this.txtIDBorrar.Location = new System.Drawing.Point(892, 57);
+
 
 
             this.txtIDBorrar.Name = "txtIDBorrar";
@@ -636,7 +636,6 @@
             this.uu.TabIndex = 73;
             this.uu.Text = "Usuario";
             // 
-
             // label21
             // 
             this.label21.AutoSize = true;
@@ -723,7 +722,6 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-
             // txtContraseña2
             // 
             this.txtContraseña2.Location = new System.Drawing.Point(139, 214);
@@ -767,6 +765,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
+
             this.label20.Location = new System.Drawing.Point(811, 94);
 
             this.label20.Name = "label20";

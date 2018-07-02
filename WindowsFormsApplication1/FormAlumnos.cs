@@ -513,8 +513,6 @@ namespace WindowsFormsApplication1
 
                 MessageBox.Show("Error" + ex);
             }
-
-
         }
 
         private void cbSelec_TextChanged(object sender, EventArgs e)

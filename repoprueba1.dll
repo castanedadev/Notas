@@ -4,6 +4,7 @@ AS
 BEGIN
  INSERT INTO ANO VALUES (@ano)
 END
+
 CREATE PROCEDURE ComprobarIdMaestro
 @idMaestro varchar(50)
 as
@@ -28,6 +29,7 @@ CREATE PROCEDURE IngresarMaestroAno
 @IdMaestro varchar(50),
 @Telefono varchar(8),
 @Direccion varchar(100),
+
 @IdAno int,
 @Grado int,
 @Seccion int,
@@ -35,6 +37,7 @@ CREATE PROCEDURE IngresarMaestroAno
 as
 BEGIN
 	INSERT INTO MaestroAno VALUES (@IdMaestro,@Telefono,@Direccion,@Grado,@Seccion,@IdAno,@Estado)
+
 END
 CREATE PROCEDURE ComprobarNIE
 @NIE varchar(15)
@@ -70,6 +73,7 @@ as
 begin
 	INSERT INTO AlumnoAno VALUES (@NIE,@Telefono,@Direccion,@Responsable,@Grado,@Seccion,@Estado,@ano)
 end
+
 CREATE PROCEDURE [dbo].[IngresarNGM]
 @IdMaestro varchar(50), @Grado int , @Materia int,@seccion int,
 @estado int,@ano int
@@ -78,6 +82,7 @@ begin
 	insert into NGM  values((SELECT IdMaestroAno FROM MaestroAno WHERE MaestroAno.Ano=@ano  AND Maestro=@IdMaestro)
 ,@Grado,@Materia,@seccion,@estado)
 end
+
 CREATE PROCEDURE [dbo].[IngresarActividades]
 @Actividad varchar(100),
 @Materia int,
@@ -89,6 +94,7 @@ CREATE PROCEDURE [dbo].[IngresarActividades]
 as
 begin
 INSERT INTO ACTIVIDADES VALUES(@Actividad,@Materia,@Grado,@Seccion,@Trimestre,@Periodo,@Ponderacion)
+
 end
 CREATE PROCEDURE [dbo].[IngresarPorcentaje]
 @Alumno varchar(15),

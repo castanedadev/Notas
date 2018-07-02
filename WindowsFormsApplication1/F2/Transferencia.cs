@@ -17,12 +17,10 @@ namespace WindowsFormsApplication1.F2
         SqlConnection conRepositorio;
         SqlCommand cmm;
         SqlDataReader reader;
-
         public Transferencia()
         {
             conOrignal = ConexionK.Cnn();
             conRepositorio = ConexionRepositorio.Cnn();
-
 
         }
 
@@ -41,6 +39,7 @@ namespace WindowsFormsApplication1.F2
                     while (reader.Read())
                     {
                         if ((reader["IdDirector"].ToString().Trim()) == id)
+
                         {
 
                             auxiliar1 = 1;
@@ -53,6 +52,7 @@ namespace WindowsFormsApplication1.F2
                         }
 
                     }
+
 
 
 
@@ -72,6 +72,7 @@ namespace WindowsFormsApplication1.F2
             {
 
                 MessageBox.Show("Error comprobando perfil \n\n" + ex.ToString());
+
 
                 conOrignal.Close();
 
@@ -166,22 +167,19 @@ namespace WindowsFormsApplication1.F2
 
 
 
+
         }
 
 
 
         public void CrearIdAño(string año)
         {
-
-
-
             try
             {
                 conRepositorio.Open();
                 string cdn = "INSERT INTO ANO VALUES ('" + año + "')";
                 cmm = new SqlCommand(cdn, conRepositorio);
                 cmm.ExecuteNonQuery();
-
                 cdn = "SELECT IdAno FROM ANO WHERE Ano='" + año + "'";
                 SqlCommand n = new SqlCommand(cdn, conRepositorio);
 
@@ -198,7 +196,6 @@ namespace WindowsFormsApplication1.F2
 
                 conRepositorio.Close();
 
-
             }
             catch
             {
@@ -210,7 +207,6 @@ namespace WindowsFormsApplication1.F2
 
         public void RealizarTransFerencias()
         {
-
             TransferirDocentes();
             TransferirAlumnos();
             TransferirNGM();
@@ -222,7 +218,6 @@ namespace WindowsFormsApplication1.F2
 
 
         }
-
 
         //internal void Transferir1Parametro(string tabla,string campo, string procedimiento, string parametro,string campoID)
         //{
@@ -284,6 +279,7 @@ namespace WindowsFormsApplication1.F2
         //}
 
 
+
         internal int ComprobarExistencia1Parametro(string procedimiento, string parametro, int tipodedato)
         {
             int auxiliar = 0;
@@ -293,6 +289,7 @@ namespace WindowsFormsApplication1.F2
                 //si es tipo cadena
                 if (tipodedato == 0)
                     cadena += "exec @retorno= " + procedimiento + " '" + parametro + "';";
+
                 //si es tipo entero
                 if (tipodedato == 1)
                     cadena += "exec @retorno= " + procedimiento + " " + parametro + ";";
@@ -310,7 +307,6 @@ namespace WindowsFormsApplication1.F2
 
                     }
                 }
-
 
 
                 conRepositorio.Close();
@@ -356,6 +352,7 @@ namespace WindowsFormsApplication1.F2
                 Ingresar.Parameters.AddWithValue("@fecha", p.Fecha);
                 Ingresar.Parameters.AddWithValue("@Nombre", p.Nombre);
 
+
                 try
                 {
                     conRepositorio.Open();
@@ -368,12 +365,12 @@ namespace WindowsFormsApplication1.F2
                     conRepositorio.Close();
                 }
 
-
                 SqlCommand enviarM = new SqlCommand("IngresarMaestroAno", conRepositorio);
                 enviarM.CommandType = CommandType.StoredProcedure;
                 enviarM.Parameters.AddWithValue("@IdMaestro", p.IdMaestro);
                 enviarM.Parameters.AddWithValue("@Telefono", p.Telefono);
                 enviarM.Parameters.AddWithValue("@Direccion", p.Direccion);
+
                 if (p.Tutor == 1)
                 {
                     enviarM.Parameters.AddWithValue("@Grado", p.Grado);
@@ -389,12 +386,14 @@ namespace WindowsFormsApplication1.F2
                 }
 
 
+
                 enviarM.Parameters.AddWithValue("@IdAno", IdAño);
                 enviarM.Parameters.AddWithValue("@Estado", p.Estado);
                 try
                 {
                     conRepositorio.Open();
                     enviarM.ExecuteNonQuery();
+
                     conRepositorio.Close();
 
                 }
@@ -436,6 +435,7 @@ namespace WindowsFormsApplication1.F2
                 enviarM.Parameters.AddWithValue("@Telefono", p.Telefono);
                 enviarM.Parameters.AddWithValue("@Direccion", p.Direccion);
 
+
                 if (p.Tutor == 1)
                 {
                     enviarM.Parameters.AddWithValue("@Grado", p.Grado);
@@ -468,7 +468,6 @@ namespace WindowsFormsApplication1.F2
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
-
             }
         }
 
@@ -488,6 +487,7 @@ namespace WindowsFormsApplication1.F2
                 {
                     conRepositorio.Open();
                     cmm.ExecuteNonQuery();
+
                     conRepositorio.Close();
 
                 }
@@ -555,8 +555,6 @@ namespace WindowsFormsApplication1.F2
 
 
             }
-
-
         }
 
         internal void TransferirAlumnos()
@@ -608,12 +606,14 @@ namespace WindowsFormsApplication1.F2
                             SqlCommand command = new SqlCommand("IngresarNGM", conRepositorio);
                             command.CommandType = CommandType.StoredProcedure;
                             command.Parameters.AddWithValue("@IdMaestro", IdMaestro);
+
                             command.Parameters.AddWithValue("@Grado", Grado);
                             command.Parameters.AddWithValue("@Materia", Materia);
                             command.Parameters.AddWithValue("@seccion", Seccion);
                             command.Parameters.AddWithValue("@estado", Estado);
                             command.Parameters.AddWithValue("@ano", IdAño);
                             command.ExecuteNonQuery();
+
                             conRepositorio.Close();
                         }
                         catch (Exception ex)
@@ -635,7 +635,6 @@ namespace WindowsFormsApplication1.F2
                 conOrignal.Close();
 
             }
-
         }
 
 
@@ -666,16 +665,19 @@ namespace WindowsFormsApplication1.F2
                             int Periodo = int.Parse(reader["Periodo"].ToString().Trim());
                             double Ponderacion = double.Parse(reader["Ponderacion"].ToString().Trim());
 
+
                             SqlCommand command = new SqlCommand("IngresarActividades", conRepositorio);
                             command.CommandType = CommandType.StoredProcedure;
                             command.Parameters.AddWithValue("@Actividad", Actividad);
                             command.Parameters.AddWithValue("@Materia", Materia);
                             command.Parameters.AddWithValue("@Grado", Grado);
                             command.Parameters.AddWithValue("@Seccion", Seccion);
+
                             command.Parameters.AddWithValue("@Trimestre", Trimestre);
                             command.Parameters.AddWithValue("@Periodo", Periodo);
                             command.Parameters.AddWithValue("@Ponderacion", Ponderacion);
                             command.ExecuteNonQuery();
+
                             conRepositorio.Close();
                         }
                         catch (Exception ex)
@@ -734,6 +736,7 @@ namespace WindowsFormsApplication1.F2
                             command.Parameters.AddWithValue("@Porcentaje", Porcentaje);
                             command.Parameters.AddWithValue("@ano", IdAño);
                             command.ExecuteNonQuery();
+
                             conRepositorio.Close();
                         }
                         catch (Exception ex)
@@ -941,13 +944,5 @@ namespace WindowsFormsApplication1.F2
 
 
         }
-
-
-
-
-
-
-
-
     }
 }

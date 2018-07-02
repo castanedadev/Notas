@@ -360,5 +360,4 @@ namespace WindowsFormsApplication1
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.Label label5;
     }
-
 }

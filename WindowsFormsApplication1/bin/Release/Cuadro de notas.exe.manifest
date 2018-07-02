@@ -54,22 +54,16 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-<<<<<<< HEAD
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Cuadro de notas.exe" size="3410432">
-=======
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Cuadro de notas.exe" size="3409408">
->>>>>>> Primer commit nuevo proyecto
+
       <assemblyIdentity name="Cuadro de notas" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-<<<<<<< HEAD
-        <dsig:DigestValue>j/Cg2wLS27SJ+RYVoQxjFbRilAIZXBVvJYmc3Zm+4bw=</dsig:DigestValue>
-=======
         <dsig:DigestValue>vWieWRtHxq5sjn9jHbdX3rgRHm50XSV/k0+Tj+GccNs=</dsig:DigestValue>
->>>>>>> Primer commit nuevo proyecto
+
       </hash>
     </dependentAssembly>
   </dependency>

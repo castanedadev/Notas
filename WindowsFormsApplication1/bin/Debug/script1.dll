@@ -403,7 +403,6 @@ begin
 INSERT INTO PorcentajeMateria VALUES((SELECT NIE from ALUMNO WHERE Nombre=@Alumno),
 (SELECT IdMateria from MATERIA WHERE Materia=@Materia ),@Trimestre,@Periodo,@Porcentaje)
 end
-
 CREATE PROCEDURE IngresarRegistro
 @Alumno varchar(100),
 
@@ -473,6 +472,7 @@ Trimestre=@Trimestre AND Periodo=@Periodo
 AND 
 Actividad=@nombre AND Seccion=(SELECT IdSeccion from SECCION WHERE Seccion=@Seccion)
 
+
 end
 CREATE PROCEDURE [dbo].[Nombreusu]
 @id varchar(50)
@@ -535,6 +535,7 @@ Trimestre=@Trimestre
 AND ACTIVIDADES.Materia=(SELECT IdMateria from MATERIA WHERE Materia=@Materia))
  AND 
 ACTIVIDADES.Seccion=(SELECT IdSeccion FROM SECCION WHERE Seccion=@Seccion))
+
 
 end
 CREATE PROCEDURE [dbo].[selecinfo_alumnos]
