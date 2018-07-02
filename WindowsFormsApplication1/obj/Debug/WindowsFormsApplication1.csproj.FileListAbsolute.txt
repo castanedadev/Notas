@@ -1,0 +1,15 @@
+C:\Users\TOSHIBA\Desktop\Practica3\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\TOSHIBA\Desktop\Practica3\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Notas.mdf
+C:\Users\TOSHIBA\Desktop\Practica3\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Notas_log.ldf
+C:\Users\TOSHIBA\Desktop\Practica3\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\TOSHIBA\Desktop\Practica3\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\TOSHIBA\Desktop\Practica3\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+C:\Users\TOSHIBA\Desktop\Practica3\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\TOSHIBA\Desktop\Practica3\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\TOSHIBA\Desktop\Practica3\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+C:\Users\TOSHIBA\Desktop\Practica3\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\TOSHIBA\Desktop\Practica3\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\TOSHIBA\Desktop\Practica3\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.manifest
+C:\Users\TOSHIBA\Desktop\Practica3\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.application
+C:\Users\TOSHIBA\Desktop\Practica3\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe.manifest
+C:\Users\TOSHIBA\Desktop\Practica3\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.application

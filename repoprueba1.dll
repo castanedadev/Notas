@@ -1,0 +1,149 @@
+CREATE Procedure IngresarAno
+@ano varchar(4)
+AS
+BEGIN
+ INSERT INTO ANO VALUES (@ano)
+END
+CREATE PROCEDURE [dbo].[IngresarGrado]
+@Grado varchar(50)
+as
+begin
+INSERT INTO GRADO VALUES(@Grado)
+end
+CREATE PROCEDURE [dbo].[IngresarSeccion]
+@Seccion char
+as
+begin
+INSERT INTO SECCION VALUES(@Seccion)
+end
+CREATE PROCEDURE ComprobarIdMaestro
+@idMaestro varchar(50)
+as
+begin	
+	if @idMaestro=some (SELECT IdMaestro FROM Maestros)
+	BEGIN 
+		return 0
+	END
+	ELSE 
+	BEGIN
+		return 1		
+	END
+end
+CREATE PROCEDURE [dbo].[IngresarDocente]
+@idMaestro varchar(50), @Nombre varchar(100),
+@fecha varchar(100),@telefono varchar(10), @direccion varchar(100) 
+as
+begin
+	INSERT INTO Maestros VALUES (@idMaestro,@Nombre,@fecha,@telefono,@direccion)	
+end
+CREATE PROCEDURE IngresarMaestroAno
+@IdMaestro varchar(50),
+@IdAno int,
+@Grado int,
+@Seccion int,
+@Estado int
+as
+BEGIN
+	INSERT INTO MaestroAno VALUES (@IdMaestro,@Grado,@Seccion,@IdAno,@Estado)
+END
+CREATE PROCEDURE ComprobarNIE
+@NIE varchar(15)
+as
+BEGIN
+	if @NIE=some (SELECT NIE FROM ALUMNO)
+	BEGIN
+		return 0
+	END
+	else
+	BEGIN
+		return 1
+	END
+END
+CREATE PROCEDURE [dbo].[IngresarAlumno]
+ @NIE varchar(15),
+ @Nombre varchar(100),   
+ @Fecha_Nac varchar(100)
+AS   
+BEGIN
+ INSERT INTO ALUMNO VALUES(@NIE,@Nombre,@Fecha_Nac)
+END
+CREATE PROCEDURE IngresarAlumnoAno
+@NIE varchar(15),
+@Telefono    VARCHAR (9)   ,
+@Direccion   VARCHAR (250) ,
+@Responsable VARCHAR (100) ,
+@Grado int,
+@Seccion int,
+@Estado int,
+@ano int
+as
+begin
+	INSERT INTO AlumnoAno VALUES (@NIE,@Telefono,@Direccion,@Responsable,@Grado,@Seccion,@Estado,@ano)
+end
+CREATE PROCEDURE [dbo].[IngresarNGS]
+@Grado int,
+@Seccion int
+as
+begin
+INSERT INTO NiVelGradoSeccion VALUES(@Grado,@Seccion)
+end
+CREATE PROCEDURE [dbo].[IngresarMateria]
+@Materia varchar(50)
+as
+begin
+INSERT INTO MATERIA VALUES(@Materia)
+end
+CREATE PROCEDURE [dbo].[IngresarNGM]
+@IdMaestro varchar(50), @Grado int , @Materia int,@seccion int,
+@estado int,@ano int
+as 
+begin 
+	insert into NGM  values((SELECT IdMaestroAno FROM MaestroAno WHERE MaestroAno.Ano=@ano  AND Maestro=@IdMaestro)
+,@Grado,@Materia,@seccion,@estado)
+end
+CREATE PROCEDURE [dbo].[IngresarGradoMateria]
+@Grado int,
+@Materia int
+as
+begin
+INSERT INTO MateriaGrado VALUES(@Grado,@Materia)
+end
+CREATE PROCEDURE [dbo].[IngresarActividades]
+@Actividad varchar(100),
+@Materia int,
+@Grado int,
+@Trimestre int,
+@Periodo int,
+@Ponderacion decimal(18,2)
+as
+begin
+INSERT INTO ACTIVIDADES VALUES(@Actividad,@Materia,@Grado,@Trimestre,@Periodo,@Ponderacion)
+end
+CREATE PROCEDURE [dbo].[IngresarPorcentaje]
+@Alumno varchar(15),
+@Materia varchar(50),
+@Trimestre int,
+@Periodo int,
+@Porcentaje decimal(18,2),
+@ano int
+as
+begin
+INSERT INTO PorcentajeMateria VALUES((SELECT IdAlumnoAno from AlumnoANo WHERE AlumnoAno.Alumno=@Alumno AND AlumnoAno.Ano=@ano),
+@Materia,@Trimestre,@Periodo,@Porcentaje)
+end
+CREATE PROCEDURE [dbo].[IngresarRegistro]
+@Alumno varchar(15),
+@Materia int,
+@Actividad int,
+@Grado int,
+@Seccion int,
+@Trimestre int,
+@Periodo int,
+@Calificacion decimal(18,2),
+@ano int
+as
+begin
+INSERT INTO REGISTRO VALUES((SELECT IdAlumnoAno from AlumnoANo WHERE AlumnoAno.Alumno=@Alumno AND AlumnoAno.Ano=@ano)
+,@Materia,@Actividad,@Grado,@Seccion,@Trimestre,@Periodo,@Calificacion)
+end
+FIN

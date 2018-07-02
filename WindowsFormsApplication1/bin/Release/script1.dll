@@ -1,0 +1,742 @@
+CREATE PROCEDURE [dbo].[ALUMNOSPORSECCION]
+@Grado varchar(50),
+@Seccion char
+as
+begin
+ SELECT ALUMNO.Nombre FROM ALUMNO
+ WHERE ALUMNO.Grado=(SELECT IdGrado from GRADO where Grado=@Grado) AND ALUMNO.Seccion=(SELECT IdSeccion FROM SECCION where Seccion=@Seccion)
+ AND ALUMNO.Estado=1;
+end
+CREATE PROCEDURE [dbo].[borrar_alumno]
+ @NIE varchar(15) 
+AS   
+BEGIN
+   DELETE FROM REGISTRO
+   WHERE Alumno=@NIE
+
+   DELETE FROM PorcentajeMateria
+   WHERE Alumno=@NIE
+
+   DELETE FROM ALUMNO
+   WHERE NIE=@NIE
+END
+CREATE PROCEDURE [dbo].[consultaMaestroData]
+	@id varchar(10)
+AS
+begin
+SELECT   Maestros.IdMaestro, Maestros.Nombre, Maestros.Fecha ,Maestros.Telefono, Maestros.Direccion, Maestros.Tutor, GRADO.Grado, SECCION.Seccion,Maestros.Estado
+FROM     GRADO INNER JOIN
+Maestros ON GRADO.IdGrado = Maestros.Grado_t INNER JOIN
+SECCION ON dbo.Maestros.Seccion_t = SECCION.IdSeccion
+WHERE Maestros.IdMaestro=@id
+end
+CREATE PROCEDURE [dbo].[CustoMate]
+@Nombre varchar(50),
+@Grado varchar(50),
+@Seccion varchar(50)
+as
+begin
+SELECT MATERIA.Materia FROM NGM
+INNER JOIN MATERIA ON MATERIA.IdMateria=NGM.Materia
+WHERE NGM.Maestro=@Nombre
+AND NGM.Grado=(SELECT IdGrado FROM GRADO WHERE Grado=@Grado)
+AND NGM.Seccion=(SELECT IdSeccion from SECCION WHERE Seccion=@Seccion)
+end
+CREATE PROCEDURE DeleteAct
+@Actividad varchar(100),
+
+@Materia varchar(50),
+
+@Grado varchar(50),
+
+@Trimestre int,
+
+@Periodo int,
+
+@Seccion varchar(1)
+
+as
+
+begin
+
+DELETE FROM  REGISTRO WHERE 
+Actividad=(SELECT IdActividad from ACTIVIDADES WHERE Trimestre=@Trimestre AND 
+Periodo=@Periodo AND Actividad=@Actividad 
+AND  Grado=(SELECT IdGrado from GRADO WHERE Grado=@Grado)
+ AND 
+Materia=(SELECT IdMateria from MATERIA WHERE Materia=@Materia) 
+AND 
+Seccion=(SELECT IdSeccion from SECCION WHERE Seccion=@Seccion))
+ AND 
+Materia=(SELECT IdMateria from MATERIA WHERE Materia=@Materia)
+ AND 
+Grado=(SELECT IdGrado from GRADO WHERE Grado=@Grado) 
+AND 
+Periodo=@Periodo AND Trimestre=@Trimestre
+
+DELETE FROM ACTIVIDADES WHERE
+
+Actividad=@Actividad AND Materia=(SELECT IdMateria from MATERIA WHERE Materia=@Materia)
+ AND 
+Grado=(SELECT IdGrado from GRADO WHERE Grado=@Grado) 
+AND Periodo=@Periodo AND Trimestre=@Trimestre
+ AND 
+Seccion=(SELECT IdSeccion from SECCION WHERE Seccion=@Seccion)
+ 
+end
+CREATE PROCEDURE [dbo].[DeletedDocente]
+	@idMaestro varchar(10)
+AS
+begin
+	delete from Maestros where IdMaestro=@idMaestro
+end
+CREATE PROCEDURE [dbo].[DeletedNGM]
+	@idMaestro varchar(10)
+AS
+begin
+	delete from NGM where Maestro=@idMaestro;
+end
+CREATE PROCEDURE [dbo].[fillCuadrofinal]
+@Alumno varchar(100),
+@Materia varchar(50),
+@Trimestre int,
+@Periodo int
+as
+begin
+SELECT Porcentaje from PorcentajeMateria where Alumno=(SELECT NIE FROM ALUMNO WHERE Nombre=@Alumno)
+AND Materia=(SELECT IdMateria from MATERIA WHERE Materia=@Materia)
+AND Trimestre=@Trimestre AND Periodo=@Periodo
+end
+CREATE PROCEDURE [dbo].[FillCusto]
+@Nombre varchar(100)
+as
+begin
+SELECT GRADO.Grado FROM NGM
+INNER JOIN GRADO ON GRADO.IdGrado=NGM.Grado
+WHERE NGM.Maestro=@Nombre
+GROUP BY GRADO.Grado
+end
+CREATE PROCEDURE GetActividades
+@Grado varchar(50),
+
+@Materia varchar(50),
+
+@Trimestre int,
+
+@Periodo int,
+
+@Seccion varchar(1)
+
+as
+
+begin
+
+SELECT Actividad,Ponderacion from ACTIVIDADES 
+WHERE Grado=(SELECT IdGrado from GRADO WHERE Grado=@Grado) 
+AND 
+Materia=(SELECT IdMateria from MATERIA WHERE Materia=@Materia) 
+AND 
+Trimestre=@Trimestre
+ AND Periodo=@Periodo
+ AND 
+Seccion=(SELECT IdSeccion from SECCION WHERE Seccion=@Seccion)
+
+end
+CREATE PROCEDURE [dbo].[getestadoA]
+@Nombre varchar(100)
+as
+BEGIN
+Select ESTADO.Estado from ALUMNO 
+Inner Join ESTADO ON ESTADO.IdEstado=ALUMNO.Estado
+WHERE ALUMNO.NIE=(SELECT NIE FROM ALUMNO WHERE Nombre=@Nombre)
+END
+CREATE PROCEDURE [dbo].[getname]
+@Nombre varchar(100)
+AS
+BEGIN
+SELECT Nombre FROM ALUMNO WHERE Nombre like '%'+@Nombre+'%'
+END
+CREATE PROCEDURE [dbo].[getPeriodo]
+@Periodo int
+as
+begin
+SELECT Porcentaje from PERIODO WHERE IdPeriodo=@Periodo
+end
+CREATE PROCEDURE getPonderacion
+@Grado varchar(50),
+
+@Materia varchar(50),
+
+@Trimestre int,
+
+@Periodo int,
+
+@Seccion varchar(1)
+
+as
+
+begin
+
+SELECT Ponderacion from ACTIVIDADES 
+WHERE Grado=(SELECT IdGrado from GRADO WHERE Grado=@Grado) AND
+
+Materia=(SELECT IdMateria from MATERIA WHERE Materia=@Materia)
+ AND 
+Periodo=@Periodo AND Trimestre=@Trimestre
+ AND
+Seccion=(SELECT IdSeccion from SECCION WHERE Seccion=@Seccion)
+
+end
+CREATE PROCEDURE [dbo].[getPorcentajes]
+@Alumno varchar(100),
+@Materia varchar(50),
+@Trimestre int,
+@Periodo int
+as
+begin
+SELECT Porcentaje from PorcentajeMateria WHERE
+Alumno=(SELECT NIE from ALUMNO WHERE Nombre=@Alumno) AND
+Materia=(SELECT IdMateria from MATERIA WHERE Materia=@Materia) AND
+Periodo=@Periodo
+AND Trimestre=@Trimestre
+end
+CREATE PROCEDURE [dbo].[GradoMaterias]
+@Grado varchar(50)
+as
+begin
+SELECT MATERIA.Materia FROM MateriaGrado
+inner join MATERIA ON MATERIA.IdMateria=MateriaGrado.Materia
+WHERE MateriaGrado.Grado= (SELECT IdGrado from GRADO WHERE Grado=@Grado)
+end
+CREATE PROCEDURE [dbo].[GradoSeccion]
+@Grado varchar (50)
+as
+begin
+SELECT SECCION.Seccion FROM NivelGradoSeccion
+INNER JOIN SECCION ON SECCION.IdSeccion=NivelGradoSeccion.Seccion
+WHERE NivelGradoSeccion.Grado=(SELECT IdGrado from GRADO WHERE Grado=@Grado)
+end
+CREATE PROCEDURE [dbo].[idgrad]
+@Grado varchar(50)
+AS
+BEGIN
+ SELECT IdGrado FROM GRADO WHERE Grado=@Grado
+END
+CREATE PROCEDURE [dbo].[idsec]
+@Seccion varchar(1)
+AS
+BEGIN
+ SELECT * FROM SECCION WHERE Seccion=@Seccion
+END
+CREATE PROCEDURE IngresarActividades
+@Actividad varchar(100),
+
+@Materia varchar(50),
+
+@Grado varchar(50),
+
+@Trimestre int,
+
+@Periodo int,
+
+@Ponderacion decimal(18,2),
+
+@Seccion varchar(1)
+
+as
+
+begin
+
+INSERT INTO ACTIVIDADES VALUES(@Actividad,(SELECT IdMateria from MATERIA WHERE Materia=@Materia),
+
+(SELECT IdGrado from GRADO WHERE Grado=@Grado),@Trimestre,@Periodo,@Ponderacion,
+
+(SELECT IdSeccion from SECCION WHERE Seccion=@Seccion))
+
+end
+CREATE PROCEDURE [dbo].[Ingresaralumnos]
+ @NIE varchar(15),
+ @Nombre varchar(100),   
+ @Fecha_Nac varchar(100),
+ @Telefono varchar(9),
+ @Direccion varchar(250),
+ @Responsable varchar(100),
+ @Grado int,
+ @Seccion int
+AS   
+BEGIN
+ INSERT INTO ALUMNO VALUES(@NIE,@Nombre,@Fecha_Nac,@Telefono,@Direccion,@Responsable,@Grado,@Seccion,1)
+END
+CREATE PROCEDURE [dbo].[IngresarDocente]
+@tutor int,@idMaestro varchar(50), @Nombre varchar(100),
+@fecha varchar(100),@telefono varchar(10), @direccion varchar(100),
+@Grado varchar(50),@seccion char(1),@estado varchar(1)
+as
+begin	 
+	if @tutor=1
+	BEGIN 
+		insert into Maestros values(@idMaestro,@Nombre,@fecha,@telefono,@direccion,@tutor,
+		(select GRADO.IdGrado from GRADO where Grado=@Grado),
+		(select SECCION.IdSeccion from SECCION where Seccion= @seccion),
+		@estado)
+	END
+	if @tutor=0
+	BEGIN 
+		insert into Maestros(IdMaestro,Nombre,Fecha,Telefono,Direccion,Tutor,Estado) 
+		values(@idMaestro,@Nombre,@fecha,@telefono,@direccion,@tutor,@estado)
+	END		
+end
+CREATE PROCEDURE [dbo].[IngresarGrado]
+@Grado varchar(50)
+as
+begin
+INSERT INTO GRADO VALUES(@Grado)
+end
+CREATE PROCEDURE [dbo].[IngresarGradoMateria]
+@Grado varchar(50),
+@Materia varchar(80)
+as
+begin
+INSERT INTO MateriaGrado VALUES((SELECT IdGrado from GRADO WHERE Grado=@Grado),(SELECT IdMateria from MATERIA WHERE Materia=@Materia))
+end
+CREATE PROCEDURE [dbo].[IngresarMateria]
+@Materia varchar(50)
+as
+begin
+INSERT INTO MATERIA VALUES(@Materia)
+end
+CREATE PROCEDURE [dbo].[IngresarNGM]
+@IdMaestro varchar(50), @Grado varchar(50), @Materia varchar(50),@seccion varchar(1),
+@estado varchar(1)
+as 
+begin 
+	insert into NGM 
+	values((select Maestros.IdMaestro from Maestros where IdMaestro=@IdMaestro),
+	(select GRADO.IdGrado from GRADO where Grado=@Grado), 
+	(select MATERIA.IdMateria from MATERIA where Materia=@Materia),
+	(select IdSeccion from SECCION where Seccion=@seccion),
+	@estado
+	)
+end
+CREATE PROCEDURE [dbo].[IngresarNGS]
+@Grado varchar(50),
+@Seccion char
+as
+begin
+INSERT INTO NiVelGradoSeccion VALUES((SELECT IdGrado from GRADO WHERE Grado=@Grado),
+(SELECT IdSeccion from SECCION WHERE Seccion=@Seccion))
+end
+CREATE PROCEDURE [dbo].[IngresarPorcentaje]
+@Alumno varchar(100),
+@Materia varchar(50),
+@Trimestre int,
+@Periodo int,
+@Porcentaje decimal(18,2)
+as
+begin
+INSERT INTO PorcentajeMateria VALUES((SELECT NIE from ALUMNO WHERE Nombre=@Alumno),
+(SELECT IdMateria from MATERIA WHERE Materia=@Materia ),@Trimestre,@Periodo,@Porcentaje)
+end
+CREATE PROCEDURE IngresarRegistro
+@Alumno varchar(100),
+
+@Materia varchar(50),
+
+@Actividad varchar(100),
+
+@Grado varchar(50),
+
+@Seccion char,
+
+@Trimestre int,
+
+@Periodo int,
+
+@Calificacion decimal(18,2)
+
+as
+
+begin
+
+INSERT INTO REGISTRO VALUES((SELECT NIE from ALUMNO WHERE Nombre=@Alumno),
+(SELECT IdMateria from MATERIA WHERE Materia=@Materia),
+(SELECT IdActividad from ACTIVIDADES WHERE Trimestre=@Trimestre 
+AND Periodo=@Periodo AND Actividad=@Actividad AND  Grado=(SELECT IdGrado from GRADO WHERE Grado=@Grado) 
+
+AND Materia=(SELECT IdMateria from MATERIA WHERE Materia=@Materia) 
+
+AND Seccion=(SELECT IdSeccion from SECCION WHERE Seccion=@Seccion)),
+
+(SELECT IdGrado from GRADO WHERE Grado=@Grado),
+(SELECT IdSeccion from SECCION WHERE Seccion=@Seccion),@Trimestre,
+@Periodo,@Calificacion) 
+
+end
+CREATE PROCEDURE [dbo].[IngresarSeccion]
+@Seccion char
+as
+begin
+INSERT INTO SECCION VALUES(@Seccion)
+end
+
+CREATE PROCEDURE NnombreAct
+@Materia varchar(50),
+
+@Grado varchar(50),
+
+@Trimestre int,
+
+@Periodo int,
+
+@nombre varchar(100),
+
+@Nnombre varchar(100),
+
+@Seccion varchar(1)
+
+as
+
+begin
+
+UPDATE ACTIVIDADES set Actividad=@Nnombre WHERE 
+Materia=(SELECT IdMateria from MATERIA WHERE Materia=@Materia)
+ AND 
+Grado=(SELECT IdGrado from GRADO WHERE Grado=@Grado) AND 
+Trimestre=@Trimestre AND Periodo=@Periodo 
+AND 
+Actividad=@nombre AND Seccion=(SELECT IdSeccion from SECCION WHERE Seccion=@Seccion)
+
+end
+CREATE PROCEDURE [dbo].[Nombreusu]
+@id varchar(50)
+as
+begin
+SELECT Nombre from Maestros WHERE IdMaestro=@id
+end
+CREATE PROCEDURE [dbo].[Nombreusu1]
+@id varchar(50)
+as
+begin
+SELECT Nombre from Director WHERE IdDirector=@id
+end
+CREATE PROCEDURE [dbo].[NOTAS]
+@Alumno varchar(100),
+@Materia varchar (50)
+as
+begin
+SELECT ALUMNO.Nombre,ACTIVIDADES.Actividad,REGISTRO.Calificacion FROM REGISTRO
+INNER JOIN ALUMNO ON ALUMNO.NIE=REGISTRO.Alumno
+INNER JOIN ACTIVIDADES ON ACTIVIDADES.IdActividad=REGISTRO.Actividad
+WHERE REGISTRO.Alumno=(SELECT NIE from ALUMNO WHERE Nombre=@Alumno) AND REGISTRO.Materia=(SELECT IdMateria from MATERIA WHERE Materia=@Materia) 
+end
+CREATE PROCEDURE NOTASPORGRADOSECCION
+@Materia varchar (50),
+
+@Grado varchar(50),
+
+@Seccion char,
+
+@Alumno varchar(100),
+
+@Actividad varchar(100),
+
+@Trimestre int,
+
+@Periodo int
+
+as
+
+begin
+
+SELECT Calificacion FROM REGISTRO
+WHERE REGISTRO.Materia=(SELECT IdMateria from MATERIA WHERE Materia=@Materia) 
+AND 
+REGISTRO.Grado=(SELECT IdGrado from GRADO WHERE Grado=@Grado) 
+AND 
+REGISTRO.Seccion=(select IdSeccion from SECCION WHERE Seccion=@Seccion)
+ AND 
+REGISTRO.Alumno=(SELECT NIE from ALUMNO WHERE Nombre=@Alumno) 
+AND REGISTRO.Periodo=@Periodo AND Trimestre=@Trimestre
+ AND
+REGISTRO.Actividad=(SELECT IdActividad from ACTIVIDADES 
+WHERE Actividad=@Actividad AND 
+ACTIVIDADES.Grado=(SELECT IdGrado from GRADO WHERE Grado=@Grado
+AND Periodo=@Periodo AND 
+Trimestre=@Trimestre
+AND ACTIVIDADES.Materia=(SELECT IdMateria from MATERIA WHERE Materia=@Materia))
+ AND 
+ACTIVIDADES.Seccion=(SELECT IdSeccion FROM SECCION WHERE Seccion=@Seccion))
+
+end
+CREATE PROCEDURE [dbo].[selecinfo_alumnos]
+ @Nombre varchar(100) 
+AS   
+BEGIN
+   SELECT ALUMNO.NIE,ALUMNO.Nombre,ALUMNO.Fecha_nac,ALUMNO.Telefono, 
+   ALUMNO.Direccion,ALUMNO.Responsable,GRADO.Grado,SECCION.Seccion FROM ALUMNO
+   inner join GRADO ON GRADO.IdGrado=ALUMNO.Grado
+   inner join SECCION ON SECCION.IdSeccion=ALUMNO.Seccion
+   WHERE ALUMNO.Nombre=@Nombre
+END
+CREATE PROCEDURE [dbo].[updatealumnos]
+ @NIE varchar(15),
+ @Nombre varchar(100),   
+ @Fecha_Nac varchar(100),
+ @Telefono varchar(9),
+ @Direccion varchar(250),
+ @Responsable varchar(100),
+ @Grado varchar(50),
+ @Seccion varchar(1),
+ @Estado varchar(15)
+AS 
+BEGIN  
+    UPDATE ALUMNO
+    SET Nombre=@Nombre,Fecha_nac=@Fecha_Nac,Telefono=@Telefono,
+	Direccion=@Direccion,Responsable=@Responsable,Grado=@Grado,Seccion=@Seccion,
+	Estado=(Select IdEstado from ESTADO WHERE Estado=@Estado)
+    WHERE NIE=@NIE
+END
+CREATE PROCEDURE [dbo].[UpdateDocente]
+@tutor int,@idMaestro varchar(10),@telefono varchar(10), @direccion varchar(50),
+@Grado varchar(50),@seccion char(1),@estado varchar(1)
+as
+begin	 
+	if @tutor=1
+	begin 
+		update Maestros set 
+		Telefono = @telefono, Direccion = @direccion,
+		Tutor = @tutor,
+		Grado_t = (select GRADO.IdGrado from GRADO where Grado=@Grado),
+		Seccion_t = (select SECCION.IdSeccion from SECCION where Seccion= @seccion),
+		Estado = @estado		
+		Where IdMaestro = @idMaestro		
+	end
+	if @tutor=0
+	begin 
+		update Maestros set 
+		Telefono = @telefono, Direccion = @direccion,
+		Tutor = @tutor,
+		Grado_t = null,
+		Seccion_t = null,
+		Estado = @estado		
+		Where IdMaestro = @idMaestro
+	end		
+end
+CREATE PROCEDURE UpdateNotas
+@Materia varchar (50),
+
+@Grado varchar(50),
+
+@Seccion char,
+
+@Alumno varchar(100),
+
+@Actividad varchar(100),
+
+@Trimestre int,
+
+@Periodo int,
+
+@NCalificaion decimal(18,2)
+
+as
+
+begin
+
+UPDATE REGISTRO set Calificacion=@NCalificaion
+WHERE REGISTRO.Materia=(SELECT IdMateria from MATERIA WHERE Materia=@Materia) 
+AND 
+REGISTRO.Grado=(SELECT IdGrado from GRADO WHERE Grado=@Grado) 
+AND REGISTRO.Seccion=(select IdSeccion from SECCION WHERE Seccion=@Seccion)
+ AND 
+REGISTRO.Alumno=(SELECT NIE from ALUMNO WHERE Nombre=@Alumno) 
+AND REGISTRO.Periodo=@Periodo AND @Trimestre=@Trimestre
+ AND 
+REGISTRO.Actividad=(SELECT IdActividad from ACTIVIDADES 
+WHERE Actividad=@Actividad AND 
+ACTIVIDADES.Grado=(SELECT IdGrado from GRADO WHERE Grado=@Grado
+AND Periodo=@Periodo AND Trimestre=@Trimestre
+ AND 
+ACTIVIDADES.Materia=(SELECT IdMateria from MATERIA WHERE Materia=@Materia))
+ AND ACTIVIDADES.Seccion=(SELECT IdSeccion FROM SECCION WHERE Seccion=@Seccion))
+
+AND REGISTRO.Seccion=(SELECT IdSeccion FROM SECCION WHERE Seccion=@Seccion)
+SELECT Calificacion FROM REGISTRO
+WHERE REGISTRO.Materia=(SELECT IdMateria from MATERIA WHERE Materia=@Materia) 
+AND 
+REGISTRO.Grado=(SELECT IdGrado from GRADO WHERE Grado=@Grado) 
+AND REGISTRO.Seccion=(select IdSeccion from SECCION WHERE Seccion=@Seccion) 
+AND 
+REGISTRO.Alumno=(SELECT NIE from ALUMNO WHERE Nombre=@Alumno) 
+AND REGISTRO.Periodo=@Periodo AND Trimestre=@Trimestre 
+AND 
+REGISTRO.Actividad=(SELECT IdActividad from ACTIVIDADES 
+WHERE Actividad=@Actividad AND 
+ACTIVIDADES.Grado=(SELECT IdGrado from GRADO WHERE Grado=@Grado
+AND Periodo=@Periodo AND Trimestre=@Trimestre 
+AND 
+ACTIVIDADES.Materia=(SELECT IdMateria from MATERIA WHERE Materia=@Materia)) 
+AND 
+ACTIVIDADES.Seccion=(SELECT IdSeccion FROM SECCION WHERE Seccion=@Seccion))
+AND REGISTRO.Seccion=(SELECT IdSeccion FROM SECCION WHERE Seccion=@Seccion)
+end
+CREATE PROCEDURE UpdatePonderacion
+@Actividad varchar(100),
+
+@Materia varchar(50),
+
+@Grado varchar(50),
+
+@Trimestre int,
+
+@Periodo int,
+
+@Npodenra decimal(18,2),
+
+@Seccion varchar(1)
+
+as
+
+begin
+
+UPDATE ACTIVIDADES set Ponderacion=@Npodenra 
+WHERE 
+Actividad=@Actividad AND Materia=(SELECT IdMateria from MATERIA WHERE Materia=@Materia)
+ AND 
+Grado=(SELECT IdGrado from GRADO WHERE Grado=@Grado ) 
+AND Trimestre=@Trimestre
+ AND Periodo=@Periodo
+ 
+AND Seccion=(SELECT IdSeccion from SECCION WHERE Seccion=@Seccion)
+
+end
+CREATE PROCEDURE [dbo].[UpdatePorcentaje]
+@Alumno varchar(100),
+@Materia varchar(50),
+@NPorcentaje decimal(18,2),
+@Trimestre int,
+@Periodo int
+as
+begin
+UPDATE PorcentajeMateria set Porcentaje=@NPorcentaje WHERE
+Alumno=(SELECT NIE from ALUMNO WHERE Nombre=@Alumno) AND
+Materia=(SELECT IdMateria from MATERIA WHERE Materia=@Materia) AND
+Periodo=@Periodo AND Trimestre=@Trimestre
+SELECT Porcentaje from PorcentajeMateria WHERE
+Alumno=(SELECT NIE from ALUMNO WHERE Nombre=@Alumno) AND
+Materia=(SELECT IdMateria from MATERIA WHERE Materia=@Materia) AND
+Periodo=@Periodo AND Trimestre=@Trimestre
+end
+CREATE PROCEDURE UpdatePorstep1
+@Materia varchar(50),
+
+@Actividad varchar(100),
+
+@Grado varchar(50),
+
+@Trimestre int,
+
+@Periodo int,
+
+@Seccion varchar(1)
+
+as 
+
+begin
+
+SELECT ALUMNO.Nombre,Calificacion from REGISTRO 
+
+inner join ALUMNO ON ALUMNO.NIE=REGISTRO.Alumno
+
+WHERE
+ REGISTRO.Materia=(SELECT IdMateria from MATERIA WHERE Materia=@Materia) 
+AND REGISTRO.Grado=(SELECT IdGrado from GRADO WHERE Grado=@Grado) 
+AND 
+REGISTRO.Periodo=@Periodo AND @Trimestre=@Trimestre 
+AND REGISTRO.Actividad=(SELECT IdActividad from ACTIVIDADES 
+WHERE Actividad=@Actividad AND 
+ACTIVIDADES.Grado=(SELECT IdGrado from GRADO WHERE Grado=@Grado) 
+AND 
+Periodo=@Periodo AND Trimestre=@Trimestre 
+AND ACTIVIDADES.Materia=(SELECT IdMateria from MATERIA WHERE Materia=@Materia) 
+AND 
+ACTIVIDADES.Seccion=(SELECT IdSeccion from SECCION WHERE Seccion=@Seccion))
+
+end
+CREATE PROCEDURE [dbo].[ValidarEntrada]
+@usu varchar(50),
+@pass varchar(50)
+as
+begin
+SELECT Usuario,Pass,Tipo from Usuarios
+WHERE Usuario=@usu AND Pass=@pass
+end
+CREATE PROCEDURE [dbo].[Ver_TutorExitst]
+@grado varchar(20),@seccion varchar(20)
+as
+begin 
+select IdMaestro, Estado from Maestros 
+where 
+Grado_t=(select GRADO.IdGrado from GRADO where Grado=@grado) 
+and 
+Seccion_t=(select SECCION.IdSeccion from SECCION where Seccion= @seccion)
+and
+Maestros.Estado = 1
+end
+CREATE PROCEDURE [dbo].[Verificar_NGM]
+	@grado varchar(20),@materia varchar(20),@seccion varchar(1)
+AS
+begin
+	SELECT        Maestro
+FROM            NGM INNER JOIN
+                         MATERIA ON NGM.Materia = dbo.MATERIA.IdMateria INNER JOIN
+                         GRADO ON NGM.Grado = GRADO.IdGrado		INNER JOIN
+						 SECCION ON NGM.Seccion=SECCION.IdSeccion
+WHERE        
+(GRADO.Grado = @grado) 
+AND (MATERIA.Materia = @materia) 
+AND (SECCION.Seccion=@seccion)
+AND Estado = 1;
+end
+CREATE PROCEDURE [dbo].[VerNGM]
+@id varchar(10)
+as
+begin
+SELECT        GRADO.Grado, MATERIA.Materia,SECCION.Seccion
+FROM            GRADO INNER JOIN
+NGM ON GRADO.IdGrado = NGM.Grado INNER JOIN
+MATERIA ON NGM.Materia = MATERIA.IdMateria
+INNER JOIN SECCION ON NGM.Seccion=SECCION.IdSeccion
+WHERE NGM.Maestro = @id and NGM.Estado = 1
+end
+CREATE PROCEDURE secc
+@Maestro varchar(15),
+@Grado varchar(50)
+as
+begin
+SELECT SECCION.Seccion FROM NGM
+INNER JOIN SECCION ON SECCION.IdSeccion=NGM.Seccion
+WHERE NGM. Maestro=@Maestro AND NGM.Grado=(SELECT IdGrado FROM GRADO WHERE Grado=@Grado)
+END
+CREATE PROCEDURE DeleteDatos
+AS
+BEGIN
+	DELETE REGISTRO
+	DELETE PorcentajeMateria
+	DELETE ACTIVIDADES
+	DELETE MateriaGrado
+	DELETE NGM
+	DELETE MATERIA
+	DELETE NivelGradoSeccion
+	DELETE ALUMNO
+	DELETE Maestros
+	DELETE SECCION WHERE IdSeccion!=1
+	DELETE GRADO WHERE IdGrado!=1
+end
+CREATE PROCEDURE Preferencia
+@Usuario varchar(15)
+as
+begin
+SELECT Tipo from Usuarios WHERE Usuario=@Usuario
+end
+FIN

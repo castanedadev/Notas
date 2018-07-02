@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cuadro de notas", "WindowsFormsApplication1\Cuadro de notas.csproj", "{E86044E5-5EF0-4E06-A589-5AAC50A25422}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E86044E5-5EF0-4E06-A589-5AAC50A25422}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E86044E5-5EF0-4E06-A589-5AAC50A25422}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E86044E5-5EF0-4E06-A589-5AAC50A25422}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E86044E5-5EF0-4E06-A589-5AAC50A25422}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

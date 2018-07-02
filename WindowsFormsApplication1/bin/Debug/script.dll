@@ -1,0 +1,174 @@
+CREATE DATABASE Escuela;
+USE Escuela;
+CREATE TABLE NE
+(
+NombreEscuela varchar(100),
+CONSTRAINT pk_NE01 PRIMARY KEY (NombreEscuela)
+);
+CREATE TABLE TipoUsuario
+(
+IdTipoUsuario int identity(1,1),
+Tipo varchar(50),
+CONSTRAINT pk_TpUsu01 PRIMARY KEY (IdTipoUsuario)
+);
+CREATE TABLE Director
+(
+IdDirector varchar(50),
+Nombre varchar(100),
+Correo varchar(100),
+pass varchar(100),
+tpUsu int,
+Telefono varchar(10),
+CONSTRAINT pk_DR10 PRIMARY KEY (IdDirector),
+CONSTRAINT fk_TpUsu10 FOREIGN KEY (tpUsu) REFERENCES TipoUsuario(IdTipoUsuario)
+)
+CREATE TABLE ESTADO
+(
+IdEstado int identity(1,1),
+Estado varchar(15),
+CONSTRAINT pk_IdE01 PRIMARY KEY (IdEstado)
+);
+CREATE TABLE Usuarios
+(
+IdUsuarios int identity(1,1),
+Usuario varchar(50),
+Pass varchar(50),
+Tipo int not null,
+CONSTRAINT pk_IdUsua1 PRIMARY KEY (IdUsuarios),
+CONSTRAINT fk_Tipo1 FOREIGN KEY (Tipo) REFERENCES TipoUsuario(IdTipoUsuario)
+);
+CREATE TABLE GRADO
+(
+IdGrado int identity(1,1),
+Grado varchar(50),
+CONSTRAINT pk_idG2 PRIMARY KEY (IdGrado)
+);
+CREATE TABLE SECCION
+(
+IdSeccion int identity(1,1),
+Seccion char(1),
+CONSTRAINT pk_IdS3 PRIMARY KEY (IdSeccion)
+);
+CREATE TABLE Maestros
+(
+IdMaestro varchar(50) not null,
+Nombre varchar(100) not null,
+Fecha varchar(100),
+Telefono varchar(8),
+Direccion varchar(100),
+Tutor int,
+Grado_t int,
+Seccion_t int,
+Estado int,
+CONSTRAINT PK_Maes Primary Key(IdMaestro),
+CONSTRAINT FK_GRADO121 Foreign Key (Grado_t) REFERENCES GRADO(IdGrado),
+CONSTRAINT FK_SECCION121 Foreign Key(Seccion_t) REFERENCES SECCION(IdSeccion),
+CONSTRAINT FK_Estado121 FOREIGN KEY (Estado) REFERENCES ESTADO (IdEstado)
+);
+CREATE TABLE ALUMNO
+(
+NIE varchar(15) not null,
+Nombre varchar(100),
+Fecha_nac   VARCHAR (100) ,
+Telefono    VARCHAR (9)   ,
+Direccion   VARCHAR (250) ,
+Responsable VARCHAR (100) ,
+Grado int,
+Seccion int,
+Estado int,
+CONSTRAINT pk_NI4 PRIMARY KEY (NIE),
+CONSTRAINT fk_Gra4 FOREIGN KEY (Grado) REFERENCES GRADO(IdGrado),
+CONSTRAINT fk_Secc4 FOREIGN KEY (Seccion) REFERENCES SECCION(IdSECCION),
+CONSTRAINT fk_esta2 FOREIGN KEY (Estado) REFERENCES ESTADO(IdEstado)
+);
+CREATE TABLE MATERIA
+(
+IdMateria int identity(1,1),
+Materia varchar(50) not null,
+CONSTRAINT pk_IdM5 PRIMARY KEY (IdMateria)
+);
+CREATE TABLE MateriaGrado
+(
+IdMateriaGrado int identity(1,1),
+Materia int,
+Grado int,
+CONSTRAINT pk_IMG6 PRIMARY KEY (IdMateriaGrado),
+CONSTRAINT fk_M6 FOREIGN KEY (Materia) REFERENCES MATERIA(IdMateria),
+CONSTRAINT fk_G6 FOREIGN KEY (Grado) REFERENCES GRADO(IdGrado)
+);
+CREATE TABLE NivelGradoSeccion
+(
+IdNGS int identity(1,1),
+Grado int,
+Seccion int,
+CONSTRAINT pk_Ings7 PRIMARY KEY (IdNGS),
+CONSTRAINT fk_G7 FOREIGN KEY (Grado) REFERENCES GRADO(IdGrado),
+CONSTRAINT fk_S7 FOREIGN KEY (Seccion) REFERENCES SECCION(IdSeccion)
+);
+CREATE TABLE TRIMESTRE 
+(
+IdTrimestre int identity(1,1),
+Trimestre varchar(50),
+CONSTRAINT pk_IdT8 PRIMARY KEY (IdTrimestre)
+);
+CREATE TABLE PorcentajeMateria
+(
+IdPorcentaje int identity(1,1),
+Alumno varchar(15),
+Materia int,
+Trimestre int,
+Periodo int ,
+Porcentaje decimal(18,2),
+CONSTRAINT pk_IdP9 PRIMARY KEY (IdPorcentaje),
+CONSTRAINT fk_A9 FOREIGN KEY (Alumno) REFERENCES ALUMNO(NIE),
+CONSTRAINT fk_T9 FOREIGN KEY (Trimestre) REFERENCES TRIMESTRE(IdTrimestre),
+CONSTRAINT fk_Materia9 FOREIGN KEY (Materia) REFERENCES MATERIA(IdMateria)
+);
+CREATE TABLE ACTIVIDADES
+(
+IdActividad int identity(1,1),
+Actividad varchar(100),
+Materia int,
+Grado int,
+Trimestre int,
+Periodo int,
+Ponderacion decimal(18,2),
+CONSTRAINT pk_IdA10 PRIMARY KEY (IdActividad),
+CONSTRAINT fk_M10 FOREIGN KEY (Materia) REFERENCES MATERIA(IdMateria),
+CONSTRAINT fk_G10 FOREIGN KEY (Grado) REFERENCES Grado(IdGrado),
+CONSTRAINT fk_T10 FOREIGN KEY (Trimestre) REFERENCES TRIMESTRE(IdTrimestre)
+);
+CREATE TABLE REGISTRO
+(
+IdRegistro int identity(1,1),
+Alumno varchar(15),
+Materia int,
+Actividad int,
+Grado int,
+Seccion int,
+Trimestre int,
+Periodo int,
+Calificacion decimal(18,2),
+CONSTRAINT pk_IdR11 PRIMARY KEY (IdRegistro),
+CONSTRAINT fk_IdA11 FOREIGN KEY (Alumno) REFERENCES ALUMNO(NIE),
+CONSTRAINT fk_M11 FOREIGN KEY (Materia) REFERENCES MATERIA(IdMateria),
+CONSTRAINT fk_A11 FOREIGN KEY (Actividad) REFERENCES Actividades(IdActividad),
+CONSTRAINT fk_G11 FOREIGN KEY (Grado) REFERENCES GRADO(IdGrado),
+CONSTRAINT fk_S11 FOREIGN KEY (Seccion) REFERENCES SECCION(IdSeccion),
+CONSTRAINT fk_T11 FOREIGN KEY (Trimestre) REFERENCES TRIMESTRE(IdTrimestre)
+);
+CREATE TABLE NGM
+(
+IdNivel int identity(1,1),
+Maestro varchar(50),
+Grado int,
+Materia int,
+Seccion int,
+Estado int,
+CONSTRAINT pk_Nivel14 PRIMARY KEY (IdNivel),
+CONSTRAINT fk_M14 FOREIGN KEY (Maestro) REFERENCES Maestros (IdMaestro),
+CONSTRAINT fk_G14 FOREIGN KEY (Grado) REFERENCES GRADO(IdGrado),
+CONSTRAINT fk_MA14 FOREIGN KEY (Materia) REFERENCES  MATERIA (IdMateria),
+CONSTRAINT fk_S14 FOREIGN KEY (Seccion) REFERENCES SECCION (IdSeccion),
+CONSTRAINT fk_E14 FOREIGN KEY (Estado) REFERENCES ESTADO (IdEstado),
+);
