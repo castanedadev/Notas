@@ -89,14 +89,17 @@
             // 
             this.planificarActividadesToolStripMenuItem.Name = "planificarActividadesToolStripMenuItem";
             this.planificarActividadesToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+
             this.planificarActividadesToolStripMenuItem.Text = "Planificar actividades";
             this.planificarActividadesToolStripMenuItem.Click += new System.EventHandler(this.planificarActividadesToolStripMenuItem_Click);
             // 
             // cuadroDeActividadesToolStripMenuItem
             // 
             this.cuadroDeActividadesToolStripMenuItem.Name = "cuadroDeActividadesToolStripMenuItem";
+
             this.cuadroDeActividadesToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
             this.cuadroDeActividadesToolStripMenuItem.Text = "Cuadro de notas";
+
             this.cuadroDeActividadesToolStripMenuItem.Click += new System.EventHandler(this.cuadroDeActividadesToolStripMenuItem_Click);
             // 
             // cuadroFinalToolStripMenuItem
@@ -166,7 +169,9 @@
             // 
             // button1
             // 
+
             this.button1.Location = new System.Drawing.Point(374, 24);
+
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 8;

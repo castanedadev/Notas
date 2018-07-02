@@ -72,6 +72,7 @@ namespace WindowsFormsApplication1
             string aux = Application.StartupPath;
             aux += "\\Logo.jpeg";
             iTextSharp.text.Image imagen= iTextSharp.text.Image.GetInstance(aux);
+
             Document doc = new Document(PageSize.A4.Rotate(), 10, 10, 10, 10);
             SaveFileDialog savefiledialog1 = new SaveFileDialog();
             savefiledialog1.InitialDirectory = @"C:";
@@ -94,6 +95,7 @@ namespace WindowsFormsApplication1
                PdfWriter pdfw=PdfWriter.GetInstance(doc, file);
                 doc.Open();
                 doc.Add(imagen);
+
                 doc.Add(new Paragraph("                                                                                   COMPLEJO EDUCATIVO COLONIA TIERRA VIRGEN "));
                 doc.Add(new Paragraph("                                                                                                    PROMEDIOS TRIMESTRALES"));
                 doc.Add(new Paragraph("          GRADO:" + cbGrado.Text + "        SECCIÓN:" + cbSeccion.Text + "                      ASIGNTURA:" + cbMateria.Text));
@@ -190,8 +192,8 @@ namespace WindowsFormsApplication1
         }
 
         private void cbSeccion_SelectedIndexChanged(object sender, EventArgs e)
-        {            
-           
+        {               
+
             pr.Limpiarcb(cbMateria);
             if (pr.Preferencia(Usuario.usuario) == 1)
             {
@@ -202,6 +204,7 @@ namespace WindowsFormsApplication1
                 pr.materiacusto(Usuario.usuario, cbGrado, cbSeccion, cbMateria);
             }
             Activar();
+
         }
 
         private void cbMateria_SelectedIndexChanged(object sender, EventArgs e)

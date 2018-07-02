@@ -82,7 +82,7 @@ Grado=(SELECT IdGrado from GRADO WHERE Grado=@Grado)
 AND Periodo=@Periodo AND Trimestre=@Trimestre
  AND 
 Seccion=(SELECT IdSeccion from SECCION WHERE Seccion=@Seccion)
- 
+
 end
 CREATE PROCEDURE [dbo].[DeletedDocente]
 	@idMaestro varchar(10)
@@ -116,6 +116,7 @@ INNER JOIN GRADO ON GRADO.IdGrado=NGM.Grado
 WHERE NGM.Maestro=@Nombre
 GROUP BY GRADO.Grado
 end
+
 CREATE PROCEDURE GetActividades
 @Grado varchar(50),
 
@@ -419,6 +420,7 @@ as
 begin
 SELECT Nombre from Director WHERE IdDirector=@id
 end
+
 CREATE PROCEDURE [dbo].[NOTAS]
 @Alumno varchar(100),
 @Materia varchar (50)
@@ -429,6 +431,7 @@ INNER JOIN ALUMNO ON ALUMNO.NIE=REGISTRO.Alumno
 INNER JOIN ACTIVIDADES ON ACTIVIDADES.IdActividad=REGISTRO.Actividad
 WHERE REGISTRO.Alumno=(SELECT NIE from ALUMNO WHERE Nombre=@Alumno) AND REGISTRO.Materia=(SELECT IdMateria from MATERIA WHERE Materia=@Materia) 
 end
+
 CREATE PROCEDURE NOTASPORGRADOSECCION
 @Materia varchar (50),
 
@@ -466,6 +469,7 @@ Trimestre=@Trimestre
 AND ACTIVIDADES.Materia=(SELECT IdMateria from MATERIA WHERE Materia=@Materia))
  AND 
 ACTIVIDADES.Seccion=(SELECT IdSeccion FROM SECCION WHERE Seccion=@Seccion))
+
 
 end
 CREATE PROCEDURE [dbo].[selecinfo_alumnos]
@@ -522,6 +526,7 @@ begin
 		Where IdMaestro = @idMaestro
 	end		
 end
+
 CREATE PROCEDURE UpdateNotas
 @Materia varchar (50),
 
@@ -739,4 +744,5 @@ as
 begin
 SELECT Tipo from Usuarios WHERE Usuario=@Usuario
 end
+
 FIN

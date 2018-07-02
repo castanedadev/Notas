@@ -82,6 +82,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.txtIDBorrar = new System.Windows.Forms.TextBox();
             this.uu = new System.Windows.Forms.Label();
+
             this.label21 = new System.Windows.Forms.Label();
             this.txtContra = new System.Windows.Forms.TextBox();
             this.txtContraConfirmar = new System.Windows.Forms.TextBox();
@@ -92,6 +93,7 @@
             this.label24 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
+
             this.txtContraseña2 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.txtUsuB = new System.Windows.Forms.TextBox();
@@ -105,6 +107,7 @@
             this.txtUser = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.chEstado = new System.Windows.Forms.CheckBox();
+
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV2)).BeginInit();
@@ -627,6 +630,7 @@
             this.uu.TabIndex = 73;
             this.uu.Text = "Usuario";
             // 
+
             // label21
             // 
             this.label21.AutoSize = true;
@@ -713,6 +717,7 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+
             // txtContraseña2
             // 
             this.txtContraseña2.Location = new System.Drawing.Point(139, 214);
