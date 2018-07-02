@@ -55,6 +55,7 @@ namespace WindowsFormsApplication1
 
         private void cbGrado_SelectedIndexChanged(object sender, EventArgs e)
         {
+            pr.Limpiarcb(cbSeccion);
             pr.Limpiarcb(cbMateria);
             if (pr.Preferencia(Usuario.usuario) == 1)
             {
@@ -190,7 +191,7 @@ namespace WindowsFormsApplication1
 
         private void cbSeccion_SelectedIndexChanged(object sender, EventArgs e)
         {            
-            Activar();
+           
             pr.Limpiarcb(cbMateria);
             if (pr.Preferencia(Usuario.usuario) == 1)
             {
@@ -200,6 +201,7 @@ namespace WindowsFormsApplication1
             {
                 pr.materiacusto(Usuario.usuario, cbGrado, cbSeccion, cbMateria);
             }
+            Activar();
         }
 
         private void cbMateria_SelectedIndexChanged(object sender, EventArgs e)
