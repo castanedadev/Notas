@@ -82,6 +82,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.txtIDBorrar = new System.Windows.Forms.TextBox();
             this.uu = new System.Windows.Forms.Label();
+
             this.label21 = new System.Windows.Forms.Label();
             this.txtContra = new System.Windows.Forms.TextBox();
             this.txtContraConfirmar = new System.Windows.Forms.TextBox();
@@ -632,6 +633,7 @@
             this.uu.TabIndex = 73;
             this.uu.Text = "Usuario";
             // 
+
             // label21
             // 
             this.label21.AutoSize = true;
@@ -719,7 +721,10 @@
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 631030c... Primer commit nuevo proyecto
             // txtContraseña2
             // 
             this.txtContraseña2.Location = new System.Drawing.Point(139, 214);
