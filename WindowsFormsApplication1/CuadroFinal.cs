@@ -193,6 +193,7 @@ namespace WindowsFormsApplication1
         private void cbSeccion_SelectedIndexChanged(object sender, EventArgs e)
         {               
 
+
             pr.Limpiarcb(cbMateria);
             if (pr.Preferencia(Usuario.usuario) == 1)
             {
