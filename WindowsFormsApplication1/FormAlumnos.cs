@@ -50,7 +50,7 @@ namespace WindowsFormsApplication1
                     scomand.CommandType = CommandType.StoredProcedure;
                     scomand.ExecuteNonQuery();
                     getconexion.Close();
-                    MessageBox.Show("Agregado con exito");
+                    MessageBox.Show("Agregado con exito", "REGISTRO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtNIE.Clear();
                     txtNom.Clear();
                     txtApell.Clear();
@@ -64,12 +64,12 @@ namespace WindowsFormsApplication1
                 catch (Exception ex)
                 {
 
-                    MessageBox.Show("Error" + ex);
+                    MessageBox.Show("Error" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Error en registro");
+                MessageBox.Show("Error en registro", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtNIE.Clear();
                 txtNom.Clear();
                 txtApell.Clear();
@@ -132,7 +132,7 @@ namespace WindowsFormsApplication1
                 getconexion.Close();
                 if (txtNIE.Text==nie)
                 {
-                    MessageBox.Show("NIE Existente");
+                    MessageBox.Show("NIE Existente", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return (false);
                 }
                 else
@@ -166,7 +166,7 @@ namespace WindowsFormsApplication1
                 getconexion.Close();
                 if (txtApell.Text + "," + txtNom.Text == nombre)
                 {
-                    MessageBox.Show("Ese nombre ya fue registrado");
+                    MessageBox.Show("Ese nombre ya fue registrado", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return (false);
                 }
                 else
@@ -201,7 +201,7 @@ namespace WindowsFormsApplication1
                 getconexion.Close();
                 if (txtNIE.Text != nie)
                 {
-                    MessageBox.Show("Ese nombre ya fue registrado");
+                    MessageBox.Show("Ese nombre ya fue registrado", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return (false);
                 }
                 else
@@ -285,7 +285,7 @@ namespace WindowsFormsApplication1
                     scomand.CommandType = CommandType.StoredProcedure;
                     scomand.ExecuteNonQuery();
                     getconexion.Close();
-                    MessageBox.Show("Actualizacion exitosa");
+                    MessageBox.Show("Actualizacion exitosa", "ACTUALIZACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     txtNIE.Clear();
                     txtNom.Clear();
@@ -299,12 +299,12 @@ namespace WindowsFormsApplication1
                 catch (Exception ex)
                 {
 
-                    MessageBox.Show("Error" + ex);
+                    MessageBox.Show("Error" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Error en registro");
+                MessageBox.Show("Error en registro", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtNom.Clear();
                 txtApell.Clear();
                 dTDFechaN.ResetText();
@@ -330,7 +330,7 @@ namespace WindowsFormsApplication1
                     scomand.CommandType = CommandType.StoredProcedure;
                     scomand.ExecuteNonQuery();
                     getconexion.Close();
-                    MessageBox.Show("Registro borrado exitosamente");
+                    MessageBox.Show("Registro borrado exitosamente", "ELIMINADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtNIE.Clear();
                     txtNom.Clear();
                     txtApell.Clear();
@@ -341,13 +341,13 @@ namespace WindowsFormsApplication1
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error" + ex);
+                    MessageBox.Show("Error" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
             }
             else
             {
-                MessageBox.Show("Error al borrar registro");
+                MessageBox.Show("Error al borrar registro", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtNIE.Clear();
                 txtNom.Clear();
                 txtApell.Clear();
@@ -588,7 +588,7 @@ namespace WindowsFormsApplication1
                     scomand.CommandType = CommandType.StoredProcedure;
                     scomand.ExecuteNonQuery();
                     getconexion.Close();
-                    MessageBox.Show("Agregado con exito");
+                    MessageBox.Show("Agregado con exito", "REGISTRO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtNIE.Clear();
                     txtNom.Clear();
                     txtApell.Clear();
@@ -607,7 +607,7 @@ namespace WindowsFormsApplication1
             }
             else
             {
-                MessageBox.Show("Error en registro");
+                MessageBox.Show("Error en registro", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtNIE.Clear();
                 txtNom.Clear();
                 txtApell.Clear();
@@ -647,7 +647,7 @@ namespace WindowsFormsApplication1
                     scomand.CommandType = CommandType.StoredProcedure;
                     scomand.ExecuteNonQuery();
                     getconexion.Close();
-                    MessageBox.Show("Actualizacion exitosa");
+                    MessageBox.Show("Actualizacion exitosa", "ACTUALIZACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     txtNIE.Clear();
                     txtNom.Clear();
@@ -661,12 +661,12 @@ namespace WindowsFormsApplication1
                 catch (Exception ex)
                 {
 
-                    MessageBox.Show("Error" + ex);
+                    MessageBox.Show("Error" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Error en registro");
+                MessageBox.Show("Error en registro", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtNom.Clear();
                 txtApell.Clear();
                 dTDFechaN.ResetText();
@@ -690,7 +690,7 @@ namespace WindowsFormsApplication1
                     scomand.CommandType = CommandType.StoredProcedure;
                     scomand.ExecuteNonQuery();
                     getconexion.Close();
-                    MessageBox.Show("Registro borrado exitosamente");
+                    MessageBox.Show("Registro borrado exitosamente", "ELIMINADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtNIE.Clear();
                     txtNom.Clear();
                     txtApell.Clear();
@@ -701,13 +701,13 @@ namespace WindowsFormsApplication1
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error" + ex);
+                    MessageBox.Show("Error" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
             }
             else
             {
-                MessageBox.Show("Error al borrar registro");
+                MessageBox.Show("Error al borrar registro", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtNIE.Clear();
                 txtNom.Clear();
                 txtApell.Clear();

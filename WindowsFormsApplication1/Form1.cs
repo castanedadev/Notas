@@ -205,7 +205,7 @@ namespace WindowsFormsApplication1
             catch (Exception)
             {
 
-                MessageBox.Show("Ingrese datos válidos");
+                MessageBox.Show("Ingrese datos válidos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 dgvRegistro.CurrentCell.Value = "0";
                 pr.CuadroNotas(dgvRegistro, cbGrado, cbMateria, cbSeccion, rbt1, rbt2, rbt3, rbp35,
             rbs35, rb30);
@@ -215,10 +215,6 @@ namespace WindowsFormsApplication1
         private void btnExcel_Click(object sender, EventArgs e)
         {
             pr.exportarexcel(dgvRegistro);
-        }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void rbp1_CheckedChanged(object sender, EventArgs e)
@@ -307,12 +303,6 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void btnActividades_Click(object sender, EventArgs e)
-        {
-            Actividades f = new Actividades();
-            f.Show();
-            this.Hide();
-        }
         private void btnPDF_Click(object sender, EventArgs e)
         {
             toPDF();
@@ -330,12 +320,6 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void regresarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Menu m = new Menu();
-            m.Show();
-            this.Hide();
-        }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
@@ -507,12 +491,12 @@ namespace WindowsFormsApplication1
                     dgvRegistro.Columns["ALUMNOS"].ReadOnly = true;
                     dgvRegistro.Columns["No"].ReadOnly = true;
                     btnExcel.Enabled = true;
-                    MessageBox.Show("Porcentajes actulizados");
+                    MessageBox.Show("Porcentajes actulizados", "ACTUALIZACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
 
-                    MessageBox.Show("ERROR" + ex);
+                    MessageBox.Show("ERROR" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

@@ -70,7 +70,7 @@ namespace WindowsFormsApplication1
             }
             else
             {
-                MessageBox.Show("Datos no coinciden");
+                MessageBox.Show("Datos no coinciden", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 TxtUser.Clear();
                 TxtPass.Clear();
             }

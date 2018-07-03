@@ -33,7 +33,7 @@ namespace WindowsFormsApplication1
             txtPonderacion.Enabled = false;
             btnAgregar.Enabled = false;
             cbMateria.Enabled = false;
-            btnborrar.Enabled = false;
+            btnBorrar.Enabled = false;
        
 
         }
@@ -154,7 +154,7 @@ namespace WindowsFormsApplication1
             txtActividad.Enabled = true;
             txtPonderacion.Enabled = true;
             btnAgregar.Enabled = true;
-            btnborrar.Enabled = true;
+            btnBorrar.Enabled = true;
 
         }
 
@@ -253,14 +253,6 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Form1 f = new Form1();
-            f.Show();
-            this.Hide();
-
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
             DialogResult r = MessageBox.Show("Se borrarán todos los registros de esta actividad", "Eliminar actividad", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -315,7 +307,7 @@ namespace WindowsFormsApplication1
             lblnp.Visible = true;
             txtnn.Visible = true;
             txtnp.Visible = true;
-            btnactu.Visible = true;
+            btnactu1.Visible = true;
              actividada = dgvactividades[0, y].Value.ToString();
             ponderaa = dgvactividades[1, y].Value.ToString();
             txtnn.Text = actividada;
@@ -473,7 +465,7 @@ namespace WindowsFormsApplication1
                     lblnp.Visible = false;
                     txtnn.Visible = false;
                     txtnp.Visible = false;
-                    btnactu.Visible = false;
+                    btnactu1.Visible = false;
 
 
                     MessageBox.Show("Datos actualizados", "MENSAJE", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -484,26 +476,6 @@ namespace WindowsFormsApplication1
 
             }
 
-        //private void button2_Click_1(object sender, EventArgs e)
-        //{
-        //    FormAlumnos f = new FormAlumnos();
-        //    f.Show();
-        //    this.Hide();
-        //}
-
-        //private void button3_Click_1(object sender, EventArgs e)
-        //{
-        //    CuadroFinal f = new CuadroFinal();
-        //    f.Show();
-        //    this.Hide();
-        //}
-
-        //private void regresarToolStripMenuItem_Click(object sender, EventArgs e)
-        //{
-        //    Menu m = new Menu();
-        //    m.Show();
-        //    this.Hide();
-        //}
 
         private void Actividades_Load(object sender, EventArgs e)
         {

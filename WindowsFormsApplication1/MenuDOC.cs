@@ -117,7 +117,7 @@ namespace WindowsFormsApplication1
         private void btn3_2_Click(object sender, EventArgs e)
         {
             panel3.Hide(); v3 = 0;
-            mostrar(new Docente());
+            mostrar(new DatosDocente());
         }
 
         private void btn1_3_Click(object sender, EventArgs e)
@@ -128,10 +128,13 @@ namespace WindowsFormsApplication1
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
-            Login call = new Login();
-            this.Hide();
-            call.ShowDialog();
-            this.Close();
+            if (MessageBox.Show("¿Esta seguro se querer Cerrar Sesion?", "CERRAR SESION", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Login call = new Login();
+                this.Hide();
+                call.ShowDialog();
+                this.Close();
+            }
         }
         ////////////////////////////////////////////////////////////////////////
         //////////////////////// FONDOS

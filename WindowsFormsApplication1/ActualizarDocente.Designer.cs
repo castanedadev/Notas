@@ -62,6 +62,7 @@
             this.GB_NGMS.Controls.Add(this.label9);
             this.GB_NGMS.Controls.Add(this.CB_Grado);
             this.GB_NGMS.Controls.Add(this.label8);
+            this.GB_NGMS.Font = new System.Drawing.Font("Microsoft PhagsPa", 10F, System.Drawing.FontStyle.Bold);
             this.GB_NGMS.Location = new System.Drawing.Point(399, 134);
             this.GB_NGMS.Name = "GB_NGMS";
             this.GB_NGMS.Size = new System.Drawing.Size(379, 236);
@@ -73,9 +74,9 @@
             // 
             this.CB_TNGMS.Enabled = false;
             this.CB_TNGMS.FormattingEnabled = true;
-            this.CB_TNGMS.Location = new System.Drawing.Point(150, 59);
+            this.CB_TNGMS.Location = new System.Drawing.Point(151, 62);
             this.CB_TNGMS.Name = "CB_TNGMS";
-            this.CB_TNGMS.Size = new System.Drawing.Size(80, 21);
+            this.CB_TNGMS.Size = new System.Drawing.Size(80, 25);
             this.CB_TNGMS.TabIndex = 53;
             this.CB_TNGMS.SelectedIndexChanged += new System.EventHandler(this.CB_TNGMS_SelectedIndexChanged);
             // 
@@ -83,7 +84,7 @@
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Microsoft PhagsPa", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(74, 63);
+            this.label29.Location = new System.Drawing.Point(82, 68);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(63, 18);
             this.label29.TabIndex = 52;
@@ -94,7 +95,7 @@
             this.DGV_g_m.AllowUserToAddRows = false;
             this.DGV_g_m.AllowUserToDeleteRows = false;
             this.DGV_g_m.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_g_m.Location = new System.Drawing.Point(20, 86);
+            this.DGV_g_m.Location = new System.Drawing.Point(20, 99);
             this.DGV_g_m.Name = "DGV_g_m";
             this.DGV_g_m.ReadOnly = true;
             this.DGV_g_m.Size = new System.Drawing.Size(341, 131);
@@ -105,9 +106,9 @@
             // 
             this.CB_TMateria.Enabled = false;
             this.CB_TMateria.FormattingEnabled = true;
-            this.CB_TMateria.Location = new System.Drawing.Point(247, 19);
+            this.CB_TMateria.Location = new System.Drawing.Point(282, 25);
             this.CB_TMateria.Name = "CB_TMateria";
-            this.CB_TMateria.Size = new System.Drawing.Size(89, 21);
+            this.CB_TMateria.Size = new System.Drawing.Size(89, 25);
             this.CB_TMateria.TabIndex = 51;
             this.CB_TMateria.SelectedIndexChanged += new System.EventHandler(this.CB_TMateria_SelectedIndexChanged);
             // 
@@ -115,7 +116,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft PhagsPa", 10F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(172, 25);
+            this.label9.Location = new System.Drawing.Point(212, 31);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(64, 18);
             this.label9.TabIndex = 17;
@@ -124,9 +125,9 @@
             // CB_Grado
             // 
             this.CB_Grado.FormattingEnabled = true;
-            this.CB_Grado.Location = new System.Drawing.Point(70, 21);
+            this.CB_Grado.Location = new System.Drawing.Point(66, 25);
             this.CB_Grado.Name = "CB_Grado";
-            this.CB_Grado.Size = new System.Drawing.Size(89, 21);
+            this.CB_Grado.Size = new System.Drawing.Size(140, 25);
             this.CB_Grado.TabIndex = 50;
             this.CB_Grado.SelectedIndexChanged += new System.EventHandler(this.CB_Grado_SelectedIndexChanged);
             // 
@@ -134,7 +135,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft PhagsPa", 10F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(6, 25);
+            this.label8.Location = new System.Drawing.Point(6, 31);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(54, 18);
             this.label8.TabIndex = 16;
@@ -146,9 +147,10 @@
             this.GB_tutor.Controls.Add(this.CB_TGrado);
             this.GB_tutor.Controls.Add(this.label6);
             this.GB_tutor.Controls.Add(this.label7);
-            this.GB_tutor.Location = new System.Drawing.Point(433, 76);
+            this.GB_tutor.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold);
+            this.GB_tutor.Location = new System.Drawing.Point(419, 67);
             this.GB_tutor.Name = "GB_tutor";
-            this.GB_tutor.Size = new System.Drawing.Size(302, 52);
+            this.GB_tutor.Size = new System.Drawing.Size(351, 52);
             this.GB_tutor.TabIndex = 60;
             this.GB_tutor.TabStop = false;
             this.GB_tutor.Text = "Tutor";
@@ -158,17 +160,17 @@
             // 
             this.CB_TSeccion.Enabled = false;
             this.CB_TSeccion.FormattingEnabled = true;
-            this.CB_TSeccion.Location = new System.Drawing.Point(239, 21);
+            this.CB_TSeccion.Location = new System.Drawing.Point(286, 15);
             this.CB_TSeccion.Name = "CB_TSeccion";
-            this.CB_TSeccion.Size = new System.Drawing.Size(55, 21);
+            this.CB_TSeccion.Size = new System.Drawing.Size(55, 29);
             this.CB_TSeccion.TabIndex = 49;
             // 
             // CB_TGrado
             // 
             this.CB_TGrado.FormattingEnabled = true;
-            this.CB_TGrado.Location = new System.Drawing.Point(65, 21);
+            this.CB_TGrado.Location = new System.Drawing.Point(66, 15);
             this.CB_TGrado.Name = "CB_TGrado";
-            this.CB_TGrado.Size = new System.Drawing.Size(97, 21);
+            this.CB_TGrado.Size = new System.Drawing.Size(144, 29);
             this.CB_TGrado.TabIndex = 48;
             this.CB_TGrado.SelectedIndexChanged += new System.EventHandler(this.CB_TGrado_SelectedIndexChanged);
             // 
@@ -186,7 +188,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft PhagsPa", 10F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(167, 22);
+            this.label7.Location = new System.Drawing.Point(217, 21);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(63, 18);
             this.label7.TabIndex = 13;
@@ -206,10 +208,12 @@
             // 
             // LBDocentes
             // 
+            this.LBDocentes.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold);
             this.LBDocentes.FormattingEnabled = true;
+            this.LBDocentes.ItemHeight = 21;
             this.LBDocentes.Location = new System.Drawing.Point(12, 45);
             this.LBDocentes.Name = "LBDocentes";
-            this.LBDocentes.Size = new System.Drawing.Size(381, 329);
+            this.LBDocentes.Size = new System.Drawing.Size(381, 319);
             this.LBDocentes.TabIndex = 74;
             this.LBDocentes.SelectedIndexChanged += new System.EventHandler(this.LBDocentes_SelectedIndexChanged);
             // 
@@ -258,7 +262,7 @@
             this.btnUpdate.IconVisible = true;
             this.btnUpdate.IconZoom = 90D;
             this.btnUpdate.IsTab = false;
-            this.btnUpdate.Location = new System.Drawing.Point(399, 370);
+            this.btnUpdate.Location = new System.Drawing.Point(399, 376);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Normalcolor = System.Drawing.Color.DimGray;
             this.btnUpdate.OnHovercolor = System.Drawing.Color.SlateGray;
@@ -293,7 +297,7 @@
             this.btnEliminar.IconVisible = true;
             this.btnEliminar.IconZoom = 90D;
             this.btnEliminar.IsTab = false;
-            this.btnEliminar.Location = new System.Drawing.Point(595, 370);
+            this.btnEliminar.Location = new System.Drawing.Point(595, 376);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Normalcolor = System.Drawing.Color.DarkRed;
             this.btnEliminar.OnHovercolor = System.Drawing.Color.OrangeRed;

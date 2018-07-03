@@ -27,7 +27,7 @@ namespace WindowsFormsApplication1
 
         public Docente()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
 
         private void Docente_Load(object sender, EventArgs e)
@@ -1021,7 +1021,7 @@ namespace WindowsFormsApplication1
 
         private void button5_Click(object sender, EventArgs e)
         {
-            ActualizarDocente call = new ActualizarDocente();
+            IngresarDocente call = new IngresarDocente();
             call.Show();
         }
 
