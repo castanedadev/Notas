@@ -237,7 +237,7 @@
             this.btn1_2.BackColor = System.Drawing.Color.SteelBlue;
             this.btn1_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn1_2.BorderRadius = 0;
-            this.btn1_2.ButtonText = "Cuadro Actividades";
+            this.btn1_2.ButtonText = "Cuadro Notas";
             this.btn1_2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn1_2.DisabledColor = System.Drawing.Color.Gray;
             this.btn1_2.Iconcolor = System.Drawing.Color.Transparent;
@@ -260,7 +260,7 @@
             this.btn1_2.selected = false;
             this.btn1_2.Size = new System.Drawing.Size(165, 31);
             this.btn1_2.TabIndex = 8;
-            this.btn1_2.Text = "Cuadro Actividades";
+            this.btn1_2.Text = "Cuadro Notas";
             this.btn1_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn1_2.Textcolor = System.Drawing.Color.White;
             this.btn1_2.TextFont = new System.Drawing.Font("Microsoft PhagsPa", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

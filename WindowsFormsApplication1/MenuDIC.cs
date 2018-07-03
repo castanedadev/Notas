@@ -90,7 +90,7 @@ namespace WindowsFormsApplication1
         private void btn1_1_Click(object sender, EventArgs e)
         {
             panel1.Hide(); v1 = 0;
-            mostrar(new Actividades()); 
+            mostrar(new Acti());
         }
 
         private void btn1_2_Click(object sender, EventArgs e)
