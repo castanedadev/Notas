@@ -145,11 +145,7 @@ Grado=(SELECT IdGrado from GRADO WHERE Grado=@Grado)
 AND Periodo=@Periodo AND Trimestre=@Trimestre
  AND 
 Seccion=(SELECT IdSeccion from SECCION WHERE Seccion=@Seccion)
-<<<<<<< HEAD
 
-=======
- 
->>>>>>> a493520... PrimerCambio
 end
 CREATE PROCEDURE [dbo].[DeletedDocente]
 	@idMaestro varchar(10)
@@ -183,10 +179,7 @@ INNER JOIN GRADO ON GRADO.IdGrado=NGM.Grado
 WHERE NGM.Maestro=@Nombre
 GROUP BY GRADO.Grado
 end
-<<<<<<< HEAD
 
-=======
->>>>>>> a493520... PrimerCambio
 CREATE PROCEDURE GetActividades
 @Grado varchar(50),
 
@@ -233,10 +226,7 @@ as
 begin
 SELECT Porcentaje from PERIODO WHERE IdPeriodo=@Periodo
 end
-<<<<<<< HEAD
 
-=======
->>>>>>> a493520... PrimerCambio
 CREATE PROCEDURE getPonderacion
 @Grado varchar(50),
 
@@ -303,10 +293,7 @@ AS
 BEGIN
  SELECT * FROM SECCION WHERE Seccion=@Seccion
 END
-<<<<<<< HEAD
 
-=======
->>>>>>> a493520... PrimerCambio
 CREATE PROCEDURE IngresarActividades
 @Actividad varchar(100),
 
@@ -416,10 +403,7 @@ begin
 INSERT INTO PorcentajeMateria VALUES((SELECT NIE from ALUMNO WHERE Nombre=@Alumno),
 (SELECT IdMateria from MATERIA WHERE Materia=@Materia ),@Trimestre,@Periodo,@Porcentaje)
 end
-<<<<<<< HEAD
 
-=======
->>>>>>> a493520... PrimerCambio
 CREATE PROCEDURE IngresarRegistro
 @Alumno varchar(100),
 
@@ -502,10 +486,7 @@ as
 begin
 SELECT Nombre from Director WHERE IdDirector=@id
 end
-<<<<<<< HEAD
 
-=======
->>>>>>> a493520... PrimerCambio
 CREATE PROCEDURE [dbo].[NOTAS]
 @Alumno varchar(100),
 @Materia varchar (50)
@@ -516,10 +497,7 @@ INNER JOIN ALUMNO ON ALUMNO.NIE=REGISTRO.Alumno
 INNER JOIN ACTIVIDADES ON ACTIVIDADES.IdActividad=REGISTRO.Actividad
 WHERE REGISTRO.Alumno=(SELECT NIE from ALUMNO WHERE Nombre=@Alumno) AND REGISTRO.Materia=(SELECT IdMateria from MATERIA WHERE Materia=@Materia) 
 end
-<<<<<<< HEAD
 
-=======
->>>>>>> a493520... PrimerCambio
 CREATE PROCEDURE NOTASPORGRADOSECCION
 @Materia varchar (50),
 
@@ -613,10 +591,7 @@ begin
 		Where IdMaestro = @idMaestro
 	end		
 end
-<<<<<<< HEAD
 
-=======
->>>>>>> a493520... PrimerCambio
 CREATE PROCEDURE UpdateNotas
 @Materia varchar (50),
 
@@ -722,10 +697,7 @@ Alumno=(SELECT NIE from ALUMNO WHERE Nombre=@Alumno) AND
 Materia=(SELECT IdMateria from MATERIA WHERE Materia=@Materia) AND
 Periodo=@Periodo AND Trimestre=@Trimestre
 end
-<<<<<<< HEAD
 
-=======
->>>>>>> a493520... PrimerCambio
 CREATE PROCEDURE UpdatePorstep1
 @Materia varchar(50),
 
@@ -826,21 +798,15 @@ BEGIN
 	DELETE NGM
 	DELETE ALUMNO
 	DELETE Maestros
-<<<<<<< HEAD
 	DELETE SECCION WHERE IdSeccion!=1
 	DELETE GRADO WHERE IdGrado!=1
 end
-=======
-END
->>>>>>> a493520... PrimerCambio
+
 CREATE PROCEDURE Preferencia
 @Usuario varchar(15)
 as
 begin
 SELECT Tipo from Usuarios WHERE Usuario=@Usuario
 end
-<<<<<<< HEAD
 
-=======
->>>>>>> a493520... PrimerCambio
 FIN

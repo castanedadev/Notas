@@ -42,6 +42,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.btnRAl = new System.Windows.Forms.Button();
             this.btnRProfes = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.bunifuGradientPanel2.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -124,9 +125,13 @@
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+<<<<<<< HEAD
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button4);
+=======
+            this.panel1.Controls.Add(this.button1);
+>>>>>>> Cambio 4
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.btnRAl);
             this.panel1.Controls.Add(this.btnRProfes);
@@ -210,6 +215,19 @@
             this.btnRProfes.Text = "Recuperar \r\nprofesores\r\n";
             this.btnRProfes.UseVisualStyleBackColor = false;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Window;
+            this.bunifuTransition1.SetDecoration(this.button1, BunifuAnimatorNS.DecorationType.None);
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(13, 277);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(178, 45);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Enviar a repositorio";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Rep1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -243,5 +261,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnRAl;
+        private System.Windows.Forms.Button button1;
     }
 }
