@@ -63,6 +63,7 @@ namespace WindowsFormsApplication1
 
                 doc.Add(new Paragraph("   "));
 
+
                 GenerarDocumento(doc);
                 doc.Close();
                 Process.Start(filename);

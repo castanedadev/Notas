@@ -100,6 +100,7 @@
             this.cuadroDeActividadesToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
             this.cuadroDeActividadesToolStripMenuItem.Text = "Cuadro de notas";
 
+
             this.cuadroDeActividadesToolStripMenuItem.Click += new System.EventHandler(this.cuadroDeActividadesToolStripMenuItem_Click);
             // 
             // cuadroFinalToolStripMenuItem
@@ -169,8 +170,8 @@
             // 
             // button1
             // 
-
             this.button1.Location = new System.Drawing.Point(374, 24);
+
 
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);

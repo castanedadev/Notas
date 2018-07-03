@@ -470,7 +470,6 @@ AND ACTIVIDADES.Materia=(SELECT IdMateria from MATERIA WHERE Materia=@Materia))
  AND 
 ACTIVIDADES.Seccion=(SELECT IdSeccion FROM SECCION WHERE Seccion=@Seccion))
 
-
 end
 CREATE PROCEDURE [dbo].[selecinfo_alumnos]
  @Nombre varchar(100) 
