@@ -106,6 +106,12 @@ namespace WindowsFormsApplication1.F3
                         alumno.Responsable = reader["Responsable"].ToString().Trim();
                         alumno.Grado = int.Parse(reader["Grado"].ToString().Trim())+1;
                         alumno.Seccion = int.Parse(reader["Seccion"].ToString().Trim());
+                        
+                        if (alumno.Grado == 13)
+                        {
+                            alumno.Grado-=1;
+                        }
+
 
 
                         temp.Add(alumno);
