@@ -82,7 +82,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.txtIDBorrar = new System.Windows.Forms.TextBox();
             this.uu = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
             this.txtContra = new System.Windows.Forms.TextBox();
             this.txtContraConfirmar = new System.Windows.Forms.TextBox();
@@ -633,16 +632,6 @@
             this.uu.TabIndex = 73;
             this.uu.Text = "Usuario";
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(-3, -1);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(434, 23);
-            this.button4.TabIndex = 76;
-            this.button4.Text = "Regresar al login";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // label21
             // 
             this.label21.AutoSize = true;
@@ -729,6 +718,7 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+
 
             // txtContraseña2
             // 
@@ -871,7 +861,6 @@
             this.Controls.Add(this.label22);
             this.Controls.Add(this.txtContra);
             this.Controls.Add(this.label21);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.txtIDBorrar);
             this.Controls.Add(this.uu);
@@ -976,7 +965,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox txtIDBorrar;
         private System.Windows.Forms.Label uu;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox txtContra;
         private System.Windows.Forms.TextBox txtContraConfirmar;
