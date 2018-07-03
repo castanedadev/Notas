@@ -78,5 +78,15 @@ namespace WindowsFormsApplication1.F2
             button1.Click += new System.EventHandler(button1_Click);
             button2.Click += new System.EventHandler(button5_Click);         
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
