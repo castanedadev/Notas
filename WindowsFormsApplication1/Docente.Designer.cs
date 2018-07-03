@@ -604,7 +604,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(788, 171);
+            this.button3.Location = new System.Drawing.Point(832, 141);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(124, 35);
             this.button3.TabIndex = 68;
@@ -614,7 +614,7 @@
             // 
             // txtIDBorrar
             // 
-            this.txtIDBorrar.Location = new System.Drawing.Point(801, 62);
+            this.txtIDBorrar.Location = new System.Drawing.Point(892, 57);
             this.txtIDBorrar.Name = "txtIDBorrar";
             this.txtIDBorrar.Size = new System.Drawing.Size(100, 20);
             this.txtIDBorrar.TabIndex = 66;
@@ -622,7 +622,7 @@
             // uu
             // 
             this.uu.AutoSize = true;
-            this.uu.Location = new System.Drawing.Point(829, 34);
+            this.uu.Location = new System.Drawing.Point(829, 64);
             this.uu.Name = "uu";
             this.uu.Size = new System.Drawing.Size(43, 13);
             this.uu.TabIndex = 73;
@@ -758,7 +758,7 @@
             // 
             // txtContrarBorrar
             // 
-            this.txtContrarBorrar.Location = new System.Drawing.Point(801, 125);
+            this.txtContrarBorrar.Location = new System.Drawing.Point(892, 86);
             this.txtContrarBorrar.Name = "txtContrarBorrar";
             this.txtContrarBorrar.Size = new System.Drawing.Size(100, 20);
             this.txtContrarBorrar.TabIndex = 67;
@@ -766,7 +766,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(829, 94);
+            this.label20.Location = new System.Drawing.Point(811, 94);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(61, 13);
             this.label20.TabIndex = 86;
