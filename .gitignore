@@ -3,3 +3,4 @@ Notas/WindowsFormsApplication1/bin/obj/Release
 .vs/
 WindowsFormsApplication1/bin/obj/Release/
 WindowsFormsApplication1/obj/
+*.exe
