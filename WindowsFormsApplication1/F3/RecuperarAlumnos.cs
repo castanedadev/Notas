@@ -66,6 +66,8 @@ namespace WindowsFormsApplication1.F3
 
         private void ComAñoChange(object sender, EventArgs e)
         {
+         
+           
             if (cmbAño.SelectedIndex != -1)
             {
                 cmbGrado.Visible = true;
@@ -126,7 +128,7 @@ namespace WindowsFormsApplication1.F3
         }
         internal void RR()
         {
-
+            listBox2.Items.Clear();
             int año = cmbAño.SelectedIndex + 1;
             int grado = cmbGrado.SelectedIndex + 2;
             int seccion = cmbSeccion.SelectedIndex + 2;
@@ -289,6 +291,7 @@ namespace WindowsFormsApplication1.F3
 
         private void txtNombre_OnTextChange(object sender, EventArgs e)
         {
+            listBox2.Items.Clear();
             if (txtNombre.text != "")
             {
                 int año = cmbAño.SelectedIndex + 1;
