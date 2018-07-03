@@ -6,3 +6,4 @@ WindowsFormsApplication1/obj/
 *.exe
 *.pdb
 *.manifest
+*.application
