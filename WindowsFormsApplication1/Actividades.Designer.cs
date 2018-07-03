@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Actividades));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,7 +44,6 @@
             this.rbt1 = new System.Windows.Forms.RadioButton();
             this.rbt2 = new System.Windows.Forms.RadioButton();
             this.rbt3 = new System.Windows.Forms.RadioButton();
-            this.btnCargar = new System.Windows.Forms.Button();
             this.rbp35 = new System.Windows.Forms.RadioButton();
             this.rbs35 = new System.Windows.Forms.RadioButton();
             this.rb30 = new System.Windows.Forms.RadioButton();
@@ -59,7 +60,7 @@
             this.cbSeccion = new System.Windows.Forms.ComboBox();
             this.btnAgregar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnBorrar1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnCargar1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnCargar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnactu1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnactu = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
@@ -200,16 +201,6 @@
             this.rbt3.UseVisualStyleBackColor = true;
             this.rbt3.CheckedChanged += new System.EventHandler(this.rbp3_CheckedChanged);
             // 
-            // btnCargar
-            // 
-            this.btnCargar.Location = new System.Drawing.Point(416, 60);
-            this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(118, 23);
-            this.btnCargar.TabIndex = 15;
-            this.btnCargar.Text = "Cargar Actividades";
-            this.btnCargar.UseVisualStyleBackColor = true;
-            this.btnCargar.Click += new System.EventHandler(this.button2_Click);
-            // 
             // rbp35
             // 
             this.rbp35.AutoSize = true;
@@ -263,10 +254,26 @@
             // dgvactividades
             // 
             this.dgvactividades.AllowUserToAddRows = false;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvactividades.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvactividades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvactividades.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Actividad,
             this.Ponderacion});
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvactividades.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvactividades.Location = new System.Drawing.Point(355, 231);
             this.dgvactividades.Name = "dgvactividades";
             this.dgvactividades.ReadOnly = true;
@@ -402,7 +409,7 @@
             this.btnAgregar.IconZoom = 90D;
             this.btnAgregar.IsTab = false;
             this.btnAgregar.Location = new System.Drawing.Point(6, 285);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Normalcolor = System.Drawing.Color.Blue;
             this.btnAgregar.OnHovercolor = System.Drawing.Color.RoyalBlue;
@@ -438,7 +445,7 @@
             this.btnBorrar1.IconZoom = 90D;
             this.btnBorrar1.IsTab = false;
             this.btnBorrar1.Location = new System.Drawing.Point(163, 285);
-            this.btnBorrar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBorrar1.Margin = new System.Windows.Forms.Padding(4);
             this.btnBorrar1.Name = "btnBorrar1";
             this.btnBorrar1.Normalcolor = System.Drawing.Color.Blue;
             this.btnBorrar1.OnHovercolor = System.Drawing.Color.RoyalBlue;
@@ -452,41 +459,41 @@
             this.btnBorrar1.TextFont = new System.Drawing.Font("Microsoft PhagsPa", 14F, System.Drawing.FontStyle.Bold);
             this.btnBorrar1.Click += new System.EventHandler(this.button3_Click);
             // 
-            // btnCargar1
+            // btnCargar
             // 
-            this.btnCargar1.Activecolor = System.Drawing.Color.Blue;
-            this.btnCargar1.BackColor = System.Drawing.Color.Blue;
-            this.btnCargar1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCargar1.BorderRadius = 0;
-            this.btnCargar1.ButtonText = "Cargar Actividades";
-            this.btnCargar1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCargar1.DisabledColor = System.Drawing.Color.Gray;
-            this.btnCargar1.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnCargar1.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnCargar1.Iconimage")));
-            this.btnCargar1.Iconimage_right = null;
-            this.btnCargar1.Iconimage_right_Selected = null;
-            this.btnCargar1.Iconimage_Selected = null;
-            this.btnCargar1.IconMarginLeft = 0;
-            this.btnCargar1.IconMarginRight = 0;
-            this.btnCargar1.IconRightVisible = true;
-            this.btnCargar1.IconRightZoom = 0D;
-            this.btnCargar1.IconVisible = true;
-            this.btnCargar1.IconZoom = 90D;
-            this.btnCargar1.IsTab = false;
-            this.btnCargar1.Location = new System.Drawing.Point(541, 60);
-            this.btnCargar1.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCargar1.Name = "btnCargar1";
-            this.btnCargar1.Normalcolor = System.Drawing.Color.Blue;
-            this.btnCargar1.OnHovercolor = System.Drawing.Color.RoyalBlue;
-            this.btnCargar1.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnCargar1.selected = false;
-            this.btnCargar1.Size = new System.Drawing.Size(179, 33);
-            this.btnCargar1.TabIndex = 35;
-            this.btnCargar1.Text = "Cargar Actividades";
-            this.btnCargar1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCargar1.Textcolor = System.Drawing.Color.White;
-            this.btnCargar1.TextFont = new System.Drawing.Font("Microsoft PhagsPa", 11F, System.Drawing.FontStyle.Bold);
-            this.btnCargar1.Click += new System.EventHandler(this.button2_Click);
+            this.btnCargar.Activecolor = System.Drawing.Color.Blue;
+            this.btnCargar.BackColor = System.Drawing.Color.Blue;
+            this.btnCargar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCargar.BorderRadius = 0;
+            this.btnCargar.ButtonText = "Cargar Actividades";
+            this.btnCargar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCargar.DisabledColor = System.Drawing.Color.Gray;
+            this.btnCargar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnCargar.Iconimage = null;
+            this.btnCargar.Iconimage_right = null;
+            this.btnCargar.Iconimage_right_Selected = null;
+            this.btnCargar.Iconimage_Selected = null;
+            this.btnCargar.IconMarginLeft = 0;
+            this.btnCargar.IconMarginRight = 0;
+            this.btnCargar.IconRightVisible = true;
+            this.btnCargar.IconRightZoom = 0D;
+            this.btnCargar.IconVisible = true;
+            this.btnCargar.IconZoom = 90D;
+            this.btnCargar.IsTab = false;
+            this.btnCargar.Location = new System.Drawing.Point(453, 46);
+            this.btnCargar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCargar.Name = "btnCargar";
+            this.btnCargar.Normalcolor = System.Drawing.Color.Blue;
+            this.btnCargar.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnCargar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnCargar.selected = false;
+            this.btnCargar.Size = new System.Drawing.Size(179, 33);
+            this.btnCargar.TabIndex = 35;
+            this.btnCargar.Text = "Cargar Actividades";
+            this.btnCargar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCargar.Textcolor = System.Drawing.Color.White;
+            this.btnCargar.TextFont = new System.Drawing.Font("Microsoft PhagsPa", 11F, System.Drawing.FontStyle.Bold);
+            this.btnCargar.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnactu1
             // 
@@ -498,7 +505,7 @@
             this.btnactu1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnactu1.DisabledColor = System.Drawing.Color.Gray;
             this.btnactu1.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnactu1.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnactu1.Iconimage")));
+            this.btnactu1.Iconimage = null;
             this.btnactu1.Iconimage_right = null;
             this.btnactu1.Iconimage_right_Selected = null;
             this.btnactu1.Iconimage_Selected = null;
@@ -551,7 +558,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(660, 413);
             this.Controls.Add(this.btnactu1);
-            this.Controls.Add(this.btnCargar1);
+            this.Controls.Add(this.btnCargar);
             this.Controls.Add(this.btnBorrar1);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.cbSeccion);
@@ -564,7 +571,6 @@
             this.Controls.Add(this.dgvactividades);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnBorrar);
-            this.Controls.Add(this.btnCargar);
             this.Controls.Add(this.rbt3);
             this.Controls.Add(this.rbt2);
             this.Controls.Add(this.rbt1);
@@ -608,7 +614,6 @@
         private System.Windows.Forms.RadioButton rbt1;
         private System.Windows.Forms.RadioButton rbt2;
         private System.Windows.Forms.RadioButton rbt3;
-        private System.Windows.Forms.Button btnCargar;
         private System.Windows.Forms.RadioButton rbp35;
         private System.Windows.Forms.RadioButton rbs35;
         private System.Windows.Forms.RadioButton rb30;
@@ -625,7 +630,7 @@
         private System.Windows.Forms.ComboBox cbSeccion;
         private Bunifu.Framework.UI.BunifuFlatButton btnAgregar;
         private Bunifu.Framework.UI.BunifuFlatButton btnBorrar1;
-        private Bunifu.Framework.UI.BunifuFlatButton btnCargar1;
+        private Bunifu.Framework.UI.BunifuFlatButton btnCargar;
         private Bunifu.Framework.UI.BunifuFlatButton btnactu1;
         private System.Windows.Forms.Button btnactu;
         private System.Windows.Forms.Button btnBorrar;
