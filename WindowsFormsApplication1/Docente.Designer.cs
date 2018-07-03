@@ -82,7 +82,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.txtIDBorrar = new System.Windows.Forms.TextBox();
             this.uu = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
             this.txtContra = new System.Windows.Forms.TextBox();
             this.txtContraConfirmar = new System.Windows.Forms.TextBox();
@@ -92,6 +91,7 @@
             this.txtContraB = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
             this.txtContraseña2 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.txtUsuB = new System.Windows.Forms.TextBox();
@@ -105,7 +105,6 @@
             this.txtUser = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.chEstado = new System.Windows.Forms.CheckBox();
-            this.button5 = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV2)).BeginInit();
@@ -628,16 +627,6 @@
             this.uu.TabIndex = 73;
             this.uu.Text = "Usuario";
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(-3, -1);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(434, 23);
-            this.button4.TabIndex = 76;
-            this.button4.Text = "Regresar al login";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // label21
             // 
             this.label21.AutoSize = true;
@@ -713,6 +702,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(344, 599);
             this.panel1.TabIndex = 85;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(71, 68);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 84;
+            this.button5.Text = "button5";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // txtContraseña2
             // 
@@ -828,16 +827,6 @@
             this.chEstado.UseVisualStyleBackColor = true;
             this.chEstado.CheckedChanged += new System.EventHandler(this.chEstado_CheckedChanged);
             // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(71, 68);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 84;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
             // Docente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -862,7 +851,6 @@
             this.Controls.Add(this.label22);
             this.Controls.Add(this.txtContra);
             this.Controls.Add(this.label21);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.txtIDBorrar);
             this.Controls.Add(this.uu);
@@ -967,7 +955,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox txtIDBorrar;
         private System.Windows.Forms.Label uu;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox txtContra;
         private System.Windows.Forms.TextBox txtContraConfirmar;
