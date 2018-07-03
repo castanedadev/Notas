@@ -207,6 +207,27 @@
     <Compile Include="F3\RPro.Designer.cs">
       <DependentUpon>RPro.cs</DependentUpon>
     </Compile>
+    <Compile Include="F4\Alu.cs" />
+    <Compile Include="F4\GR1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F4\GR1.Designer.cs">
+      <DependentUpon>GR1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F4\Grafico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F4\Grafico.Designer.cs">
+      <DependentUpon>Grafico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F4\Graficos2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F4\Graficos2.Designer.cs">
+      <DependentUpon>Graficos2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F4\Nota.cs" />
+    <Compile Include="F4\procesoI.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -302,6 +323,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="F3\RPro.resx">
       <DependentUpon>RPro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F4\GR1.resx">
+      <DependentUpon>GR1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F4\Grafico.resx">
+      <DependentUpon>Grafico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F4\Graficos2.resx">
+      <DependentUpon>Graficos2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

@@ -87,3 +87,6 @@ C:\Users\Camilo\Documents\GitHub\Notas\WindowsFormsApplication1\bin\Debug\Cuadro
 C:\Users\Camilo\Documents\GitHub\Notas\WindowsFormsApplication1\bin\Debug\itextsharp.dll
 C:\Users\Camilo\Documents\GitHub\Notas\WindowsFormsApplication1\obj\Debug\Cuadro de notas.exe.manifest
 C:\Users\Camilo\Documents\GitHub\Notas\WindowsFormsApplication1\obj\Debug\Cuadro de notas.application
+C:\Users\Camilo\Documents\GitHub\Notas\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.F4.GR1.resources
+C:\Users\Camilo\Documents\GitHub\Notas\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.F4.Grafico.resources
+C:\Users\Camilo\Documents\GitHub\Notas\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.F4.Graficos2.resources

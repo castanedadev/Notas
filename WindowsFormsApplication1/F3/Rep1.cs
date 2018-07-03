@@ -35,6 +35,14 @@ namespace WindowsFormsApplication1.F3
             this.Visible = true;
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            F4.GR1 fh = new F4.GR1();
+            this.Visible = false;
+            fh.ShowDialog();
+            this.Visible = true;
+        }
+
 
     }
 }
