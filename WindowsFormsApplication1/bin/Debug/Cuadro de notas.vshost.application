@@ -29,6 +29,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <dsig:DigestValue>iV4zCRCK11dM+/i0vpLR/06WHXjWxb23n/kwTPO0K58=</dsig:DigestValue>
 =======
         <dsig:DigestValue>TJueZxwA3cQH0BfZzxkQrTPN3utzZmMMXP8VeX6aFeI=</dsig:DigestValue>
@@ -39,6 +40,9 @@
 =======
         <dsig:DigestValue>ML8kxT6t9n1VjQan1IgPLZDfeHZsnazBEiCqxxZuLWU=</dsig:DigestValue>
 >>>>>>> Cambio2
+=======
+        <dsig:DigestValue>57jQUW9b4RzOiUJAqQ77Dcj5EQsguq4bFZSNKUEQtFs=</dsig:DigestValue>
+>>>>>>> cambio3
       </hash>
     </dependentAssembly>
   </dependency>

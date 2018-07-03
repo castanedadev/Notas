@@ -67,6 +67,7 @@
   <dependency>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Cuadro de notas.exe" size="3423232">
 =======
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Cuadro de notas.exe" size="257536">
@@ -74,12 +75,16 @@
 =======
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Cuadro de notas.exe" size="3930624">
 >>>>>>> PrimerCambio
+=======
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Cuadro de notas.exe" size="3969536">
+>>>>>>> cambio3
       <assemblyIdentity name="Cuadro de notas" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -93,6 +98,9 @@
 =======
         <dsig:DigestValue>nkXVpeXBTelkPQfg5owmehbUJOBz27C90rSGVeFb4mI=</dsig:DigestValue>
 >>>>>>> Cambio2
+=======
+        <dsig:DigestValue>wZsgodb8dfF7GSsm1tIGCcu7gvcA8UJN/na/WZbVA34=</dsig:DigestValue>
+>>>>>>> cambio3
       </hash>
     </dependentAssembly>
   </dependency>
