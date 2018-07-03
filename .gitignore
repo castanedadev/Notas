@@ -5,3 +5,4 @@ WindowsFormsApplication1/bin/obj/Release/
 WindowsFormsApplication1/obj/
 *.exe
 *.pdb
+*.manifest
