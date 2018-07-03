@@ -67,7 +67,7 @@ namespace WindowsFormsApplication1.F2
                 n.CrearIdAño(comboBox1.Text);
 
                 n.RealizarTransFerencias();
-
+                this.Close();
             }
 
 
@@ -76,7 +76,7 @@ namespace WindowsFormsApplication1.F2
         private void Eliminar_Load(object sender, EventArgs e)
         {
             button1.Click += new System.EventHandler(button1_Click);
-            button2.Click += new System.EventHandler(button5_Click);         
+            button2.Click += new System.EventHandler(button5_Click);
         }
     }
 }

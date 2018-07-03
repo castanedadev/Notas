@@ -43,6 +43,14 @@ namespace WindowsFormsApplication1.F3
             this.Visible = true;
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            F2.Eliminar fh= new F2.Eliminar();
+            this.Visible = false;
+            fh.ShowDialog();
+            this.Visible = true;
+        }
+
 
     }
 }

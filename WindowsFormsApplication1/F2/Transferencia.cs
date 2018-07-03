@@ -395,7 +395,6 @@ namespace WindowsFormsApplication1.F2
                 {
                     conRepositorio.Open();
                     enviarM.ExecuteNonQuery();
-                    MessageBox.Show("Profesor " + p.Nombre + " enviado");
                     conRepositorio.Close();
 
                 }
@@ -489,7 +488,6 @@ namespace WindowsFormsApplication1.F2
                 {
                     conRepositorio.Open();
                     cmm.ExecuteNonQuery();
-                    MessageBox.Show("Enviando alumno " + a.Nombre);
                     conRepositorio.Close();
 
                 }
@@ -616,7 +614,6 @@ namespace WindowsFormsApplication1.F2
                             command.Parameters.AddWithValue("@estado", Estado);
                             command.Parameters.AddWithValue("@ano", IdAño);
                             command.ExecuteNonQuery();
-                            MessageBox.Show("Enviando NGM");
                             conRepositorio.Close();
                         }
                         catch (Exception ex)
@@ -679,7 +676,6 @@ namespace WindowsFormsApplication1.F2
                             command.Parameters.AddWithValue("@Periodo", Periodo);
                             command.Parameters.AddWithValue("@Ponderacion", Ponderacion);
                             command.ExecuteNonQuery();
-                            MessageBox.Show("Enviando Actividad");
                             conRepositorio.Close();
                         }
                         catch (Exception ex)
@@ -738,7 +734,6 @@ namespace WindowsFormsApplication1.F2
                             command.Parameters.AddWithValue("@Porcentaje", Porcentaje);
                             command.Parameters.AddWithValue("@ano", IdAño);
                             command.ExecuteNonQuery();
-                            MessageBox.Show("Enviando porcentaje");
                             conRepositorio.Close();
                         }
                         catch (Exception ex)
@@ -804,7 +799,7 @@ namespace WindowsFormsApplication1.F2
                             command.Parameters.AddWithValue("@Calificacion", Calificacion);
                             command.Parameters.AddWithValue("@ano", IdAño);
                             command.ExecuteNonQuery();
-                            MessageBox.Show("Enviando registro");
+
                             conRepositorio.Close();
                         }
                         catch (Exception ex)

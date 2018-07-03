@@ -172,6 +172,173 @@ FROM            dbo.ALUMNO INNER JOIN
                          dbo.AlumnoAno ON dbo.ALUMNO.NIE = dbo.AlumnoAno.Alumno INNER JOIN
                          dbo.ANO ON dbo.AlumnoAno.Ano = dbo.ANO.IdAno
 						 WHERE AlumnoAno.Ano=@ano and  Alumno.Nombre like @nombre
+END
+CREATE PROCEDURE GetAlNoAno
 
+@grado int,
+@seccion int
+
+as
+
+BEGIN
+
+SELECT        dbo.ALUMNO.NIE, dbo.ALUMNO.Nombre, dbo.ALUMNO.Fecha_nac, dbo.AlumnoAno.Telefono, dbo.AlumnoAno.Direccion,
+ dbo.AlumnoAno.Responsable, dbo.AlumnoAno.Grado, dbo.AlumnoAno.Seccion, dbo.ANO.ano
+
+FROM   dbo.ALUMNO INNER JOIN
+  dbo.AlumnoAno ON dbo.ALUMNO.NIE = dbo.AlumnoAno.Alumno INNER JOIN
+
+                         dbo.ANO ON dbo.AlumnoAno.Ano = dbo.ANO.IdAno
+
+						 WHERE AlumnoAno.Grado=@grado AND AlumnoAno.Seccion=@seccion
+
+END
+CREATE PROCEDURE GetAlNoGrado
+@ano  int,
+@seccion int
+
+as
+BEGIN
+
+SELECT        dbo.ALUMNO.NIE, dbo.ALUMNO.Nombre, dbo.ALUMNO.Fecha_nac, dbo.AlumnoAno.Telefono, dbo.AlumnoAno.Direccion,
+ dbo.AlumnoAno.Responsable, dbo.AlumnoAno.Grado, dbo.AlumnoAno.Seccion, dbo.ANO.ano FROM   dbo.ALUMNO INNER JOIN
+ 
+ dbo.AlumnoAno ON dbo.ALUMNO.NIE = dbo.AlumnoAno.Alumno INNER JOIN
+                         dbo.ANO ON dbo.AlumnoAno.Ano = dbo.ANO.IdAno
+						
+ WHERE dbo.AlumnoAno.Ano=@ano AND AlumnoAno.Seccion=@seccion
+END
+CREATE PROCEDURE GetAlNoSeccion
+@ano  int,
+@grado int
+
+as
+BEGIN
+
+SELECT dbo.ALUMNO.NIE, dbo.ALUMNO.Nombre, dbo.ALUMNO.Fecha_nac, dbo.AlumnoAno.Telefono, dbo.AlumnoAno.Direccion,
+ dbo.AlumnoAno.Responsable, dbo.AlumnoAno.Grado, dbo.AlumnoAno.Seccion, dbo.ANO.ano FROM   dbo.ALUMNO 
+INNER JOIN
+  dbo.AlumnoAno ON dbo.ALUMNO.NIE = dbo.AlumnoAno.Alumno INNER JOIN
+                         dbo.ANO ON dbo.AlumnoAno.Ano = dbo.ANO.IdAno
+						
+ WHERE dbo.AlumnoAno.Ano=@ano AND AlumnoAno.Grado=@grado
+
+END
+CREATE PROCEDURE GetAlNoAnoGrado
+
+@seccion int
+
+as
+BEGIN
+
+SELECT        dbo.ALUMNO.NIE, dbo.ALUMNO.Nombre, dbo.ALUMNO.Fecha_nac, dbo.AlumnoAno.Telefono, dbo.AlumnoAno.Direccion,
+ dbo.AlumnoAno.Responsable, dbo.AlumnoAno.Grado, dbo.AlumnoAno.Seccion, dbo.ANO.ano FROM   dbo.ALUMNO 
+INNER JOIN
+  dbo.AlumnoAno ON dbo.ALUMNO.NIE = dbo.AlumnoAno.Alumno INNER JOIN
+                         dbo.ANO ON dbo.AlumnoAno.Ano = dbo.ANO.IdAno
+						
+ WHERE AlumnoAno.Seccion=@seccion
+
+END
+
+CREATE PROCEDURE GetAlNoAnoSeccion
+
+@Grado int
+
+as
+BEGIN
+
+SELECT        dbo.ALUMNO.NIE, dbo.ALUMNO.Nombre, dbo.ALUMNO.Fecha_nac, dbo.AlumnoAno.Telefono, dbo.AlumnoAno.Direccion,
+ dbo.AlumnoAno.Responsable, dbo.AlumnoAno.Grado, dbo.AlumnoAno.Seccion, dbo.ANO.ano FROM   dbo.ALUMNO 
+INNER JOIN
+  dbo.AlumnoAno ON dbo.ALUMNO.NIE = dbo.AlumnoAno.Alumno INNER JOIN
+                         dbo.ANO ON dbo.AlumnoAno.Ano = dbo.ANO.IdAno
+						
+ WHERE AlumnoAno.Grado=@Grado
+
+END
+CREATE PROCEDURE GetAlNoGradoSeccion
+
+@ano int
+
+as
+BEGIN
+
+SELECT        dbo.ALUMNO.NIE, dbo.ALUMNO.Nombre, dbo.ALUMNO.Fecha_nac, dbo.AlumnoAno.Telefono, dbo.AlumnoAno.Direccion,
+ dbo.AlumnoAno.Responsable, dbo.AlumnoAno.Grado, dbo.AlumnoAno.Seccion, dbo.ANO.ano FROM   dbo.ALUMNO INNER JOIN
+ 
+ dbo.AlumnoAno ON dbo.ALUMNO.NIE = dbo.AlumnoAno.Alumno INNER JOIN
+                         dbo.ANO ON dbo.AlumnoAno.Ano = dbo.ANO.IdAno
+			
+			 WHERE AlumnoAno.Ano=@ano
+
+END
+CREATE PROCEDURE GetAlNoNada
+
+as
+BEGIN
+
+SELECT        dbo.ALUMNO.NIE, dbo.ALUMNO.Nombre, dbo.ALUMNO.Fecha_nac, dbo.AlumnoAno.Telefono, dbo.AlumnoAno.Direccion,
+ dbo.AlumnoAno.Responsable, dbo.AlumnoAno.Grado, dbo.AlumnoAno.Seccion, dbo.ANO.ano FROM  
+ dbo.ALUMNO INNER JOIN
+  dbo.AlumnoAno ON dbo.ALUMNO.NIE = dbo.AlumnoAno.Alumno 
+INNER JOIN 
+                        dbo.ANO ON dbo.AlumnoAno.Ano = dbo.ANO.IdAno
+
+END
+CREATE PROCEDURE GetAlumnoAno
+
+@NIE varchar(15),
+
+@ano varchar(4)
+
+as
+
+BEGIN
+
+select IdAlumnoAno from  AlumnoAno where AlumnoAno.Alumno=@NIE and AlumnoAno.Ano=(SELECT IdAno FROM ANO WHERE ano=@ano)
+
+END
+CREATE PROCEDURE GetNotas
+@IdAlumnoAno int,
+@IdMateria int 
+as
+BEGIN
+SELECT        dbo.MATERIA.IdMateria, dbo.MATERIA.Materia, dbo.PorcentajeMateria.Trimestre, dbo.PorcentajeMateria.Periodo, dbo.PorcentajeMateria.Porcentaje
+FROM            dbo.PorcentajeMateria INNER JOIN
+                         dbo.MATERIA ON dbo.PorcentajeMateria.Materia = dbo.MATERIA.IdMateria INNER JOIN
+                         dbo.AlumnoAno ON dbo.PorcentajeMateria.Alumno = dbo.AlumnoAno.IdAlumnoAno
+                       WHERE AlumnoAno.Estado=1 AND   PorcentajeMateria.Alumno=@IdAlumnoAno AND PorcentajeMateria.Materia=@IdMateria
+END
+
+CREATE PROCEDURE GetAlDosAnos
+
+@ano int,
+@ano1 int
+
+as
+BEGIN
+SELECT        dbo.ALUMNO.NIE, dbo.ALUMNO.Nombre, dbo.ALUMNO.Fecha_nac, dbo.AlumnoAno.Telefono, dbo.AlumnoAno.Direccion,
+ dbo.AlumnoAno.Responsable, dbo.AlumnoAno.Grado, dbo.AlumnoAno.Seccion, dbo.ANO.ano FROM   dbo.ALUMNO INNER JOIN
+ 
+ dbo.AlumnoAno ON dbo.ALUMNO.NIE = dbo.AlumnoAno.Alumno INNER JOIN
+                         dbo.ANO ON dbo.AlumnoAno.Ano = dbo.ANO.IdAno
+		
+				 WHERE  AlumnoAno.Ano between @ano and @ano1
+
+END
+
+CREATE PROCEDURE GetPNGM
+@ano int,
+@grado int,
+@seccion int,
+@materia int
+as
+BEGIN
+SELECT        dbo.Maestros.Nombre
+FROM            dbo.Maestros INNER JOIN
+                         dbo.MaestroAno ON dbo.Maestros.IdMaestro = dbo.MaestroAno.Maestro INNER JOIN
+                         dbo.NGM ON dbo.MaestroAno.IdMaestroAno = dbo.NGM.Maestro
+					WHERE MaestroAno.Ano=@ano AND NGM.Materia=@materia AND NGM.Grado=@grado AND NGM.SECCION=@seccion
 END
 FIN

@@ -129,6 +129,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "Eliminar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Eliminar";
             this.Load += new System.EventHandler(this.Eliminar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
