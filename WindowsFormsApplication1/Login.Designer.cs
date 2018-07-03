@@ -190,7 +190,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources._287311;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(441, 263);
             this.Controls.Add(this.panel1);
@@ -199,6 +200,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TxtUser);
             this.Controls.Add(this.TxtPass);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";

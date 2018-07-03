@@ -30,6 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuDOC));
             this.panel4 = new System.Windows.Forms.Panel();
+            this.Fondo6 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.Fondo2 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.Fondo5 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.Fondo1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.Fondo4 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.Fondo3 = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn2_1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Pnl2 = new System.Windows.Forms.Panel();
@@ -52,13 +58,15 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn3_1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.PnlContenido = new System.Windows.Forms.Panel();
-            this.Fondo1 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.Fondo3 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.Fondo4 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.Fondo5 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.Fondo2 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.Fondo6 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnLogoES = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Fondo6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Fondo2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Fondo5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Fondo1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Fondo4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Fondo3)).BeginInit();
             this.panel2.SuspendLayout();
             this.Pnl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnConfiguration)).BeginInit();
@@ -67,12 +75,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Fondo1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Fondo3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Fondo4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Fondo5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Fondo2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Fondo6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLogoES)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
@@ -90,12 +94,96 @@
             this.panel4.Size = new System.Drawing.Size(104, 151);
             this.panel4.TabIndex = 17;
             // 
+            // Fondo6
+            // 
+            this.Fondo6.BackColor = System.Drawing.Color.Gold;
+            this.Fondo6.Image = ((System.Drawing.Image)(resources.GetObject("Fondo6.Image")));
+            this.Fondo6.ImageActive = null;
+            this.Fondo6.Location = new System.Drawing.Point(54, 103);
+            this.Fondo6.Name = "Fondo6";
+            this.Fondo6.Size = new System.Drawing.Size(45, 45);
+            this.Fondo6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Fondo6.TabIndex = 21;
+            this.Fondo6.TabStop = false;
+            this.Fondo6.Zoom = 10;
+            this.Fondo6.Click += new System.EventHandler(this.Fondo6_Click);
+            // 
+            // Fondo2
+            // 
+            this.Fondo2.BackColor = System.Drawing.Color.Fuchsia;
+            this.Fondo2.Image = ((System.Drawing.Image)(resources.GetObject("Fondo2.Image")));
+            this.Fondo2.ImageActive = null;
+            this.Fondo2.Location = new System.Drawing.Point(54, 2);
+            this.Fondo2.Name = "Fondo2";
+            this.Fondo2.Size = new System.Drawing.Size(45, 45);
+            this.Fondo2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Fondo2.TabIndex = 20;
+            this.Fondo2.TabStop = false;
+            this.Fondo2.Zoom = 10;
+            this.Fondo2.Click += new System.EventHandler(this.Fondo2_Click);
+            // 
+            // Fondo5
+            // 
+            this.Fondo5.BackColor = System.Drawing.Color.Chocolate;
+            this.Fondo5.Image = ((System.Drawing.Image)(resources.GetObject("Fondo5.Image")));
+            this.Fondo5.ImageActive = null;
+            this.Fondo5.Location = new System.Drawing.Point(3, 103);
+            this.Fondo5.Name = "Fondo5";
+            this.Fondo5.Size = new System.Drawing.Size(45, 45);
+            this.Fondo5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Fondo5.TabIndex = 19;
+            this.Fondo5.TabStop = false;
+            this.Fondo5.Zoom = 10;
+            this.Fondo5.Click += new System.EventHandler(this.Fondo5_Click);
+            // 
+            // Fondo1
+            // 
+            this.Fondo1.BackColor = System.Drawing.Color.Blue;
+            this.Fondo1.Image = ((System.Drawing.Image)(resources.GetObject("Fondo1.Image")));
+            this.Fondo1.ImageActive = null;
+            this.Fondo1.Location = new System.Drawing.Point(3, 2);
+            this.Fondo1.Name = "Fondo1";
+            this.Fondo1.Size = new System.Drawing.Size(45, 45);
+            this.Fondo1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Fondo1.TabIndex = 16;
+            this.Fondo1.TabStop = false;
+            this.Fondo1.Zoom = 10;
+            this.Fondo1.Click += new System.EventHandler(this.Fondo1_Click);
+            // 
+            // Fondo4
+            // 
+            this.Fondo4.BackColor = System.Drawing.Color.OrangeRed;
+            this.Fondo4.Image = ((System.Drawing.Image)(resources.GetObject("Fondo4.Image")));
+            this.Fondo4.ImageActive = null;
+            this.Fondo4.Location = new System.Drawing.Point(54, 53);
+            this.Fondo4.Name = "Fondo4";
+            this.Fondo4.Size = new System.Drawing.Size(45, 45);
+            this.Fondo4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Fondo4.TabIndex = 18;
+            this.Fondo4.TabStop = false;
+            this.Fondo4.Zoom = 10;
+            this.Fondo4.Click += new System.EventHandler(this.Fondo4_Click);
+            // 
+            // Fondo3
+            // 
+            this.Fondo3.BackColor = System.Drawing.Color.GreenYellow;
+            this.Fondo3.Image = ((System.Drawing.Image)(resources.GetObject("Fondo3.Image")));
+            this.Fondo3.ImageActive = null;
+            this.Fondo3.Location = new System.Drawing.Point(3, 53);
+            this.Fondo3.Name = "Fondo3";
+            this.Fondo3.Size = new System.Drawing.Size(45, 45);
+            this.Fondo3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Fondo3.TabIndex = 17;
+            this.Fondo3.TabStop = false;
+            this.Fondo3.Zoom = 10;
+            this.Fondo3.Click += new System.EventHandler(this.Fondo3_Click);
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.btn2_1);
             this.panel2.Location = new System.Drawing.Point(233, 173);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(162, 41);
+            this.panel2.Size = new System.Drawing.Size(162, 35);
             this.panel2.TabIndex = 15;
             // 
             // btn2_1
@@ -491,6 +579,8 @@
             // Pnl1
             // 
             this.Pnl1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.Pnl1.Controls.Add(this.btnLogoES);
+            this.Pnl1.Controls.Add(this.bunifuImageButton1);
             this.Pnl1.Controls.Add(this.btnMinimizar);
             this.Pnl1.Controls.Add(this.LblDOC);
             this.Pnl1.Controls.Add(this.label1);
@@ -520,7 +610,7 @@
             // 
             this.LblDOC.AutoSize = true;
             this.LblDOC.Font = new System.Drawing.Font("Microsoft PhagsPa", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblDOC.Location = new System.Drawing.Point(93, 9);
+            this.LblDOC.Location = new System.Drawing.Point(123, 9);
             this.LblDOC.Name = "LblDOC";
             this.LblDOC.Size = new System.Drawing.Size(40, 18);
             this.LblDOC.TabIndex = 7;
@@ -530,7 +620,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft PhagsPa", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 9);
+            this.label1.Location = new System.Drawing.Point(39, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 18);
             this.label1.TabIndex = 6;
@@ -556,7 +646,7 @@
             this.panel3.Controls.Add(this.btn3_1);
             this.panel3.Location = new System.Drawing.Point(350, 66);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(156, 38);
+            this.panel3.Size = new System.Drawing.Size(156, 35);
             this.panel3.TabIndex = 16;
             // 
             // btn3_1
@@ -602,83 +692,33 @@
             this.PnlContenido.Size = new System.Drawing.Size(855, 355);
             this.PnlContenido.TabIndex = 12;
             // 
-            // Fondo1
+            // btnLogoES
             // 
-            this.Fondo1.BackColor = System.Drawing.Color.Blue;
-            this.Fondo1.ImageActive = null;
-            this.Fondo1.Location = new System.Drawing.Point(3, 2);
-            this.Fondo1.Name = "Fondo1";
-            this.Fondo1.Size = new System.Drawing.Size(45, 45);
-            this.Fondo1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Fondo1.TabIndex = 16;
-            this.Fondo1.TabStop = false;
-            this.Fondo1.Zoom = 10;
-            this.Fondo1.Click += new System.EventHandler(this.Fondo1_Click);
+            this.btnLogoES.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogoES.ErrorImage = null;
+            this.btnLogoES.Image = ((System.Drawing.Image)(resources.GetObject("btnLogoES.Image")));
+            this.btnLogoES.ImageActive = null;
+            this.btnLogoES.Location = new System.Drawing.Point(0, 0);
+            this.btnLogoES.Name = "btnLogoES";
+            this.btnLogoES.Size = new System.Drawing.Size(32, 32);
+            this.btnLogoES.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnLogoES.TabIndex = 12;
+            this.btnLogoES.TabStop = false;
+            this.btnLogoES.Zoom = 10;
             // 
-            // Fondo3
+            // bunifuImageButton1
             // 
-            this.Fondo3.BackColor = System.Drawing.Color.GreenYellow;
-            this.Fondo3.ImageActive = null;
-            this.Fondo3.Location = new System.Drawing.Point(3, 53);
-            this.Fondo3.Name = "Fondo3";
-            this.Fondo3.Size = new System.Drawing.Size(45, 45);
-            this.Fondo3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Fondo3.TabIndex = 17;
-            this.Fondo3.TabStop = false;
-            this.Fondo3.Zoom = 10;
-            this.Fondo3.Click += new System.EventHandler(this.Fondo3_Click);
-            // 
-            // Fondo4
-            // 
-            this.Fondo4.BackColor = System.Drawing.Color.OrangeRed;
-            this.Fondo4.ImageActive = null;
-            this.Fondo4.Location = new System.Drawing.Point(54, 53);
-            this.Fondo4.Name = "Fondo4";
-            this.Fondo4.Size = new System.Drawing.Size(45, 45);
-            this.Fondo4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Fondo4.TabIndex = 18;
-            this.Fondo4.TabStop = false;
-            this.Fondo4.Zoom = 10;
-            this.Fondo4.Click += new System.EventHandler(this.Fondo4_Click);
-            // 
-            // Fondo5
-            // 
-            this.Fondo5.BackColor = System.Drawing.Color.Chocolate;
-            this.Fondo5.ImageActive = null;
-            this.Fondo5.Location = new System.Drawing.Point(3, 103);
-            this.Fondo5.Name = "Fondo5";
-            this.Fondo5.Size = new System.Drawing.Size(45, 45);
-            this.Fondo5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Fondo5.TabIndex = 19;
-            this.Fondo5.TabStop = false;
-            this.Fondo5.Zoom = 10;
-            this.Fondo5.Click += new System.EventHandler(this.Fondo5_Click);
-            // 
-            // Fondo2
-            // 
-            this.Fondo2.BackColor = System.Drawing.Color.Fuchsia;
-            this.Fondo2.ImageActive = null;
-            this.Fondo2.Location = new System.Drawing.Point(54, 2);
-            this.Fondo2.Name = "Fondo2";
-            this.Fondo2.Size = new System.Drawing.Size(45, 45);
-            this.Fondo2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Fondo2.TabIndex = 20;
-            this.Fondo2.TabStop = false;
-            this.Fondo2.Zoom = 10;
-            this.Fondo2.Click += new System.EventHandler(this.Fondo2_Click);
-            // 
-            // Fondo6
-            // 
-            this.Fondo6.BackColor = System.Drawing.Color.Gold;
-            this.Fondo6.ImageActive = null;
-            this.Fondo6.Location = new System.Drawing.Point(54, 103);
-            this.Fondo6.Name = "Fondo6";
-            this.Fondo6.Size = new System.Drawing.Size(45, 45);
-            this.Fondo6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Fondo6.TabIndex = 21;
-            this.Fondo6.TabStop = false;
-            this.Fondo6.Zoom = 10;
-            this.Fondo6.Click += new System.EventHandler(this.Fondo6_Click);
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton1.ErrorImage = null;
+            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(669, 0);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(32, 32);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1.TabIndex = 11;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Zoom = 10;
             // 
             // MenuDOC
             // 
@@ -698,6 +738,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuDOC";
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Fondo6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Fondo2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Fondo5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Fondo1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Fondo4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Fondo3)).EndInit();
             this.panel2.ResumeLayout(false);
             this.Pnl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnConfiguration)).EndInit();
@@ -707,12 +753,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Fondo1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Fondo3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Fondo4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Fondo5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Fondo2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Fondo6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLogoES)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -735,7 +777,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton btn1_1;
         private System.Windows.Forms.Panel Pnl1;
         private Bunifu.Framework.UI.BunifuImageButton btnMinimizar;
-        private System.Windows.Forms.Label LblDOC;
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuImageButton btnCerrar;
         private System.Windows.Forms.Panel panel3;
@@ -748,5 +789,8 @@
         private Bunifu.Framework.UI.BunifuImageButton Fondo1;
         private Bunifu.Framework.UI.BunifuImageButton Fondo4;
         private Bunifu.Framework.UI.BunifuImageButton Fondo3;
+        public System.Windows.Forms.Label LblDOC;
+        private Bunifu.Framework.UI.BunifuImageButton btnLogoES;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
     }
 }

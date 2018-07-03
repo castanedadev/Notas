@@ -61,167 +61,178 @@
             // 
             // cbSeccion
             // 
+            this.cbSeccion.Font = new System.Drawing.Font("Microsoft PhagsPa", 10F);
             this.cbSeccion.FormattingEnabled = true;
-            this.cbSeccion.Location = new System.Drawing.Point(303, 337);
+            this.cbSeccion.Location = new System.Drawing.Point(390, 342);
             this.cbSeccion.Name = "cbSeccion";
-            this.cbSeccion.Size = new System.Drawing.Size(55, 21);
+            this.cbSeccion.Size = new System.Drawing.Size(55, 25);
             this.cbSeccion.TabIndex = 39;
             // 
             // txtResponsable
             // 
-            this.txtResponsable.Location = new System.Drawing.Point(158, 288);
+            this.txtResponsable.Font = new System.Drawing.Font("Microsoft PhagsPa", 10F);
+            this.txtResponsable.Location = new System.Drawing.Point(193, 288);
             this.txtResponsable.Name = "txtResponsable";
-            this.txtResponsable.Size = new System.Drawing.Size(242, 20);
+            this.txtResponsable.Size = new System.Drawing.Size(242, 25);
             this.txtResponsable.TabIndex = 51;
             // 
             // cbGrado
             // 
+            this.cbGrado.Font = new System.Drawing.Font("Microsoft PhagsPa", 10F);
             this.cbGrado.FormattingEnabled = true;
-            this.cbGrado.Location = new System.Drawing.Point(135, 337);
+            this.cbGrado.Location = new System.Drawing.Point(173, 342);
             this.cbGrado.Name = "cbGrado";
-            this.cbGrado.Size = new System.Drawing.Size(107, 21);
+            this.cbGrado.Size = new System.Drawing.Size(107, 25);
             this.cbGrado.TabIndex = 38;
             this.cbGrado.SelectedIndexChanged += new System.EventHandler(this.cbGrado_SelectedIndexChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft PhagsPa", 10F, System.Drawing.FontStyle.Bold);
             this.label6.Location = new System.Drawing.Point(38, 345);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 13);
+            this.label6.Size = new System.Drawing.Size(129, 18);
             this.label6.TabIndex = 36;
             this.label6.Text = "Grado de ingreso:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft PhagsPa", 10F, System.Drawing.FontStyle.Bold);
             this.label8.Location = new System.Drawing.Point(25, 293);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(127, 15);
+            this.label8.Size = new System.Drawing.Size(152, 18);
             this.label8.TabIndex = 50;
             this.label8.Text = "Responsable familiar:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(248, 345);
+            this.label7.Font = new System.Drawing.Font("Microsoft PhagsPa", 10F, System.Drawing.FontStyle.Bold);
+            this.label7.Location = new System.Drawing.Point(299, 345);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(49, 13);
+            this.label7.Size = new System.Drawing.Size(63, 18);
             this.label7.TabIndex = 37;
             this.label7.Text = "Seccion:";
             // 
             // dTDFechaN
             // 
-            this.dTDFechaN.Location = new System.Drawing.Point(158, 186);
+            this.dTDFechaN.Font = new System.Drawing.Font("Microsoft PhagsPa", 10F);
+            this.dTDFechaN.Location = new System.Drawing.Point(193, 186);
             this.dTDFechaN.Name = "dTDFechaN";
-            this.dTDFechaN.Size = new System.Drawing.Size(200, 20);
+            this.dTDFechaN.Size = new System.Drawing.Size(200, 25);
             this.dTDFechaN.TabIndex = 49;
             // 
             // txtDic
             // 
-            this.txtDic.Location = new System.Drawing.Point(158, 255);
+            this.txtDic.Font = new System.Drawing.Font("Microsoft PhagsPa", 10F);
+            this.txtDic.Location = new System.Drawing.Point(193, 255);
             this.txtDic.Name = "txtDic";
-            this.txtDic.Size = new System.Drawing.Size(242, 20);
+            this.txtDic.Size = new System.Drawing.Size(242, 25);
             this.txtDic.TabIndex = 48;
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(158, 222);
+            this.txtTelefono.Font = new System.Drawing.Font("Microsoft PhagsPa", 10F);
+            this.txtTelefono.Location = new System.Drawing.Point(193, 222);
             this.txtTelefono.MaxLength = 9;
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(100, 20);
+            this.txtTelefono.Size = new System.Drawing.Size(100, 25);
             this.txtTelefono.TabIndex = 47;
             // 
             // txtNom
             // 
-            this.txtNom.Location = new System.Drawing.Point(158, 123);
+            this.txtNom.Font = new System.Drawing.Font("Microsoft PhagsPa", 10F);
+            this.txtNom.Location = new System.Drawing.Point(193, 123);
             this.txtNom.Name = "txtNom";
-            this.txtNom.Size = new System.Drawing.Size(200, 20);
+            this.txtNom.Size = new System.Drawing.Size(200, 25);
             this.txtNom.TabIndex = 46;
             // 
             // txtNIE
             // 
-            this.txtNIE.Location = new System.Drawing.Point(156, 93);
-
-
+            this.txtNIE.Font = new System.Drawing.Font("Microsoft PhagsPa", 10F);
+            this.txtNIE.Location = new System.Drawing.Point(191, 94);
             this.txtNIE.MaxLength = 10;
             this.txtNIE.Name = "txtNIE";
-            this.txtNIE.Size = new System.Drawing.Size(100, 20);
+            this.txtNIE.Size = new System.Drawing.Size(100, 25);
             this.txtNIE.TabIndex = 45;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft PhagsPa", 10F, System.Drawing.FontStyle.Bold);
             this.label5.Location = new System.Drawing.Point(25, 260);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 15);
+            this.label5.Size = new System.Drawing.Size(75, 18);
             this.label5.TabIndex = 44;
             this.label5.Text = "Direccion:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft PhagsPa", 10F, System.Drawing.FontStyle.Bold);
             this.label4.Location = new System.Drawing.Point(25, 227);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 15);
+            this.label4.Size = new System.Drawing.Size(71, 18);
             this.label4.TabIndex = 43;
             this.label4.Text = "Telefono:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft PhagsPa", 10F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(25, 190);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(125, 15);
+            this.label3.Size = new System.Drawing.Size(149, 18);
             this.label3.TabIndex = 42;
             this.label3.Text = "Fecha de nacimiento:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft PhagsPa", 10F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(25, 128);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 15);
+            this.label2.Size = new System.Drawing.Size(74, 18);
             this.label2.TabIndex = 41;
             this.label2.Text = "Nombres:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(25, 94);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 15);
+            this.label1.Size = new System.Drawing.Size(38, 15);
             this.label1.TabIndex = 40;
             this.label1.Text = "NIE :";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft PhagsPa", 10F, System.Drawing.FontStyle.Bold);
             this.label9.Location = new System.Drawing.Point(28, 161);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(55, 13);
+            this.label9.Size = new System.Drawing.Size(79, 18);
             this.label9.TabIndex = 57;
             this.label9.Text = "Apellidos: ";
             // 
             // txtApell
             // 
-            this.txtApell.Location = new System.Drawing.Point(158, 158);
+            this.txtApell.Font = new System.Drawing.Font("Microsoft PhagsPa", 10F);
+            this.txtApell.Location = new System.Drawing.Point(193, 158);
             this.txtApell.Name = "txtApell";
-            this.txtApell.Size = new System.Drawing.Size(200, 20);
+            this.txtApell.Size = new System.Drawing.Size(200, 25);
             this.txtApell.TabIndex = 58;
             // 
             // rbia
             // 
             this.rbia.AutoSize = true;
-            this.rbia.Location = new System.Drawing.Point(12, 30);
+            this.rbia.Font = new System.Drawing.Font("Microsoft PhagsPa", 10F, System.Drawing.FontStyle.Bold);
+            this.rbia.Location = new System.Drawing.Point(4, 29);
             this.rbia.Name = "rbia";
-            this.rbia.Size = new System.Drawing.Size(101, 17);
+            this.rbia.Size = new System.Drawing.Size(137, 22);
             this.rbia.TabIndex = 59;
             this.rbia.TabStop = true;
             this.rbia.Text = "Ingresar Alumno";
@@ -231,9 +242,10 @@
             // rbactu
             // 
             this.rbactu.AutoSize = true;
+            this.rbactu.Font = new System.Drawing.Font("Microsoft PhagsPa", 10F, System.Drawing.FontStyle.Bold);
             this.rbactu.Location = new System.Drawing.Point(147, 29);
             this.rbactu.Name = "rbactu";
-            this.rbactu.Size = new System.Drawing.Size(180, 17);
+            this.rbactu.Size = new System.Drawing.Size(253, 22);
             this.rbactu.TabIndex = 60;
             this.rbactu.TabStop = true;
             this.rbactu.Text = "Actualizar información de alumno";
@@ -243,9 +255,10 @@
             // rbdelete
             // 
             this.rbdelete.AutoSize = true;
-            this.rbdelete.Location = new System.Drawing.Point(363, 29);
+            this.rbdelete.Font = new System.Drawing.Font("Microsoft PhagsPa", 10F, System.Drawing.FontStyle.Bold);
+            this.rbdelete.Location = new System.Drawing.Point(406, 29);
             this.rbdelete.Name = "rbdelete";
-            this.rbdelete.Size = new System.Drawing.Size(90, 17);
+            this.rbdelete.Size = new System.Drawing.Size(124, 22);
             this.rbdelete.TabIndex = 61;
             this.rbdelete.TabStop = true;
             this.rbdelete.Text = "Borrar alumno";
@@ -254,10 +267,11 @@
             // 
             // cbSelec
             // 
+            this.cbSelec.Font = new System.Drawing.Font("Microsoft PhagsPa", 10F);
             this.cbSelec.FormattingEnabled = true;
-            this.cbSelec.Location = new System.Drawing.Point(156, 67);
+            this.cbSelec.Location = new System.Drawing.Point(191, 63);
             this.cbSelec.Name = "cbSelec";
-            this.cbSelec.Size = new System.Drawing.Size(244, 21);
+            this.cbSelec.Size = new System.Drawing.Size(244, 25);
             this.cbSelec.TabIndex = 65;
             this.cbSelec.SelectedIndexChanged += new System.EventHandler(this.cbSelec_SelectedIndexChanged);
             this.cbSelec.TextChanged += new System.EventHandler(this.cbSelec_TextChanged);
@@ -265,27 +279,30 @@
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft PhagsPa", 10F, System.Drawing.FontStyle.Bold);
             this.label10.Location = new System.Drawing.Point(22, 70);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(100, 13);
+            this.label10.Size = new System.Drawing.Size(139, 18);
             this.label10.TabIndex = 64;
             this.label10.Text = "Seleccionar alumno";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(286, 225);
+            this.label11.Font = new System.Drawing.Font("Microsoft PhagsPa", 10F, System.Drawing.FontStyle.Bold);
+            this.label11.Location = new System.Drawing.Point(310, 224);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(40, 13);
+            this.label11.Size = new System.Drawing.Size(52, 18);
             this.label11.TabIndex = 66;
             this.label11.Text = "Estado";
             // 
             // cbEstado
             // 
+            this.cbEstado.Font = new System.Drawing.Font("Microsoft PhagsPa", 10F);
             this.cbEstado.FormattingEnabled = true;
-            this.cbEstado.Location = new System.Drawing.Point(333, 221);
+            this.cbEstado.Location = new System.Drawing.Point(368, 221);
             this.cbEstado.Name = "cbEstado";
-            this.cbEstado.Size = new System.Drawing.Size(121, 21);
+            this.cbEstado.Size = new System.Drawing.Size(121, 25);
             this.cbEstado.TabIndex = 67;
             // 
             // btnBorrar
@@ -401,7 +418,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.ClientSize = new System.Drawing.Size(462, 462);
+            this.ClientSize = new System.Drawing.Size(527, 462);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnIngresar);

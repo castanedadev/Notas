@@ -115,6 +115,12 @@
     <Compile Include="CuadroFinal.Designer.cs">
       <DependentUpon>CuadroFinal.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatosDocente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatosDocente.Designer.cs">
+      <DependentUpon>DatosDocente.cs</DependentUpon>
+    </Compile>
     <Compile Include="DirectorGraficos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,12 @@
     </Compile>
     <Compile Include="Docente.Designer.cs">
       <DependentUpon>Docente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IngresarDocente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IngresarDocente.Designer.cs">
+      <DependentUpon>IngresarDocente.cs</DependentUpon>
     </Compile>
     <Compile Include="F1\CrearBD.cs" />
     <Compile Include="F1\CrearBDRepositorio.cs" />
@@ -297,11 +309,17 @@
     <EmbeddedResource Include="CuadroFinal.resx">
       <DependentUpon>CuadroFinal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DatosDocente.resx">
+      <DependentUpon>DatosDocente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DirectorGraficos.resx">
       <DependentUpon>DirectorGraficos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Docente.resx">
       <DependentUpon>Docente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IngresarDocente.resx">
+      <DependentUpon>IngresarDocente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F1\DirectorPerfil.resx">
       <DependentUpon>DirectorPerfil.cs</DependentUpon>
@@ -452,6 +470,7 @@
       <DependentUpon>Notas.mdf</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Recursos\iconos de imagenes\fondos\287311.png" />
     <None Include="Recursos\icons8-checkmark-64.png" />
     <None Include="Resources\220px-Coat_of_arms_of_El_Salvador.svg.png" />
     <None Include="Resources\icons8-restaurar-ventana-50.png" />

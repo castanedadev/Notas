@@ -178,20 +178,6 @@ namespace WindowsFormsApplication1
             toPDF();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Actividades f = new Actividades();
-            f.Show();
-            this.Hide();
-        }
-
-        private void regresarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Menu m = new Menu();
-            m.Show();
-            this.Hide();
-        }
-
         private void cbSeccion_SelectedIndexChanged(object sender, EventArgs e)
 <<<<<<< HEAD
         {               
