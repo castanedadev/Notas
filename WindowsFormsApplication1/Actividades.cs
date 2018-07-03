@@ -33,9 +33,7 @@ namespace WindowsFormsApplication1
             txtPonderacion.Enabled = false;
             btnAgregar.Enabled = false;
             cbMateria.Enabled = false;
-            btnBorrar.Enabled = false;
-       
-
+            btnBorrar.Enabled = false;       
         }
 
         private bool Activar(ComboBox gr, ComboBox ma, RadioButton r1, RadioButton r2, RadioButton r3,
@@ -307,7 +305,7 @@ namespace WindowsFormsApplication1
             lblnp.Visible = true;
             txtnn.Visible = true;
             txtnp.Visible = true;
-            btnactu1.Visible = true;
+            btnactu.Visible = true;
              actividada = dgvactividades[0, y].Value.ToString();
             ponderaa = dgvactividades[1, y].Value.ToString();
             txtnn.Text = actividada;
@@ -467,7 +465,7 @@ namespace WindowsFormsApplication1
                     lblnp.Visible = false;
                     txtnn.Visible = false;
                     txtnp.Visible = false;
-                    btnactu1.Visible = false;
+                    btnactu.Visible = false;
 
 
                     MessageBox.Show("Datos actualizados", "MENSAJE", MessageBoxButtons.OK, MessageBoxIcon.Information);
