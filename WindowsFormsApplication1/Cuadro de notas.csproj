@@ -86,6 +86,12 @@
     <Compile Include="AcercaD.Designer.cs">
       <DependentUpon>AcercaD.cs</DependentUpon>
     </Compile>
+    <Compile Include="Acti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acti.Designer.cs">
+      <DependentUpon>Acti.cs</DependentUpon>
+    </Compile>
     <Compile Include="Actividades.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,6 +236,9 @@
     <Compile Include="Usuario.cs" />
     <EmbeddedResource Include="AcercaD.resx">
       <DependentUpon>AcercaD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acti.resx">
+      <DependentUpon>Acti.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Actividades.resx">
       <DependentUpon>Actividades.cs</DependentUpon>

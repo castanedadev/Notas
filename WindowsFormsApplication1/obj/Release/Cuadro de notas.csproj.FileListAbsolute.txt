@@ -267,3 +267,4 @@ C:\Users\leyenda\Documents\GitHub\Notas\WindowsFormsApplication1\obj\Release\Win
 C:\Users\leyenda\Documents\GitHub\Notas\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.MenuDOC.resources
 C:\Users\leyenda\Documents\GitHub\Notas\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.IngresarDocente.resources
 C:\Users\leyenda\Documents\GitHub\Notas\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.DatosDocente.resources
+C:\Users\leyenda\Documents\GitHub\Notas\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.Acti.resources
