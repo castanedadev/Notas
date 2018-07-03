@@ -92,6 +92,7 @@
             this.txtContraB = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
             this.txtContraseña2 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.txtUsuB = new System.Windows.Forms.TextBox();
@@ -105,7 +106,6 @@
             this.txtUser = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.chEstado = new System.Windows.Forms.CheckBox();
-            this.button5 = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV2)).BeginInit();
@@ -714,6 +714,16 @@
             this.panel1.Size = new System.Drawing.Size(344, 599);
             this.panel1.TabIndex = 85;
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(141, 70);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 84;
+            this.button5.Text = "Actualizar";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // txtContraseña2
             // 
             this.txtContraseña2.Location = new System.Drawing.Point(139, 214);
@@ -827,16 +837,6 @@
             this.chEstado.Text = "Activo";
             this.chEstado.UseVisualStyleBackColor = true;
             this.chEstado.CheckedChanged += new System.EventHandler(this.chEstado_CheckedChanged);
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(71, 68);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 84;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Docente
             // 
