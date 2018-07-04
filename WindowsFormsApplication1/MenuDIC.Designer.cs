@@ -65,6 +65,11 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.btn5_2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn5_1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.btn6_4 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn6_3 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn6_2 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn6_1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Pnl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnLogoES)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDirector)).BeginInit();
@@ -83,6 +88,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Fondo4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Fondo3)).BeginInit();
             this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // Pnl1
@@ -878,11 +884,163 @@
             this.btn5_1.TextFont = new System.Drawing.Font("Microsoft PhagsPa", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn5_1.Click += new System.EventHandler(this.btn5_1_Click);
             // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.btn6_4);
+            this.panel6.Controls.Add(this.btn6_3);
+            this.panel6.Controls.Add(this.btn6_2);
+            this.panel6.Controls.Add(this.btn6_1);
+            this.panel6.Location = new System.Drawing.Point(467, 131);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(162, 129);
+            this.panel6.TabIndex = 10;
+            // 
+            // btn6_4
+            // 
+            this.btn6_4.Activecolor = System.Drawing.Color.SteelBlue;
+            this.btn6_4.BackColor = System.Drawing.Color.SteelBlue;
+            this.btn6_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn6_4.BorderRadius = 0;
+            this.btn6_4.ButtonText = "Eliminar";
+            this.btn6_4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn6_4.DisabledColor = System.Drawing.Color.Gray;
+            this.btn6_4.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn6_4.Iconimage = null;
+            this.btn6_4.Iconimage_right = null;
+            this.btn6_4.Iconimage_right_Selected = null;
+            this.btn6_4.Iconimage_Selected = null;
+            this.btn6_4.IconMarginLeft = 0;
+            this.btn6_4.IconMarginRight = 0;
+            this.btn6_4.IconRightVisible = true;
+            this.btn6_4.IconRightZoom = 0D;
+            this.btn6_4.IconVisible = true;
+            this.btn6_4.IconZoom = 90D;
+            this.btn6_4.IsTab = false;
+            this.btn6_4.Location = new System.Drawing.Point(-1, 93);
+            this.btn6_4.Name = "btn6_4";
+            this.btn6_4.Normalcolor = System.Drawing.Color.SteelBlue;
+            this.btn6_4.OnHovercolor = System.Drawing.Color.Blue;
+            this.btn6_4.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn6_4.selected = false;
+            this.btn6_4.Size = new System.Drawing.Size(165, 31);
+            this.btn6_4.TabIndex = 10;
+            this.btn6_4.Text = "Eliminar";
+            this.btn6_4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn6_4.Textcolor = System.Drawing.Color.White;
+            this.btn6_4.TextFont = new System.Drawing.Font("Microsoft PhagsPa", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn6_4.Click += new System.EventHandler(this.btn6_4_Click);
+            // 
+            // btn6_3
+            // 
+            this.btn6_3.Activecolor = System.Drawing.Color.SteelBlue;
+            this.btn6_3.BackColor = System.Drawing.Color.SteelBlue;
+            this.btn6_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn6_3.BorderRadius = 0;
+            this.btn6_3.ButtonText = "Retornar Docentes";
+            this.btn6_3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn6_3.DisabledColor = System.Drawing.Color.Gray;
+            this.btn6_3.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn6_3.Iconimage = null;
+            this.btn6_3.Iconimage_right = null;
+            this.btn6_3.Iconimage_right_Selected = null;
+            this.btn6_3.Iconimage_Selected = null;
+            this.btn6_3.IconMarginLeft = 0;
+            this.btn6_3.IconMarginRight = 0;
+            this.btn6_3.IconRightVisible = true;
+            this.btn6_3.IconRightZoom = 0D;
+            this.btn6_3.IconVisible = true;
+            this.btn6_3.IconZoom = 90D;
+            this.btn6_3.IsTab = false;
+            this.btn6_3.Location = new System.Drawing.Point(-1, 62);
+            this.btn6_3.Name = "btn6_3";
+            this.btn6_3.Normalcolor = System.Drawing.Color.SteelBlue;
+            this.btn6_3.OnHovercolor = System.Drawing.Color.Blue;
+            this.btn6_3.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn6_3.selected = false;
+            this.btn6_3.Size = new System.Drawing.Size(165, 31);
+            this.btn6_3.TabIndex = 9;
+            this.btn6_3.Text = "Retornar Docentes";
+            this.btn6_3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn6_3.Textcolor = System.Drawing.Color.White;
+            this.btn6_3.TextFont = new System.Drawing.Font("Microsoft PhagsPa", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn6_3.Click += new System.EventHandler(this.btn6_3_Click);
+            // 
+            // btn6_2
+            // 
+            this.btn6_2.Activecolor = System.Drawing.Color.SteelBlue;
+            this.btn6_2.BackColor = System.Drawing.Color.SteelBlue;
+            this.btn6_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn6_2.BorderRadius = 0;
+            this.btn6_2.ButtonText = "Retornar Alumnos";
+            this.btn6_2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn6_2.DisabledColor = System.Drawing.Color.Gray;
+            this.btn6_2.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn6_2.Iconimage = null;
+            this.btn6_2.Iconimage_right = null;
+            this.btn6_2.Iconimage_right_Selected = null;
+            this.btn6_2.Iconimage_Selected = null;
+            this.btn6_2.IconMarginLeft = 0;
+            this.btn6_2.IconMarginRight = 0;
+            this.btn6_2.IconRightVisible = true;
+            this.btn6_2.IconRightZoom = 0D;
+            this.btn6_2.IconVisible = true;
+            this.btn6_2.IconZoom = 90D;
+            this.btn6_2.IsTab = false;
+            this.btn6_2.Location = new System.Drawing.Point(0, 31);
+            this.btn6_2.Name = "btn6_2";
+            this.btn6_2.Normalcolor = System.Drawing.Color.SteelBlue;
+            this.btn6_2.OnHovercolor = System.Drawing.Color.Blue;
+            this.btn6_2.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn6_2.selected = false;
+            this.btn6_2.Size = new System.Drawing.Size(165, 31);
+            this.btn6_2.TabIndex = 8;
+            this.btn6_2.Text = "Retornar Alumnos";
+            this.btn6_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn6_2.Textcolor = System.Drawing.Color.White;
+            this.btn6_2.TextFont = new System.Drawing.Font("Microsoft PhagsPa", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn6_2.Click += new System.EventHandler(this.btn6_2_Click);
+            // 
+            // btn6_1
+            // 
+            this.btn6_1.Activecolor = System.Drawing.Color.SteelBlue;
+            this.btn6_1.BackColor = System.Drawing.Color.SteelBlue;
+            this.btn6_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn6_1.BorderRadius = 0;
+            this.btn6_1.ButtonText = "GR1";
+            this.btn6_1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn6_1.DisabledColor = System.Drawing.Color.Gray;
+            this.btn6_1.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn6_1.Iconimage = null;
+            this.btn6_1.Iconimage_right = null;
+            this.btn6_1.Iconimage_right_Selected = null;
+            this.btn6_1.Iconimage_Selected = null;
+            this.btn6_1.IconMarginLeft = 0;
+            this.btn6_1.IconMarginRight = 0;
+            this.btn6_1.IconRightVisible = true;
+            this.btn6_1.IconRightZoom = 0D;
+            this.btn6_1.IconVisible = true;
+            this.btn6_1.IconZoom = 90D;
+            this.btn6_1.IsTab = false;
+            this.btn6_1.Location = new System.Drawing.Point(0, 0);
+            this.btn6_1.Name = "btn6_1";
+            this.btn6_1.Normalcolor = System.Drawing.Color.SteelBlue;
+            this.btn6_1.OnHovercolor = System.Drawing.Color.Blue;
+            this.btn6_1.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn6_1.selected = false;
+            this.btn6_1.Size = new System.Drawing.Size(165, 31);
+            this.btn6_1.TabIndex = 7;
+            this.btn6_1.Text = "GR1";
+            this.btn6_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn6_1.Textcolor = System.Drawing.Color.White;
+            this.btn6_1.TextFont = new System.Drawing.Font("Microsoft PhagsPa", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn6_1.Click += new System.EventHandler(this.btn6_1_Click);
+            // 
             // MenuDIC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(863, 430);
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
@@ -915,6 +1073,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Fondo4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Fondo3)).EndInit();
             this.panel5.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -957,5 +1116,10 @@
         private Bunifu.Framework.UI.BunifuImageButton Fondo3;
         private Bunifu.Framework.UI.BunifuImageButton btnLogoES;
         private Bunifu.Framework.UI.BunifuImageButton btnDirector;
+        private System.Windows.Forms.Panel panel6;
+        private Bunifu.Framework.UI.BunifuFlatButton btn6_4;
+        private Bunifu.Framework.UI.BunifuFlatButton btn6_3;
+        private Bunifu.Framework.UI.BunifuFlatButton btn6_2;
+        private Bunifu.Framework.UI.BunifuFlatButton btn6_1;
     }
 }
