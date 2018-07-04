@@ -4,7 +4,10 @@ Notas/WindowsFormsApplication1/bin/obj/Release
 WindowsFormsApplication1/bin/obj/Release/
 WindowsFormsApplication1/obj/
 *.exe
+<<<<<<< HEAD
 *.pdb
 *.manifest
 *.application
 *.suo
+=======
+>>>>>>> 63176a4... ignore rule for .vs *.exe
