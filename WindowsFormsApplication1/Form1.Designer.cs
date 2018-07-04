@@ -214,7 +214,7 @@
             // 
             // btnExcel
             // 
-            this.btnExcel.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnExcel.Activecolor = System.Drawing.Color.Teal;
             this.btnExcel.BackColor = System.Drawing.Color.Teal;
             this.btnExcel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnExcel.BorderRadius = 0;
@@ -250,7 +250,7 @@
             // 
             // btnPDF
             // 
-            this.btnPDF.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnPDF.Activecolor = System.Drawing.Color.Teal;
             this.btnPDF.BackColor = System.Drawing.Color.Teal;
             this.btnPDF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPDF.BorderRadius = 0;
@@ -331,7 +331,7 @@
             // 
             // button1
             // 
-            this.button1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.button1.Activecolor = System.Drawing.Color.Teal;
             this.button1.BackColor = System.Drawing.Color.Teal;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.BorderRadius = 0;

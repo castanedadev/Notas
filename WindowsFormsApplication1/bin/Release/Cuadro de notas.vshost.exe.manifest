@@ -54,14 +54,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Cuadro de notas.exe" size="3394560">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Cuadro de notas.exe" size="4704768">
       <assemblyIdentity name="Cuadro de notas" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>z74rvMV0DrdzdrqtKElzrH3sDuePfXxjzYzUENDc+bk=</dsig:DigestValue>
+        <dsig:DigestValue>D0S0hXKtrWdGnSHCRxw4ppSu9GdnI6H6UfE0hgm7cyU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -77,13 +77,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Cuadro de notas.exe.config" size="539">
+  <file name="Cuadro de notas.exe.config" size="1388">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>WilNkM0TxHcMi+lTbSIsQlIMEsyk0rI6z8EDALSAUcI=</dsig:DigestValue>
+      <dsig:DigestValue>O12hDmsftPOWzLaEbeDYypVIITr9Y9HjfDRSQOmo15w=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Notas.mdf" size="3211264" writeableType="applicationData">

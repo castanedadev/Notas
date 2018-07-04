@@ -54,14 +54,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Cuadro de notas.exe" size="4700160">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Cuadro de notas.exe" size="4704768">
       <assemblyIdentity name="Cuadro de notas" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>gs5ZbkV9O1RzhmFQ74iABsQWConE+mClip8987P9OYU=</dsig:DigestValue>
+        <dsig:DigestValue>D0S0hXKtrWdGnSHCRxw4ppSu9GdnI6H6UfE0hgm7cyU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -27,47 +27,58 @@ namespace WindowsFormsApplication1
         int v1 = 0;
         private void btn1_Click(object sender, EventArgs e)
         {
-            if (v1 == 0) { panel1.Show(); panel2.Hide(); v2 = 0; panel3.Hide(); v3 = 0; panel4.Hide(); v4 = 0; v1 = 1; panel5.Hide(); v5 = 0; }
+            if (v1 == 0) { panel1.Show(); panel2.Hide(); v2 = 0; panel3.Hide(); v3 = 0; panel4.Hide(); v4 = 0; v1 = 1; panel5.Hide(); v5 = 0; panel6.Hide(); v6 = 0; }
             else { panel1.Hide(); v1 = 0; }
         }
 
         int v2 = 0;
         private void btn2_Click(object sender, EventArgs e)
         {
-            if (v2 == 0) { panel2.Show(); panel1.Hide(); v1 = 0; panel3.Hide(); v3 = 0; panel4.Hide(); v4 = 0; v2 = 1; panel5.Hide(); v5 = 0; }
+            if (v2 == 0) { panel2.Show(); panel1.Hide(); v1 = 0; panel3.Hide(); v3 = 0; panel4.Hide(); v4 = 0; panel5.Hide(); v5 = 0; panel6.Hide(); v6 = 0; v2 = 1; }
             else { panel2.Hide(); v2 = 0; }
         }
 
         int v3 = 0;
         private void btn3_Click(object sender, EventArgs e)
         {
-            if (v3 == 0) { panel3.Show(); panel1.Hide(); v1 = 0; panel2.Hide(); v2 = 1; panel4.Hide(); v4 = 0; v3 = 1; panel5.Hide(); v5 = 0; }
+            if (v3 == 0) { panel3.Show(); panel1.Hide(); v1 = 0; panel2.Hide(); v2 = 1; panel4.Hide(); v4 = 0; v3 = 1; panel5.Hide(); v5 = 0; panel6.Hide(); v6 = 0; }
             else { panel3.Hide(); v3 = 0; }
         }
 
         int v4 = 0;
         private void btnConfiguration_Click(object sender, EventArgs e)
         {
-            if (v4 == 0) { panel4.Show(); panel1.Hide(); v1 = 0; panel2.Hide(); v2 = 0; panel3.Hide(); v3 = 0; v4 = 1; panel5.Hide(); v5 = 0; } else { panel4.Hide(); v4 = 0; }
+            if (v4 == 0) { panel4.Show(); panel1.Hide(); v1 = 0; panel2.Hide(); v2 = 0; panel3.Hide(); v3 = 0; v4 = 1; panel5.Hide(); v5 = 0; panel6.Hide(); v6 = 0; } else { panel4.Hide(); v4 = 0; }
         }
         int v5 = 0;
         private void btn5_Click(object sender, EventArgs e)
         {
-            if (v5 == 0) { panel5.Show(); panel4.Hide(); ; panel1.Hide(); v1 = 0; panel2.Hide(); v2 = 0; panel3.Hide(); v3 = 0; v4 = 0; v5 = 1; } else { panel5.Hide(); v5 = 0; }
+            if (v5 == 0) { panel5.Show(); panel4.Hide(); ; panel1.Hide(); v1 = 0; panel2.Hide(); v2 = 0; panel3.Hide(); v3 = 0; v4 = 0; v5 = 1; panel6.Hide(); v6 = 0; } else { panel5.Hide(); v5 = 0; }
             
         }
-        ////////////////////// BOTONES SIN BTN-S
 
+        int v6 = 0;
         private void btn4_Click(object sender, EventArgs e)
         {
-            panel4.Hide(); ; panel1.Hide(); v1 = 0; panel2.Hide(); v2 = 0; panel3.Hide(); v3 = 0; v4 = 0; panel5.Hide(); v5 = 0;
+            if (v6 == 0)
+            {
+                panel6.Show();
+                panel4.Hide(); ; panel1.Hide(); v1 = 0; panel2.Hide(); v2 = 0; panel3.Hide(); v3 = 0; v4 = 0; panel5.Hide(); v5 = 0; v6 = 1;
+            }
+            else
+            {
+                panel6.Hide(); v6 = 0;
+            }
         }
+
+        ////////////////////// BOTONES SIN BTN-S        
 
         private void btn6_Click(object sender, EventArgs e)
         {
-            panel4.Hide(); ; panel1.Hide(); v1 = 0; panel2.Hide(); v2 = 0; panel3.Hide(); v3 = 0; v4 = 0; panel5.Hide(); v5 = 0;
+            panel4.Hide(); ; panel1.Hide(); v1 = 0; panel2.Hide(); v2 = 0; panel3.Hide(); v3 = 0; v4 = 0; panel5.Hide(); v5 = 0; panel6.Hide(); v6 = 0;
             mostrar(new AcercaD());
         }   
+
         ////////////////////////////////////////////////////////////////////////////////////
         ////////////////////// MOSTRAR FORMS
         private void mostrar(object frm)
@@ -116,6 +127,29 @@ namespace WindowsFormsApplication1
             panel5.Hide(); v5 = 0;
             DirectorGraficos call = new DirectorGraficos();
             call.ShowDialog();
+        }
+        private void btn6_1_Click(object sender, EventArgs e)
+        {
+            panel6.Hide(); v6 = 0;
+            //mostrar(gr1)
+        }
+
+        private void btn6_2_Click(object sender, EventArgs e)
+        {
+            panel6.Hide(); v6 = 0;
+            //mostrar(alumnos)
+        }
+
+        private void btn6_3_Click(object sender, EventArgs e)
+        {
+            panel6.Hide(); v6 = 0;
+            //mostrar(profes)
+        }
+
+        private void btn6_4_Click(object sender, EventArgs e)
+        {
+            panel6.Hide(); v6 = 0;
+            //mostrar(eliminar)
         }
 
         private void btn5_2_Click(object sender, EventArgs e)
@@ -201,44 +235,46 @@ namespace WindowsFormsApplication1
             panel2.Location = new System.Drawing.Point(panel2.Location.X, 63);
             panel4.Location = new System.Drawing.Point(this.Width - panel4.Width, 63);
             panel5.Location = new System.Drawing.Point(panel5.Location.X, 63);
-            panel1.Hide(); panel2.Hide(); panel3.Hide(); panel4.Hide(); panel5.Hide();
+            panel6.Location = new System.Drawing.Point(panel6.Location.X, 63);
+            panel1.Hide(); panel2.Hide(); panel3.Hide(); panel4.Hide(); panel5.Hide(); panel6.Hide();
         }
 
         private void Fondo1_Click(object sender, EventArgs e)
         {
+            panel4.Hide(); v4 = 0;
             PnlContenido.BackColor = Fondo1.BackColor;
             Settings.Default.FondoDic = 1; Settings.Default.Save();
         }
 
         private void Fondo2_Click(object sender, EventArgs e)
         {
-            PnlContenido.BackColor = Fondo2.BackColor;
+            panel4.Hide(); v4 = 0; PnlContenido.BackColor = Fondo2.BackColor;
             Settings.Default.FondoDic = 2; Settings.Default.Save();
         }
 
         private void Fondo3_Click(object sender, EventArgs e)
         {
-            PnlContenido.BackColor = Fondo3.BackColor;
+            panel4.Hide(); v4 = 0; PnlContenido.BackColor = Fondo3.BackColor;
             Settings.Default.FondoDic = 3; Settings.Default.Save();
         }
 
         private void Fondo4_Click(object sender, EventArgs e)
         {
-            PnlContenido.BackColor = Fondo4.BackColor;
+            panel4.Hide(); v4 = 0; PnlContenido.BackColor = Fondo4.BackColor;
             Settings.Default.FondoDic = 4; Settings.Default.Save();
         }
 
         private void Fondo5_Click(object sender, EventArgs e)
         {
-            PnlContenido.BackColor = Fondo5.BackColor;
+            panel4.Hide(); v4 = 0; PnlContenido.BackColor = Fondo5.BackColor;
             Settings.Default.FondoDic = 5; Settings.Default.Save();
         }
 
         private void Fondo6_Click(object sender, EventArgs e)
         {
-            PnlContenido.BackColor = Fondo6.BackColor;
+            panel4.Hide(); v4 = 0; PnlContenido.BackColor = Fondo6.BackColor;
             Settings.Default.FondoDic = 6; Settings.Default.Save();
-        }
+        }        
             
 
         ////////////////////////////////////////////

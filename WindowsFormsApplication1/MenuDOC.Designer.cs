@@ -60,6 +60,9 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn3_1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.PnlContenido = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btn5_2 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn5_1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Fondo6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Fondo2)).BeginInit();
@@ -77,6 +80,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.panel3.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel4
@@ -183,7 +187,7 @@
             this.panel2.Controls.Add(this.btn2_1);
             this.panel2.Location = new System.Drawing.Point(233, 173);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(162, 35);
+            this.panel2.Size = new System.Drawing.Size(162, 33);
             this.panel2.TabIndex = 15;
             // 
             // btn2_1
@@ -375,6 +379,7 @@
             this.btn4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn4.Textcolor = System.Drawing.Color.White;
             this.btn4.TextFont = new System.Drawing.Font("Microsoft PhagsPa", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn4.Click += new System.EventHandler(this.btn4_Click_1);
             // 
             // btn1
             // 
@@ -468,7 +473,7 @@
             this.panel1.Controls.Add(this.btn1_1);
             this.panel1.Location = new System.Drawing.Point(116, 66);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(162, 98);
+            this.panel1.Size = new System.Drawing.Size(162, 96);
             this.panel1.TabIndex = 14;
             // 
             // btn1_3
@@ -674,7 +679,7 @@
             this.panel3.Controls.Add(this.btn3_1);
             this.panel3.Location = new System.Drawing.Point(350, 66);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(156, 35);
+            this.panel3.Size = new System.Drawing.Size(156, 33);
             this.panel3.TabIndex = 16;
             // 
             // btn3_1
@@ -720,11 +725,91 @@
             this.PnlContenido.Size = new System.Drawing.Size(855, 355);
             this.PnlContenido.TabIndex = 12;
             // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.btn5_2);
+            this.panel5.Controls.Add(this.btn5_1);
+            this.panel5.Location = new System.Drawing.Point(467, 119);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(162, 64);
+            this.panel5.TabIndex = 15;
+            // 
+            // btn5_2
+            // 
+            this.btn5_2.Activecolor = System.Drawing.Color.SteelBlue;
+            this.btn5_2.BackColor = System.Drawing.Color.SteelBlue;
+            this.btn5_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn5_2.BorderRadius = 0;
+            this.btn5_2.ButtonText = "Retornar Alumnos";
+            this.btn5_2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn5_2.DisabledColor = System.Drawing.Color.Gray;
+            this.btn5_2.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn5_2.Iconimage = null;
+            this.btn5_2.Iconimage_right = null;
+            this.btn5_2.Iconimage_right_Selected = null;
+            this.btn5_2.Iconimage_Selected = null;
+            this.btn5_2.IconMarginLeft = 0;
+            this.btn5_2.IconMarginRight = 0;
+            this.btn5_2.IconRightVisible = true;
+            this.btn5_2.IconRightZoom = 0D;
+            this.btn5_2.IconVisible = true;
+            this.btn5_2.IconZoom = 90D;
+            this.btn5_2.IsTab = false;
+            this.btn5_2.Location = new System.Drawing.Point(0, 31);
+            this.btn5_2.Name = "btn5_2";
+            this.btn5_2.Normalcolor = System.Drawing.Color.SteelBlue;
+            this.btn5_2.OnHovercolor = System.Drawing.Color.Blue;
+            this.btn5_2.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn5_2.selected = false;
+            this.btn5_2.Size = new System.Drawing.Size(165, 31);
+            this.btn5_2.TabIndex = 8;
+            this.btn5_2.Text = "Retornar Alumnos";
+            this.btn5_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn5_2.Textcolor = System.Drawing.Color.White;
+            this.btn5_2.TextFont = new System.Drawing.Font("Microsoft PhagsPa", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn5_2.Click += new System.EventHandler(this.btn5_2_Click);
+            // 
+            // btn5_1
+            // 
+            this.btn5_1.Activecolor = System.Drawing.Color.SteelBlue;
+            this.btn5_1.BackColor = System.Drawing.Color.SteelBlue;
+            this.btn5_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn5_1.BorderRadius = 0;
+            this.btn5_1.ButtonText = "GR1";
+            this.btn5_1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn5_1.DisabledColor = System.Drawing.Color.Gray;
+            this.btn5_1.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn5_1.Iconimage = null;
+            this.btn5_1.Iconimage_right = null;
+            this.btn5_1.Iconimage_right_Selected = null;
+            this.btn5_1.Iconimage_Selected = null;
+            this.btn5_1.IconMarginLeft = 0;
+            this.btn5_1.IconMarginRight = 0;
+            this.btn5_1.IconRightVisible = true;
+            this.btn5_1.IconRightZoom = 0D;
+            this.btn5_1.IconVisible = true;
+            this.btn5_1.IconZoom = 90D;
+            this.btn5_1.IsTab = false;
+            this.btn5_1.Location = new System.Drawing.Point(0, 0);
+            this.btn5_1.Name = "btn5_1";
+            this.btn5_1.Normalcolor = System.Drawing.Color.SteelBlue;
+            this.btn5_1.OnHovercolor = System.Drawing.Color.Blue;
+            this.btn5_1.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn5_1.selected = false;
+            this.btn5_1.Size = new System.Drawing.Size(165, 31);
+            this.btn5_1.TabIndex = 7;
+            this.btn5_1.Text = "GR1";
+            this.btn5_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn5_1.Textcolor = System.Drawing.Color.White;
+            this.btn5_1.TextFont = new System.Drawing.Font("Microsoft PhagsPa", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn5_1.Click += new System.EventHandler(this.btn5_1_Click);
+            // 
             // MenuDOC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(863, 430);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.Pnl2);
@@ -755,6 +840,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.panel3.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -792,5 +878,8 @@
         public System.Windows.Forms.Label LblDOC;
         private Bunifu.Framework.UI.BunifuImageButton btnLogoES;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
+        private System.Windows.Forms.Panel panel5;
+        private Bunifu.Framework.UI.BunifuFlatButton btn5_2;
+        private Bunifu.Framework.UI.BunifuFlatButton btn5_1;
     }
 }

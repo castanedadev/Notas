@@ -323,10 +323,20 @@ namespace WindowsFormsApplication1
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Importar im = new Importar();
-            im.importwithquestion(dgvauxiliar);
-            DialogResult dialog = MessageBox.Show("Desea importar este archivo a: " +
-                "\nGrado: " + cbGrado.Text + "    Sección: " + cbSeccion.Text +
+            
+            try
+            {
+                MessageBox.Show("hola");
+                Importar im = new Importar();
+                im.importwithquestion(dgvauxiliar);                
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Asegúrese de no dejar espacios en blanco en el documento", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }            
+            DialogResult dialog = MessageBox.Show("Desea importar este archivo a: \n\n" +
+                "\nGrado:   " + cbGrado.Text + "\nSección: " + cbSeccion.Text +
             "\nMateria: " + cbMateria.Text, "IMPORTAR", MessageBoxButtons.YesNo);
             if (dialog == DialogResult.Yes)
             {
@@ -342,7 +352,7 @@ namespace WindowsFormsApplication1
 
                             if (Convert.ToString(dgvauxiliar[j, i].Value) == "")
                             {
-                                dgvauxiliar.CurrentCell.Value = 0;
+                                dgvauxiliar[j, i].Value = 0;
                             }
 
                             if (decimal.Parse(dgvauxiliar[j, i].Value.ToString()) < 0 || decimal.Parse(dgvauxiliar[j, i].Value.ToString()) > 10)
