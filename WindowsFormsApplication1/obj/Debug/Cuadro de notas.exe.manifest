@@ -93,6 +93,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <dsig:DigestValue>czwuFVEGDqgipQxHAv95nhfLD1xllPnxUYEaypwW2Hw=</dsig:DigestValue>
 =======
         <dsig:DigestValue>3DNlp68vtbLgsp/WbuIGUhJsobhmkARUcO2zdT9A1NM=</dsig:DigestValue>
@@ -109,6 +110,9 @@
 =======
         <dsig:DigestValue>Kv63Vqs32nszTFGGAgoSvVKnalqDp5xiMSCtqF7KmGI=</dsig:DigestValue>
 >>>>>>> cambio5
+=======
+        <dsig:DigestValue>qQaBP8nMu2E1B/cnQPvv4rLVnYJmxI1ochs8wHR8Of0=</dsig:DigestValue>
+>>>>>>> ultimo primero dios
       </hash>
     </dependentAssembly>
   </dependency>
