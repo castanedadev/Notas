@@ -29,7 +29,6 @@ CREATE TABLE Maestros
 IdMaestro varchar(50) not null,
 Nombre varchar(100) not null,
 Fecha varchar(100),
-
 CONSTRAINT PK_Maes Primary Key(IdMaestro),
 );
 CREATE TABLE MaestroAno
@@ -166,6 +165,5 @@ CONSTRAINT fk_G14 FOREIGN KEY (Grado) REFERENCES GRADO(IdGrado),
 CONSTRAINT fk_MA14 FOREIGN KEY (Materia) REFERENCES  MATERIA (IdMateria),
 CONSTRAINT fk_S14 FOREIGN KEY (Seccion) REFERENCES SECCION (IdSeccion),
 CONSTRAINT fk_E14 FOREIGN KEY (Estado) REFERENCES ESTADO (IdEstado),
-
 );
 FIN
