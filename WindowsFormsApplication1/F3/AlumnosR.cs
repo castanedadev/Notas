@@ -43,7 +43,7 @@ namespace WindowsFormsApplication1.F3
             txtDic.Text = alumno.Direccion;
             txtResponsable.Text = alumno.Responsable;
 
-            cbGrado.SelectedIndex = alumno.Grado - 2;
+            cbGrado.SelectedIndex = alumno.Grado - 3;
             cbSeccion.SelectedIndex = alumno.Seccion - 2;
 
         
